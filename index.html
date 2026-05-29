@@ -98,14 +98,15 @@
 			<div class="container-fluid">
 				
             </div>
-       	</main>
+		</main>
 		<!-- End - Content Body -->
 
 		<!-- Start - Footer -->
-        <footer class="footer">
-            <div class="copyright">
-                  <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">IT Team</a> <span class="current-year">2026</span></p>
-            </div>
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
         </footer>
         <!-- End - Footer -->
 			
