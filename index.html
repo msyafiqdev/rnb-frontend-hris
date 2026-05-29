@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="meta-data">
     
-	<!-- Title -->
-	<title>Gymove  - Fitness Bootstrap Admin Dashboard Template</title>
-
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="author" content="DexignZone">
-	<meta name="robots" content="">
-
-	<meta name="keywords" content="admin, admin dashboard, admin template, bootstrap, bootstrap 5, bootstrap 5 admin template, fitness, fitness admin, modern, responsive admin dashboard, sales dashboard, sass, ui kit, web app">
-	<meta name="description" content="Discover Gymove, the ultimate fitness solution that is designed to help you achieve a healthier lifestyle with its cutting-edge features and personalized programs. Gymove is a fully mobile-responsive admin dashboard template that provides the perfect blend of exercise, nutrition, and motivation. Begin your fitness journey today with Gymove and visit DexignZone for more information.">
-
-	<meta property="og:title" content="Gymove  - Fitness Bootstrap Admin Dashboard Template">
-	<meta property="og:description" content="Discover Gymove, the ultimate fitness solution that is designed to help you achieve a healthier lifestyle with its cutting-edge features and personalized programs. Gymove is a fully mobile-responsive admin dashboard template that provides the perfect blend of exercise, nutrition, and motivation. Begin your fitness journey today with Gymove and visit DexignZone for more information.">
-	<meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
-	<meta name="format-detection" content="telephone=no">
-
+	<script>
+		fetch('fundamentals/layouts/meta/meta.html')
+		.then(response => response.text()).then(data => { document.getElementByClassName('meta-data').innerHTML = data; });
+	</script>
 	<!-- Mobile Specific -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,8 +13,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
     
 	<!-- All Required CSS -->
-	<link href="assets/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
 	
+
 	<!-- Start - Basic CSS -->
     <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
@@ -109,56 +96,8 @@
 			</script>
         </footer>
         <!-- End - Footer -->
-			
-		<div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="search-modal" aria-hidden="true" data-bs-keyboard="false">>
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header py-0">
-						<form class="d-flex align-items-center position-relative w-100" action="#">
-							<button type="button" class="btn btn-sm border-0 position-absolute start-0 p-0 text-sm">
-								<i class="flaticon-381-search-2"></i>
-							</button>
-							<input type="text" class="form-control form-control-lg ps-4 border-0 shadow-none" id="searchInput" placeholder="Search anything's">
-						</form>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="dz-scroll" style="height: 325px;">
-							<span class="text-uppercase fw-semibold text-black d-block mb-2">Quick Actions</span>
-							<ul class="actions" id="resultsList"></ul>
-							<ul class="actions" id="defaultResult">
-								<li class="quick-list">
-									<a href="index.html"><i class="flaticon-381-networking"></i>Dashboard</a>
-								</li>
-								<li class="quick-list">
-									<a href="app-calender.html"><i class="flaticon-381-calendar"></i>Calendar</a>
-								</li>
-								<li class="quick-list">
-									<a href="email-inbox.html"><i class="flaticon-381-notebook"></i>Emails</a>
-								</li>
-								<li class="quick-list">
-									<a href="app-profile.html"><i class="flaticon-381-user-7"></i>Profile</a>
-								</li>
-								<li class="quick-list">
-									<a href="ecom-product-list.html"><i class="flaticon-381-briefcase"></i>Shop</a>
-								</li>
-								<li class="quick-list">
-									<a href="ecom-customers.html"><i class="flaticon-381-user-9"></i>Customers</a>
-								</li>
-							</ul>
-							<span class="text-uppercase fw-semibold text-black d-block my-2">Help</span>
-							<ul class="actions">
-								<li class="quick-list">
-									<a href="https://coreui.w3itexperts.com/?theme=Gymove"><i class="flaticon-381-reading"></i>Read Documentation</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-   </div>
+	</div>
     <!-- End - Main Wrapper -->
 	
 	<!-- Start - Script -->
@@ -168,10 +107,7 @@
 	<script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
 	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
 	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
-	
-	<!-- Script For Dashboard 1 -->
-	<script src="assets/js/dashboard/dashboard-1.js"></script>
-	
+		
 	<!-- Script For Multiple Languages -->
 	<script src="assets/vendor/i18n/i18n.js"></script>
     <script src="assets/js/translator.js"></script>
