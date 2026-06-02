@@ -26,6 +26,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
     
 	<!-- All Required CSS -->
+	<link href="assets/vendor/fullcalendar/css/main.min.css" rel="stylesheet" />
 
 	<!-- Start - Basic CSS -->
     <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -317,7 +318,214 @@
 					</div>
 				</div>
 
-                
+                <!-- Start - Calendar -->
+				<div class="card h-auto d-none">
+					<div class="card-header d-block border-0 pb-0">
+						<h4 class="card-title">Calendar</h4>
+						<p class="mb-0">Drag and drop your event or click in the calendar</p>
+					</div>
+					<div class="card-body">
+						<div id="external-events">
+							<button type="button" class="external-event justify-content-start mb-2 btn btn-primary light" data-class="bg-primary">
+								<i class="fa-solid fa-circle"></i> New Theme Release
+							</button>
+							<button type="button" class="external-event justify-content-start mb-2 btn btn-warning light" data-class="bg-warning">
+								<i class="fa-solid fa-circle"></i> My Event
+							</button>
+							<button type="button" class="external-event justify-content-start mb-2 btn btn-danger light" data-class="bg-danger">
+								<i class="fa-solid fa-circle"></i> Meet Manager
+							</button>
+							<button type="button" class="external-event justify-content-start mb-2 btn btn-info light" data-class="bg-info">
+								<i class="fa-solid fa-circle"></i> Create New theme
+							</button>
+							<button type="button" class="external-event justify-content-start mb-2 btn btn-dark light" data-class="bg-dark">
+								<i class="fa-solid fa-circle"></i> Project Launch
+							</button>
+							<button type="button" class="external-event justify-content-start mb-2 btn btn-secondary light" data-class="bg-secondary">
+								<i class="fa-solid fa-circle"></i> Meeting
+							</button>
+						</div>
+						<div class="form-check checkbox-event my-4">
+							<input class="form-check-input" type="checkbox" value="" id="drop-remove">
+							<label class="form-check-label" for="drop-remove">Remove After Drop</label>
+						</div>
+						<a data-bs-toggle="modal" data-bs-target="#add-category" class="btn-event btn btn-primary w-100">
+							<i class="fa fa-plus"></i> Create New
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Start - Workout Details -->
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header border-0 pb-3">
+								<div>
+									<h4 class="card-title">Attendance Confirmation</h4>
+									<p class="fs-13 mb-0">Ensure your device location is enabled and you are within the authorized work area.</p>
+								</div>
+							</div>
+							<div class="card-body p-0">
+								<div class="d-flex gap-3 align-items-center avatar-success p-4">
+									<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="51" height="51" rx="25.5" fill="#2BC155"></rect>
+										<g clip-path="url()">
+										<path d="M23.8586 19.226L18.8712 24.5542C18.5076 25.0845 18.6439 25.8068 19.1717 26.1679L24.1945 29.6098L24.1945 32.9558C24.1945 33.5921 24.6995 34.125 25.3359 34.1376C25.9874 34.1477 26.5177 33.6249 26.5177 32.976L26.5177 29.0012C26.5177 28.6174 26.3283 28.2588 26.0126 28.0442L22.7904 25.8346L25.5025 22.9583L26.8914 26.1225C27.0758 26.5442 27.4949 26.8169 27.9546 26.8169L32.1844 26.8169C32.8207 26.8169 33.3536 26.3119 33.3662 25.6755C33.3763 25.024 32.8536 24.4937 32.2046 24.4937L28.7172 24.4937C28.2576 23.4482 27.7677 22.4129 27.3409 21.3522C27.1237 20.8169 27.0025 20.5846 26.6036 20.2159C26.5227 20.1401 25.9596 19.625 25.4571 19.1654C24.995 18.7462 24.2828 18.7739 23.8586 19.226Z" fill="white"></path>
+										<path d="M28.6162 19.8068C30.0861 19.8068 31.2778 18.6151 31.2778 17.1452C31.2778 15.6752 30.0861 14.4836 28.6162 14.4836C27.1462 14.4836 25.9545 15.6752 25.9545 17.1452C25.9545 18.6151 27.1462 19.8068 28.6162 19.8068Z" fill="white"></path>
+										<path d="M17.899 37.5164C20.6046 37.5164 22.798 35.323 22.798 32.6174C22.798 29.9117 20.6046 27.7184 17.899 27.7184C15.1934 27.7184 13 29.9117 13 32.6174C13 35.323 15.1934 37.5164 17.899 37.5164Z" fill="white"></path>
+										<path d="M32.101 37.5164C34.8066 37.5164 37 35.323 37 32.6174C37 29.9118 34.8066 27.7184 32.101 27.7184C29.3954 27.7184 27.202 29.9118 27.202 32.6174C27.202 35.323 29.3954 37.5164 32.101 37.5164Z" fill="white"></path>
+										</g>
+										<defs>
+										<clipPath id="clip8">
+										<rect width="24" height="24" fill="white" transform="translate(13 14)"></rect>
+										</clipPath>
+										</defs>
+									</svg>
+									<div>
+										<h6 class="fs-16 text-black mb-0">Ready to Start Your Day?</h6>
+										<span class="fs-12">Good morning. Don't forget to clock in to keep your attendance records up to date.</span>
+									</div>
+								</div>
+								<div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+									<div class="text-center">
+										<p class="fs-14 mb-2">Date</p>
+										<span class="fs-20 text-black">20 May</span>
+									</div>
+									<div class="text-center">
+										<p class="fs-14 mb-2">Time</p>
+										<span class="fs-20 text-black">08:34:53</span>
+									</div>
+									<div class="text-center">
+										<p class="fs-14 mb-2">Clock In</p>
+										<span class="fs-20 text-black">08:00</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn light btn-success m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockIn">Clock In</a>
+							<div class="mb-3"></div>
+						</div>
+					</div>
+					<!-- End - Maps Route -->
+					<!-- Start - Workout Details -->
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header border-0 pb-3">
+								<div>
+									<h4 class="card-title">End of Shift</h4>
+									<p class="fs-13 mb-0">Ensure all your daily tasks and status reports have been updated before clocking out.</p>
+								</div>
+							</div>
+							<div class="card-body p-0">
+								<div class="d-flex gap-3 align-items-center avatar-danger p-4">
+									<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="51" height="51" rx="25.5" fill="#F94687"></rect>
+										<g clip-path="url()">
+										<path d="M23.8586 19.226L18.8712 24.5542C18.5076 25.0845 18.6439 25.8068 19.1717 26.1679L24.1945 29.6098L24.1945 32.9558C24.1945 33.5921 24.6995 34.125 25.3359 34.1376C25.9874 34.1477 26.5177 33.6249 26.5177 32.976L26.5177 29.0012C26.5177 28.6174 26.3283 28.2588 26.0126 28.0442L22.7904 25.8346L25.5025 22.9583L26.8914 26.1225C27.0758 26.5442 27.4949 26.8169 27.9546 26.8169L32.1844 26.8169C32.8207 26.8169 33.3536 26.3119 33.3662 25.6755C33.3763 25.024 32.8536 24.4937 32.2046 24.4937L28.7172 24.4937C28.2576 23.4482 27.7677 22.4129 27.3409 21.3522C27.1237 20.8169 27.0025 20.5846 26.6036 20.2159C26.5227 20.1401 25.9596 19.625 25.4571 19.1654C24.995 18.7462 24.2828 18.7739 23.8586 19.226Z" fill="white"></path>
+										<path d="M28.6162 19.8068C30.0861 19.8068 31.2778 18.6151 31.2778 17.1452C31.2778 15.6752 30.0861 14.4836 28.6162 14.4836C27.1462 14.4836 25.9545 15.6752 25.9545 17.1452C25.9545 18.6151 27.1462 19.8068 28.6162 19.8068Z" fill="white"></path>
+										<path d="M17.899 37.5164C20.6046 37.5164 22.798 35.323 22.798 32.6174C22.798 29.9117 20.6046 27.7184 17.899 27.7184C15.1934 27.7184 13 29.9117 13 32.6174C13 35.323 15.1934 37.5164 17.899 37.5164Z" fill="white"></path>
+										<path d="M32.101 37.5164C34.8066 37.5164 37 35.323 37 32.6174C37 29.9118 34.8066 27.7184 32.101 27.7184C29.3954 27.7184 27.202 29.9118 27.202 32.6174C27.202 35.323 29.3954 37.5164 32.101 37.5164Z" fill="white"></path>
+										</g>
+										<defs>
+										<clipPath id="clip8">
+										<rect width="24" height="24" fill="white" transform="translate(13 14)"></rect>
+										</clipPath>
+										</defs>
+									</svg>
+									<div>
+										<h6 class="fs-16 text-black mb-0">Time to Recharge!</h6>
+										<span class="fs-12">Thank you for your hard work today. Please clock out and enjoy the rest of your day.</span>
+									</div>
+								</div>
+								<div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+									<div class="text-center">
+										<p class="fs-14 mb-2">Date</p>
+										<span class="fs-20 text-black">20 May</span>
+									</div>
+									<div class="text-center">
+										<p class="fs-14 mb-2">Time</p>
+										<span class="fs-20 text-black">08:34:53</span>
+									</div>
+									<div class="text-center">
+										<p class="fs-14 mb-2">Clock Out</p>
+										<span class="fs-20 text-black">17:00</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn light btn-danger m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockOut">Clock Out</a>
+							<div class="mb-3"></div>
+						</div>
+					</div>
+					<!-- End - Maps Route -->
+						<!-- Start - Workout Details -->
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header border-0 pb-3">
+								<div>
+									<h4 class="card-title">Attendance Exception</h4>
+									<p class="fs-13 mb-0">Your logged time is outside the standard. Please ensure your supervisor is aware of this adjustment.</p>
+								</div>
+							</div>
+							<div class="card-body p-0">
+								<div class="d-flex gap-3 align-items-center avatar-secondary p-4">
+									<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="51" height="51" rx="25.5" fill="#A02CFA"></rect>
+										<g clip-path="url()">
+										<path d="M23.8586 19.226L18.8712 24.5542C18.5076 25.0845 18.6439 25.8068 19.1717 26.1679L24.1945 29.6098L24.1945 32.9558C24.1945 33.5921 24.6995 34.125 25.3359 34.1376C25.9874 34.1477 26.5177 33.6249 26.5177 32.976L26.5177 29.0012C26.5177 28.6174 26.3283 28.2588 26.0126 28.0442L22.7904 25.8346L25.5025 22.9583L26.8914 26.1225C27.0758 26.5442 27.4949 26.8169 27.9546 26.8169L32.1844 26.8169C32.8207 26.8169 33.3536 26.3119 33.3662 25.6755C33.3763 25.024 32.8536 24.4937 32.2046 24.4937L28.7172 24.4937C28.2576 23.4482 27.7677 22.4129 27.3409 21.3522C27.1237 20.8169 27.0025 20.5846 26.6036 20.2159C26.5227 20.1401 25.9596 19.625 25.4571 19.1654C24.995 18.7462 24.2828 18.7739 23.8586 19.226Z" fill="white"></path>
+										<path d="M28.6162 19.8068C30.0861 19.8068 31.2778 18.6151 31.2778 17.1452C31.2778 15.6752 30.0861 14.4836 28.6162 14.4836C27.1462 14.4836 25.9545 15.6752 25.9545 17.1452C25.9545 18.6151 27.1462 19.8068 28.6162 19.8068Z" fill="white"></path>
+										<path d="M17.899 37.5164C20.6046 37.5164 22.798 35.323 22.798 32.6174C22.798 29.9117 20.6046 27.7184 17.899 27.7184C15.1934 27.7184 13 29.9117 13 32.6174C13 35.323 15.1934 37.5164 17.899 37.5164Z" fill="white"></path>
+										<path d="M32.101 37.5164C34.8066 37.5164 37 35.323 37 32.6174C37 29.9118 34.8066 27.7184 32.101 27.7184C29.3954 27.7184 27.202 29.9118 27.202 32.6174C27.202 35.323 29.3954 37.5164 32.101 37.5164Z" fill="white"></path>
+										</g>
+										<defs>
+										<clipPath id="clip8">
+										<rect width="24" height="24" fill="white" transform="translate(13 14)"></rect>
+										</clipPath>
+										</defs>
+									</svg>
+									<div>
+										<h6 class="fs-16 text-black mb-0">Schedule Deviation?</h6>
+										<span class="fs-12">Adjusting your schedule? Please leave a brief note for your records.</span>
+									</div>
+								</div>
+								<div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+									<div class="text-center">
+										<p class="fs-14 mb-2">Time</p>
+										<span class="fs-20 text-black">13:00-17:00</span>
+									</div>
+									<div class="text-center">
+										<p class="fs-14 mb-2">Variance</p>
+										<span class="fs-20 text-black">04.00</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn light btn-secondary m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#exception">Exception</a>
+							<div class="mb-3"></div>
+						</div>
+					</div>
+					<!-- End - Maps Route -->
+				</div>
+				<div class="card d-none">
+					<div class="card-header d-block">
+						<p class="mb-0 subtitle">Button Light style</p>
+					</div>
+					<div class="card-body">
+						<a class="btn light btn-primary" data-bs-toggle="modal" data-bs-target="#dayOff">Hari Libur Nasional, cuti bersama / Weekend</a>
+						<a class="btn light btn-secondary" data-bs-toggle="modal" data-bs-target="#sick">Cuti Sakit</a>
+						<a class="btn light btn-success" data-bs-toggle="modal" data-bs-target="#annualLeave">Cuti Tahunan</a>
+						<a class="btn light btn-danger" data-bs-toggle="modal" data-bs-target="#specialLeave">Cuti Khusus</a>
+						<a class="btn light btn-warning" data-bs-toggle="modal" data-bs-target="#unpaidLeave">Unpaid Leave</a>
+						<a class="btn light btn-info" data-bs-toggle="modal" data-bs-target="#deviation">Izin masuk telat, atau pulang lebih awal</a>
+						<a class="btn light btn-dark" data-bs-toggle="modal" data-bs-target="#onTime">Masuk On Time</a>
+						<a class="btn light btn-dark" data-bs-toggle="modal" data-bs-target="#late">Masuk Telat</a>
+						<a class="btn light btn-dark" data-bs-toggle="modal" data-bs-target="#meeting">Meeting</a>
+						<a class="btn light btn-dark" data-bs-toggle="modal" data-bs-target="#overtime">Lembur</a>
+						<a class="btn light btn-dark" data-bs-toggle="modal" data-bs-target="#trip">Perjalanan Dinas</a>
+					</div>
+				</div>
+				<div class="col-xxl-12 col-xl-12">
+					<div class="card card-body">
+						<div id="calendar" class="app-fullcalendar"></div>
+					</div>
+				</div>
+				<!-- End - Calendar -->
                     
 				<!-- End - Attendance -->
             </div>
@@ -333,6 +541,844 @@
         </footer>
         <!-- End - Footer -->
 
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="clockIn" tabindex="-1" aria-labelledby="clockInLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="clockInLabel">Attendance Confirmation</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<p class="form-label mb-3 text-center">Wed, 20 May 2026 - 
+										<span class="text-success fw-semibold">08:00:10</span>
+									</p>
+									<p class="form-label text-muted mb-3">
+										Grab your coffee and let's get things done. Clock in when you're ready to kick off your shift!
+									</p>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label">Current Location</label>
+										<iframe class="border-0 rounded" height="250"  width="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+									</div>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label">Status</label>
+										<p class="fs-13 mb-0">Ensure your device location is enabled and you are within the authorized work area.</p>
+									</div>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label">IP Address</label>
+										<p>
+											<span class="fs-13 mb-0 text-success">182.8.226.88</span> | <span class="fs-13 mb-0 text-danger">182.8.226.88</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</form>
+						<a class="btn light btn-success mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Clock In</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="clockOut" tabindex="-1" aria-labelledby="clockOutLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="clockOutLabel">End of Shift</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<p class="form-label mb-3 text-center">Wed, 20 May 2026 - 
+										<span class="fw-semibold">17:00:10</span>
+									</p>
+									<p class="form-label text-muted mb-3">
+										Please make sure your daily tasks are wrapped up before clocking out. Thank you for your hard work, and enjoy the rest of your day!
+									</p>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label">Current Location</label>
+										<iframe class="border-0 rounded" height="250"  width="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+									</div>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label">Status</label>
+										<p class="fs-13 mb-0">Ensure your device location is enabled and you are within the authorized work area.</p>
+									</div>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label">IP Address</label>
+										<p>
+											<span class="fs-13 mb-0 text-success">182.8.226.88</span> | <span class="fs-13 mb-0 text-danger">182.8.226.88</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</form>
+						<a class="btn light btn-danger mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">See You Tomorrow</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="exception" tabindex="-1" aria-labelledby="exceptionLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exceptionLabel">Attendance Exception</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<p class="form-label mb-3 text-center">Wed, 20 May 2026 - 
+										<span class="fw-semibold">17:00:10</span>
+									</p>
+									<p class="form-label text-muted mb-3">
+										Clocking in late or heading out early? Just make sure your <span class="fw-bold">supervisor</span> is in the loop 
+										and there are <span class="fw-bold">no urgent tasks</span> left behind. <br> Oh, and don't forget to leave a quick note!
+									</p>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label text-secondary">Quick Note</label>
+										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Contoh: Izin ke dokter, macet, atau ada urusan keluarga">
+									</div>
+									<div class="mb-3">
+										<label for="exampleFormControlInput1" class="form-label text-secondary">Request Type</label>
+										<div class="form-group mb-0">
+											<div class="form-check d-inline-block me-3">
+												<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+												<label class="form-check-label" for="flexRadioDefault4">Late Arrival</label>
+											</div>
+											<div class="form-check d-inline-block mx-2">
+												<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+												<label class="form-check-label" for="flexRadioDefault5">Early Departure</label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-6">
+											<div class="mb-3">
+												<label for="exampleFormControlInput1" class="form-label text-secondary">From</label>
+												<input type="time" class="form-control" id="exampleFormControlInput1">
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="mb-3">
+												<label for="exampleFormControlInput1" class="form-label text-secondary">To</label>
+												<input type="time" class="form-control" id="exampleFormControlInput1">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<a class="btn light btn-secondary mt-2 mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">Got it!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="sick" tabindex="-1" aria-labelledby="sickLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="sickLabel">Attendance Sick</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Your health comes first</h5>
+									<p class="form-label text-muted mb-3">
+										Take all the time you need to rest, hydrate, and recover. We’ve got the fort down here, so just focus on feeling better!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Sick Leave</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Reason</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Demam dan Flu</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Duration</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">18 May 2026 - 19 May 2026 (2 days)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Medical Notes</span>
+										</div>
+										<div class="col-8">
+											<a href="ecom-product-detail.html"><img src="assets/images/menus/8.avif" alt="" class="avatar avatar-lg rounded me-3" width="86"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="annualLeave" tabindex="-1" aria-labelledby="annualLeaveLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="annualLeaveLabel">Annual Leave</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Out of Office mode: ON</h5>
+									<p class="form-label text-muted mb-3">
+										Whether you’re traveling the globe or just relaxing on the couch, enjoy your well-deserved break. Disconnect, recharge, and have fun!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Annual Leave</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Reason</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Liburan keluarga dan istirahat sejenak</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Duration</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">18 May 2026 - 19 May 2026 (2 days)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="specialLeave" tabindex="-1" aria-labelledby="specialLeaveLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="specialLeaveLabel">Special Leave</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Take the time you need</h5>
+									<p class="form-label text-muted mb-3">
+										We understand that some personal matters require your full attention. Focus on what matters most right now, and we'll be right here when you return.
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Special Leave</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Reason</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Persiapan dan acara pernikahan (Atau: Menghadiri wisuda / Kedukaan keluarga)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Duration</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">18 May 2026 - 19 May 2026 (2 days)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="unpaidLeave" tabindex="-1" aria-labelledby="unpaidLeaveLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="unpaidLeaveLabel">Unpaid Leave</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Time off logged</h5>
+									<p class="form-label text-muted mb-3">
+										Your extended leave has been successfully recorded. Take the space you need, and we look forward to having you back with the team when you’re ready.
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Unpaid Leave</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Reason</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Urusan pribadi lanjutan / Perpanjangan masa istirahat</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Leave Duration</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">18 May 2026 - 19 May 2026 (2 days)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="deviation" tabindex="-1" aria-labelledby="deviationLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="deviationLabel">Permitted Late Arrival / Early Departure</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Thanks for the heads-up! | Wrapping up early today</h5>
+									<p class="form-label text-muted mb-3">
+										We know things happen. Travel safely, and just jump right into your tasks whenever you get settled at your desk. 
+									</p>
+									<p class="form-label text-muted mb-3">
+										Before you head out, just make sure any urgent tasks are handed over or completed. Have a great rest of your day!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Request Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Permitted Late Arrival | Early Departure</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Reason</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Kendaraan mogok di jalan / Mengurus administrasi darurat | <br> Menjemput anak sakit / Jadwal kontrol ke rumah sakit</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Time Variance</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">08:00 - 10:00 (Terlambat 2 Jam) | <br> 14:30 (Pulang 2.5 Jam Lebih Awal)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="onTime" tabindex="-1" aria-labelledby="onTimeLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="onTimeLabel">On-Time Clock In</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Spot on! Kudos for the punctuality.</h5>
+									<p class="form-label text-muted mb-3">
+										The early bird gets the worm! Thanks for showing up on time. Grab your coffee, review your task list, and let’s crush those goals today!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Attendance Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">On-Time Arrival</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Location</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Branch Office Yogyakarta</span> <br>
+											<span class="text-gray">Sanggrahan, Condongcatur, Kec. Depok, Kab. Sleman, Daerah Istimewa Yogyakarta </span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Clock In Time</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold"> <span class="text-success">07:50</span> (08:00 - 17:00)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Clock Out Time</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">17:00 (08:00 - 17:00)</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+		
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="late" tabindex="-1" aria-labelledby="lateLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="lateLabel">Late Arrival</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Let's catch up on lost time!</h5>
+									<p class="form-label text-muted mb-3">
+										You're clocking in past your scheduled time today. Please try to stick to your shift schedule moving forward so you don't miss out on important morning updates. Take a deep breath, and let's dive into work!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Attendance Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-danger fw-semibold">Late Arrival (10 minutes late)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Location</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Branch Office Yogyakarta</span> <br>
+											<span class="text-gray">Sanggrahan, Condongcatur, Kec. Depok, Kab. Sleman, Daerah Istimewa Yogyakarta </span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Clock In Time</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold"> <span class="text-danger">08:10</span> (08:00 - 17:00)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Clock Out Time</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">17:00 (08:00 - 17:00)</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="dayOff" tabindex="-1" aria-labelledby="dayOffLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="dayOffLabel">Day Off</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">It’s a Day Off! Time to Unplug</h5>
+									<p class="form-label text-muted mb-3">
+										Whether it's the weekend, a public holiday, or a joint holiday, today is officially a non-working day. 
+										Take this time to fully rest and recharge. See you on the next working day!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Event Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-danger fw-semibold">Weekend / Public Holiday / Joint Holiday</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Holiday Name</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold"> Weekend / Hari Raya Idul Adha / Cuti Bersama Hari Raya Idul Adha</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Date</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">21 May 2026</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="meeting" tabindex="-1" aria-labelledby="meetingLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="meetingLabel">Meeting</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Meeting Mode: ON</h5>
+									<p class="form-label text-muted mb-3">
+										Currently locked in a sync! Bring your best ideas to the table, drive solid decisions, 
+										and make sure to capture the key action items. Have a productive session!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Activity Type</span>
+										</div>
+										<div class="col-8">
+											<span class="fw-semibold">Virtual Meeting</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Topic</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Q3 Product Roadmap Sync & Brainstorming</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Location</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Zoom (Online Meeting)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Date</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">20 May 2026</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Time</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">10:00 - 12:00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="d-flex justify-content-between mt-2">
+							<a class="btn light btn-dark mt-2 mb-2 btn-lg me-2 w-100">Takeway Task (MoM)</a>
+							<a class="btn light btn-info mt-2 mb-2 btn-lg w-100">Location / Link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="overtime" tabindex="-1" aria-labelledby="overtimeLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="overtimeLabel">Overtime</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">Going the extra mile!</h5>
+									<p class="form-label text-muted mb-3">
+										We truly appreciate your dedication and the extra hours you're putting in today. 
+										Your hard work doesn't go unnoticed! Just remember to pace yourself, stay hydrated, and take short screen breaks. <br>
+										Don't burn yourself out, you've got this!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Activity Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Overtime</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Target Task</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Menyelesaikan deployment aplikasi & finalisasi laporan akhir bulan</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Supervisor</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Rexy Aldinny</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Date</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">20 May 2026</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Overtime Duration</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">18:00 - 21:00 (3 Hours)</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<a class="btn light btn-success mt-2 mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">Submit Task</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
+		<!-- Modal Box Start -->
+		<div class="modal fade" id="trip" tabindex="-1" aria-labelledby="tripLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="tripLabel">Business Trip</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="row">
+								<div class="col-xl-12">
+									<h5 class="text-muted mb-0 fw-bold">On the move!</h5>
+									<p class="form-label text-muted mb-3">
+										Safe travels! We wish you a smooth journey and highly successful meetings. 
+										Keep crushing it out there in the field, represent us well, and don't forget to save those receipts for your expense reports!
+									</p>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Activity Type</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Business Trip</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Purpose</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray fw-semibold">Presentasi purwarupa aplikasi Quickwash & Sinkronisasi Database</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Destination</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">Surabaya</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Trip Duration</span>
+										</div>
+										<div class="col-8">
+											<span class="text-gray">25 May 2026 - 27 May 2026 (3 Days)</span>
+										</div>
+									</div>
+									<div class="row py-2">
+										<div class="col-4">
+											<span>Status</span>
+										</div>
+										<div class="col-8">
+											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="d-flex justify-content-between mt-2">
+							<a class="btn light btn-info mt-2 mb-2 btn-lg me-2 w-100">Submit Task</a>
+							<a class="btn light btn-success mt-2 mb-2 btn-lg w-100">Reimbursement</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal-Box-End -->
+
 	</div>
     <!-- End - Main Wrapper -->
 	
@@ -344,398 +1390,468 @@
 	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
 	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
 
-		<!-- Chart piety plugin files -->
+	<!-- Chart piety plugin files -->
     <script src="assets/vendor/peity/jquery.peity.min.js"></script>
 
 	<!-- Script For Apexchart -->
 	<script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+	<!-- Script For Full Calendar -->
+	<script src="assets/vendor/fullcalendar/js/main.min.js"></script>
 
 	<script>
-		(function($) {
-		/* "use strict" */
+		"use strict"
+		document.addEventListener('DOMContentLoaded', function() {
 
-		var dzSparkLine = function(){
-			//let draw = Chart.controllers.line.__super__.draw; //draw shadow
-			
-			var screenWidth = $(window).width();
+				/* initialize the external events
+				-----------------------------------------------------------------*/
 
-			var barChart1 = function(){
-				if(jQuery('#barChart_1').length > 0 ){
-					const barChart_1 = document.getElementById("barChart_1").getContext('2d');
-					
-					barChart_1.height = 100;
-
-					new Chart(barChart_1, {
-						type: 'bar',
-						data: {
-							defaultFontFamily: 'Poppins',
-							labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-							datasets: [
-								{
-									label: "My Business Trips",
-									data: [65, 59, 80, 81, 56, 55, 40, 45, 50, 55, 60, 65],
-									borderColor: 'rgba(11, 42, 151, 1)',
-									borderWidth: "0",
-									barPercentage: 0.5,
-									backgroundColor: 'rgba(11, 42, 151, 1)'
-								}
-							]
-						},
-						options: {
-							plugins:{
-								legend:false,
-								
-							},
-							scales: {
-								y:{
-									ticks: {
-										beginAtZero: true
-									}
-								},
-								x:{
-									// Change here
-									
-								}
-							}
-						}
-					});
-				}
-			}
-
-			var barChart3 = function(){
-				//stalked bar chart
-				if(jQuery('#barChart_3').length > 0 ){
-					const barChart_3 = document.getElementById("barChart_3").getContext('2d');
-					//generate gradient
-					const barChart_3gradientStroke = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke.addColorStop(0, "rgba(43, 193, 85, 1)");
-					barChart_3gradientStroke.addColorStop(1, "rgba(43, 193, 85, 1)");
-
-					const barChart_3gradientStroke2 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke2.addColorStop(0, "rgba(249, 69, 135, 1)");
-					barChart_3gradientStroke2.addColorStop(1, "rgba(249, 69, 135, 1)");
-
-					const barChart_3gradientStroke3 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke3.addColorStop(0, "rgba(160, 44, 250, 1)");
-					barChart_3gradientStroke3.addColorStop(1, "rgba(160, 44, 250, 1)");
-
-					const barChart_3gradientStroke4 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke4.addColorStop(0, "rgba(30, 167, 197, 1)");
-					barChart_3gradientStroke4.addColorStop(1, "rgba(30, 167, 197, 1)");
-					
-					barChart_3.height = 100;
-
-					let barChartData = {
-						defaultFontFamily: 'Poppins',
-						labels: [
-							'Jan (21 days)', 'Feb (19 days)', 'Mar (19 days)', 
-							'Apr (20 days)', 'May (18 days)', 'Jun (21 days)', 
-							'Jul (22 days)', 'Aug (20 days)', 'Sep (22 days)', 
-							'Oct (22 days)', 'Nov (21 days)', 'Dec (20 days)'
-						],
-						datasets: [{
-							label: 'On Time',
-							backgroundColor: barChart_3gradientStroke,
-							hoverBackgroundColor: barChart_3gradientStroke, 
-							// Majority of the days are usually on time
-							data: ['18', '17', '15', '18', '16', '19', '18', '16', '20', '19', '18', '15']
-						}, {
-							label: 'Late',
-							backgroundColor: barChart_3gradientStroke2,
-							hoverBackgroundColor: barChart_3gradientStroke2, 
-							// A realistic handful of late days scattered throughout the year
-							data: ['2', '1', '3', '1', '0', '1', '2', '1', '1', '2', '1', '2']
-						}, {
-							label: 'Deviation',
-							backgroundColor: barChart_3gradientStroke3,
-							hoverBackgroundColor: barChart_3gradientStroke3, 
-							// Rare occurrences (e.g., leaving early, unusual shifts)
-							data: ['0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0']
-						}, {
-							label: 'Leave',
-							backgroundColor: barChart_3gradientStroke4,
-							hoverBackgroundColor: barChart_3gradientStroke4, 
-							// Leaves factored in, peaking slightly around summer/holidays
-							data: ['1', '0', '1', '1', '2', '0', '2', '3', '0', '1', '1', '3']
-						}]
-					};
-
-					new Chart(barChart_3, {
-						type: 'bar',
-						data: barChartData,
-						options: {
-							plugins:{
-								legend:false,
-								tooltip: {
-									mode: 'index',
-									intersect: false
-								},
-								
-							},
-							title: {
-								display: false
-							},
-							responsive: true,
-							scales: {
-								x:{
-									stacked: true,
-								},
-								y:{
-									stacked: true
-								}
-							}
-						}
-					});
-
-
-				}
-			}
-
-			var lineChart2 = function(){
-			//gradient line chart
-			if(jQuery('#lineChart_2').length > 0 ){
-				
-				const lineChart_2 = document.getElementById("lineChart_2").getContext('2d');
-				//generate gradient
-				const lineChart_2gradientStroke = lineChart_2.createLinearGradient(500, 0, 100, 0);
-				lineChart_2gradientStroke.addColorStop(0, "rgba(11, 42, 151, 1)");
-				lineChart_2gradientStroke.addColorStop(1, "rgba(11, 42, 151, 0.5)");
-
-				//Chart.controllers.line.draw = function(){ };
-				
-				class Custom extends Chart.LineController {
-					draw() {
-						// Call bubble controller method to draw all the points
-						super.draw(arguments);	
-						const ctx = this.chart.ctx;
-						let _stroke = ctx.stroke;
-						ctx.stroke = function(){
-							ctx.save();
-							ctx.shadowColor = 'rgba(110, 197, 30, 0.1)';
-							ctx.shadowBlur = 10;
-							ctx.shadowOffsetX = 0;
-							ctx.shadowOffsetY = 4;
-							_stroke.apply(this, arguments);
-							ctx.restore();
-							
-						}
+				var containerEl = document.getElementById('external-events');
+				new FullCalendar.Draggable(containerEl, {
+				itemSelector: '.external-event',
+				eventData: function(eventEl) {
+					return {
+					title: eventEl.innerText.trim()
 					}
-				};
-				Custom.id = 'shadowLine';
-				Custom.defaults = Chart.LineController.defaults;
-
-				// Stores the controller so that the chart initialization routine can look it up
-				Chart.register(Custom);
-					
-					
-				lineChart_2.height = 100;
-
-				new Chart(lineChart_2, {
-					type: 'line',
-					data: {
-						defaultFontFamily: 'Poppins',
-						labels: [
-							'Jan', 'Feb', 'Mar', 
-							'Apr', 'May', 'Jun', 
-							'Jul', 'Aug', 'Sep', 
-							'Oct', 'Nov', 'Dec'
-						],
-						datasets: [
-							{
-								label: "My Overtime Hours",
-								data: [25, 20, 60, 41, 66, 45, 80, 25, 20, 60, 41, 12],
-								borderColor: lineChart_2gradientStroke,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension:0.5,
-								pointBackgroundColor: 'rgba(11, 42, 151, 0.5)'
-							}
-						]
-					},
-					options: {
-						plugins:{
-							legend:false,
-							
-						},
-						scales: {
-							y:{
-								max: 100, 
-								min: 0, 
-								ticks: {
-									beginAtZero: true, 
-									stepSize: 20, 
-									padding: 10
-								}
-							},
-							x:{ 
-								ticks: {
-									padding: 5
-								}
-							}
-						}
-					}
+				}
+				
 				});
-			}
-		}
-			
-			var lineChart3 = function(){
-			//dual line chart
-			if(jQuery('#lineChart_3').length > 0 ){
-				const lineChart_3 = document.getElementById("lineChart_3").getContext('2d');
-				//generate gradient
-				const lineChart_3gradientStroke1 = lineChart_3.createLinearGradient(500, 0, 100, 0);
-				lineChart_3gradientStroke1.addColorStop(0, "rgba(11, 42, 151, 1)");
-				lineChart_3gradientStroke1.addColorStop(1, "rgba(11, 42, 151, 0.5)");
+				
 
-				const lineChart_3gradientStroke2 = lineChart_3.createLinearGradient(500, 0, 100, 0);
-				lineChart_3gradientStroke2.addColorStop(0, "rgba(255, 188, 17, 1)");
-				lineChart_3gradientStroke2.addColorStop(1, "rgba(255, 188, 17, 1)");
+				/* initialize the calendar
+				-----------------------------------------------------------------*/
 
-				const lineChart_3gradientStroke3 = lineChart_3.createLinearGradient(500, 0, 100, 0);
-				lineChart_3gradientStroke3.addColorStop(0, "rgba(110, 197, 30, 1)");
-				lineChart_3gradientStroke3.addColorStop(1, "rgba(110, 197, 30, 1)");
-
-				const lineChart_3gradientStroke4 = lineChart_3.createLinearGradient(500, 0, 100, 0);
-				lineChart_3gradientStroke4.addColorStop(0, "rgba(30, 167, 197, 1)");
-				lineChart_3gradientStroke4.addColorStop(1, "rgba(30, 167, 197, 1)");
-
-				class Custom extends Chart.LineController {
-					draw() {
-						// Call bubble controller method to draw all the points
-						super.draw(arguments);	
-						const ctx = this.chart.ctx;
-						let _stroke = ctx.stroke;
-						ctx.stroke = function(){
-							ctx.save();
-							ctx.shadowColor = 'rgba(110, 197, 30, 0.1)';
-							ctx.shadowBlur = 10;
-							ctx.shadowOffsetX = 0;
-							ctx.shadowOffsetY = 4;
-							_stroke.apply(this, arguments);
-							ctx.restore();
-							
-						}
+				var calendarEl = document.getElementById('calendar');
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth,timeGridWeek,timeGridDay'
+				},
+				
+				selectable: true,
+				selectMirror: true,
+				select: function(arg) {
+					var title = prompt('Event Title:');
+					if (title) {
+					calendar.addEvent({
+						title: title,
+						start: arg.start,
+						end: arg.end,
+						allDay: arg.allDay
+					})
 					}
-				};
-				Custom.id = 'shadowLine';
-				Custom.defaults = Chart.LineController.defaults;
-
-				// Stores the controller so that the chart initialization routine can look it up
-				Chart.register(Custom);
-					
-				lineChart_3.height = 100;
-
-				new Chart(lineChart_3, {
-					type: 'line',
-					data: {
-						defaultFontFamily: 'Poppins',
-						labels: [
-							'Jan', 'Feb', 'Mar', 
-							'Apr', 'May', 'Jun', 
-							'Jul', 'Aug', 'Sep', 
-							'Oct', 'Nov', 'Dec'
-						],
-						datasets: [
-							{
-								label: "Annual Leave",
-								// Spikes heavily in the summer (June, July, August) and December for holidays.
-								data: [15, 12, 18, 20, 25, 45, 55, 50, 20, 15, 22, 60],
-								borderColor: lineChart_3gradientStroke1,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension: 0.5,
-								pointBackgroundColor: 'rgba(11, 42, 151, 0.5)'
-							}, {
-								label: "Special Leave",
-								// Random but consistently low (represents jury duty, bereavement, unpaid leave, etc.)
-								data: [2, 1, 3, 2, 4, 1, 2, 0, 1, 2, 1, 3],
-								borderColor: lineChart_3gradientStroke2,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension: 0.5,
-								pointBackgroundColor: 'rgba(254, 176, 25, 1)'
-							}, {
-								label: "Sick Leave",
-								// Higher during flu season/winter months (Jan-Mar, Nov-Dec) and drops during the summer.
-								data: [35, 30, 25, 15, 10, 8, 5, 8, 12, 20, 28, 30],
-								borderColor: lineChart_3gradientStroke3,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension: 0.5,
-								pointBackgroundColor: 'rgba(110, 197, 30, 1)'
-							}, {
-								label: "Unpaid Leave",
-								// Scattered randomly throughout the year with no clear pattern.
-								data: [1, 0, 2, 1, 3, 0, 2, 1, 0, 1, 2, 1],
-								borderColor: lineChart_3gradientStroke4,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension: 0.5,
-								pointBackgroundColor: 'rgba(30, 167, 197, 1)'
-							}
-						]
-					},
-					options: {
-						plugins:{
-							legend:false,
-							
+					calendar.unselect()
+				},
+				
+				editable: true,
+				droppable: true, // this allows things to be dropped onto the calendar
+				drop: function(arg) {
+					// is the "remove after drop" checkbox checked?
+					if (document.getElementById('drop-remove').checked) {
+					// if so, remove the element from the "Draggable Events" list
+					arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+					}
+				},
+				initialDate: '2026-05-01',
+					weekNumbers: true,
+					firstDay: 1,
+					navLinks: true, // can click day/week names to navigate views
+					editable: true,
+					selectable: true,
+					nowIndicator: true,
+				events: [
+						{
+						title: 'All Day Event',
+						start: '2026-05-01'
 						},
-						scales: {
-							y:{
-								max: 100, 
-								min: 0, 
-								ticks: {
-									beginAtZero: true, 
-									stepSize: 20, 
-									padding: 10
-								}
-							},
-							x:{ 
-								ticks: {
-									padding: 5
-								}
-							}
+						{
+						title: 'Long Event',
+						start: '2026-05-07',
+						className: "bg-danger"
+						},
+						{
+						groupId: 999,
+						title: 'Repeating Event',
+						start: '2026-05-09T16:00:00'
+						},
+						{
+						groupId: 999,
+						title: 'Repeating Event',
+						start: '2026-05-16T16:00:00'
+						},
+						{
+						title: 'Conference',
+						start: '2026-05-11',
+						end: '2026-05-13',
+						className: "bg-danger"
+						},
+						{
+						title: 'Meeting',
+						start: '2026-05-12T10:30:00',
+						end: '2026-05-12T12:30:00',
+						className:"bg-info"
+						},
+						{
+						title: 'Lunch',
+						start: '2026-05-12T12:00:00'
+						},
+						{
+						title: 'Meeting',
+						start: '2021-04-12T14:30:00'
+						},
+						{
+						title: 'Happy Hour',
+						start: '2021-07-12T17:30:00'
+						},
+						{
+						title: 'Dinner',
+						start: '2026-05-12T20:00:00',
+						className: "bg-warning"
+						},
+						{
+						title: 'Birthday Party',
+						start: '2026-05-13T07:00:00',
+						className: "bg-secondary"
+						},
+						{
+						title: 'Click for Google',
+						url: 'http://google.com/',
+						start: '2026-05-28'
 						}
-					}
+					]
 				});
-			}
-		}
-			/* Function ============ */
-				return {
-					init:function(){
-					},
-					
-					
-					load:function(){
-						barChart1();
-						barChart3();
-						lineChart2();	
-						lineChart3();
-					},
-					
-					resize:function(){
-						barChart1();
-						barChart3();	
-						lineChart2();
-						lineChart3();
+				calendar.render();
+
+			});
+		"use strict"
+
+		function fullCalender(){
+			
+			
+			
+			/* initialize the external events
+				-----------------------------------------------------------------*/
+
+				var containerEl = document.getElementById('external-events');
+				new FullCalendar.Draggable(containerEl, {
+				itemSelector: '.external-event',
+				eventData: function(eventEl) {
+					return {
+					title: eventEl.innerText.trim()
 					}
 				}
-			
-			}();
-
-			jQuery(document).ready(function(){
-			});
 				
-			jQuery(window).on('load',function(){
-				dzSparkLine.load();
-			});
+				});
+				/* initialize the calendar
+				-----------------------------------------------------------------*/
 
-			jQuery(window).on('resize',function(){
-				//dzSparkLine.resize();
-				setTimeout(function(){ dzSparkLine.resize(); }, 1000);
-			}); 
+				var calendarEl = document.getElementById('calendar');
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+					initialView: 'dayGridMonth',
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth,timeGridWeek,timeGridDay'
+				},
+				eventPositioned: function(info)
+				{
+					if (info.view.type === 'dayGridMonth' && info.el.classList.contains('fc-event')) {
+						var eventCount = info.event._def.extendedProps.eventCount;
+						var moreIndicator = '<div class="event-more">+' + (eventCount - 1) + ' more</div>';
+						
+						if (eventCount > 1) {
+						info.el.querySelector('.fc-event-title').insertAdjacentHTML('beforeend', moreIndicator);
+						}
+					}
+					},
+
+				selectable: true,
+				selectMirror: true,
+				select: function(arg) {
+					var title = prompt('Event Title:');
+					if (title) {
+					calendar.addEvent({
+						title: title,
+						start: arg.start,
+						end: arg.end,
+						allDay: arg.allDay
+					})
+					}
+					calendar.unselect()
+				},
+				
+					longPressDelay: 0,
+				editable: true,
+				droppable: true, // this allows things to be dropped onto the calendar
+				drop: function(arg) {
+					// is the "remove after drop" checkbox checked?
+					if (document.getElementById('drop-remove').checked) {
+					// if so, remove the element from the "Draggable Events" list
+					arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+					}
+				},
+				initialDate: '2026-05-01',
+					weekNumbers: true,
+					firstDay: 1,
+					navLinks: true, // can click day/week names to navigate views
+					editable: false,
+					selectable: false,
+					nowIndicator: true,
+				events: [
+						{
+						title: 'Hari Buruh Internasional',
+						start: '2026-05-01',
+						backgroundColor: '#dc3545', // Your custom hex code
+							borderColor: '#bd2130',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Kenaikan Yesus Kristus',
+						start: '2026-05-14',
+						backgroundColor: '#dc3545', // Your custom hex code
+							borderColor: '#bd2130',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Cuti Bersama Kenaikan Yesus Kristus',
+						start: '2026-05-15',
+						backgroundColor: '#cd5c5c', // Your custom hex code
+							borderColor: '#a54a4a',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Hari Raya Idul Adha',
+						start: '2026-05-27',
+						backgroundColor: '#dc3545', // Your custom hex code
+							borderColor: '#bd2130',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Cuti Bersama Hari Raya Idul Adha',
+						start: '2026-05-28',
+						backgroundColor: '#cd5c5c', // Your custom hex code
+							borderColor: '#a54a4a',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-02',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-03',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-09',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-10',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-16',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-17',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-23',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-24',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-30',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-31',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-04',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:10 - Out : 17:00',
+						start: '2026-05-05',
+						backgroundColor: '#fd7e14', // Your custom hex code
+							borderColor: '#d3680d',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-07',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-11',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-12',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-18',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 12:00',
+						start: '2026-05-19',
+						backgroundColor: '#17a2b8', // Your custom hex code
+							borderColor: '#117a8b',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Annual Leave',
+						start: '2026-05-08',
+						backgroundColor: '#6f42c1', // Your custom hex code
+							borderColor: '#59339d',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Special Leave',
+						start: '2026-05-13',
+						backgroundColor: '#d63384', // Your custom hex code
+							borderColor: '#a82767',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Sick Leave',
+						start: '2026-05-06',
+						backgroundColor: '#0d6efd', // Your custom hex code
+							borderColor: '#0a58ca',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Unpaid Leave',
+						start: '2026-05-21',
+						backgroundColor: '#6c757d', // Your custom hex code
+							borderColor: '#5a6268',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Business Trip',
+						start: '2026-05-22',
+						backgroundColor: '#0dcaf0', // Your custom hex code
+							borderColor: '#0aa2c0',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-04',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-11',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-18',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-25',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Townhall Meeting',
+						start: '2026-05-07',
+						backgroundColor: '#212529', // Your custom hex code
+							borderColor: '#121416',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						}
+						// {
+						//   title: 'Click for Google',
+						//   url: 'http://google.com/',
+						//   start: '2026-05-28'
+						// }
+					]
+				});
+				calendar.render();
+				
+				
 			
-		})(jQuery);
+		}	
+			
+			
+			
+		jQuery(window).on('load',function(){
+			setTimeout(function(){
+				fullCalender();	
+			}, 1000);
+			
+			
+		});	
+
+
+	
+
 	</script>
 
 	<script>
