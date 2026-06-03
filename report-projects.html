@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<!-- Title -->
+	<title>SIAP - HRIS</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="RNB">
+	<meta name="robots" content="">
+
+	<meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+	<meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+	<meta property="og:title" content="SIAP - HRIS">
+	<meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+	<meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+	<!-- All Required CSS -->
+    <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">	
+	<link href="assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+	<!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+	<!-- Start - Switcher CSS -->
+	<link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+	<!-- End - Switcher CSS -->
+
+	<!-- Start - Style Css -->
+	<link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+	<link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+	<!-- End - Style Css -->
+    
+</head>
+<body>
+
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Reports</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+		<!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+			<div class="container-fluid">
+				<!-- Start - Page Title & Breadcrumb -->
+				<div class="page-title">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li><h1>Report</h1></li>
+							<li class="breadcrumb-item">
+								<a href="index.html">
+									<svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Home
+								</a>
+							</li>
+							<li class="breadcrumb-item" aria-current="page">Report</li>
+							<li class="breadcrumb-item active" aria-current="page">Projects</li>
+						</ol>
+					</nav>
+				</div>
+				<!-- End - Page Title & Breadcrumb -->
+				
+				<div class="card h-auto px-md-2 pt-md-2" >
+					<!-- Start - Profile Header -->
+					<div class="card-body d-flex py-md-4" id="profile-header">
+						<script>
+							fetch('fundamentals/layouts/report/profile-header.html')
+							.then(response => response.text()).then(data => { document.getElementById('profile-header').innerHTML = data; });
+						</script>
+					</div>
+					<!-- End - Profile Header -->
+
+					<!-- Start - Profile Navigation -->
+					<div class="card-footer py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
+						<ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a href="reports.html" class="nav-link py-3 px-1 border-3">Overview</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="report-task-list.html" class="nav-link py-3 px-1 border-3">Task List</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="report-projects.html" class="nav-link py-3 px-1 border-3 active">Projects</a>
+							</li>
+						</ul>
+						<ul class="d-xl-flex d-none py-2">
+							<li class="px-1">
+								<a class="btn btn-square btn-light btn-sm" >
+									<i class="fa-brands fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="px-1">
+								<a class="btn btn-square btn-light btn-sm" >
+									<i class="fa-brands fa-instagram"></i>
+								</a>
+							</li>
+							<li class="px-1">
+								<a class="btn btn-square btn-light btn-sm" >
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+							</li>
+							<li class="px-1">
+								<a class="btn btn-square btn-light btn-sm" >
+									<i class="fa-brands fa-telegram"></i>
+								</a>
+							</li>
+							<li class="px-1">
+								<a class="btn btn-square btn-light btn-sm" >
+									<i class="fa-brands fa-youtube"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- End - Profile Navigation -->
+				</div>
+
+                <div class="tab-content" id="tabContentMyProfileBottom">
+
+					<!-- Start - Documents -->
+					<div class="d-flex justify-content-between align-items-center mb-3">
+						<h5 class="mb-0">Projects</h5>
+						<div class="d-flex align-items-center">
+							<ul class="nav nav-pills nav-pills-square-sm gap-2" id="myTabView" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="project-list-tab" data-bs-toggle="tab" data-bs-target="#project-list-pane" type="button" role="tab" aria-controls="project-list-pane" aria-selected="true">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+											<line x1="8" y1="6" x2="21" y2="6"></line>
+											<line x1="8" y1="12" x2="21" y2="12"></line>
+											<line x1="8" y1="18" x2="21" y2="18"></line>
+											<line x1="3" y1="6" x2="3.01" y2="6"></line>
+											<line x1="3" y1="12" x2="3.01" y2="12"></line>
+											<line x1="3" y1="18" x2="3.01" y2="18"></line>
+										</svg>
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="project-grid-tab" data-bs-toggle="tab" data-bs-target="#project-grid-pane" type="button" role="tab" aria-controls="project-grid-pane" aria-selected="false">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+											<rect x="3" y="3" width="7" height="7"></rect>
+											<rect x="14" y="3" width="7" height="7"></rect>
+											<rect x="14" y="14" width="7" height="7"></rect>
+											<rect x="3" y="14" width="7" height="7"></rect>
+										</svg>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- End - Documents -->
+
+					<!-- Start - Billing Statement -->
+					<div class="tab-content" id="myTabContentView">
+						<div class="tab-pane fade show active" id="project-list-pane" role="tabpanel" aria-labelledby="project-list-tab" tabindex="0">
+							<div class="row">
+								<!-- Start - Figma Design -->
+								<div class="col-xxl-3 col-xl-4 col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="clearfix d-flex">
+												<div class="avatar avatar-sm rounded me-3 p-2">
+													<img src="files/reports/pkb.png" alt="">
+												</div>
+												<div class="clearfix">
+													<h6 class="mb-0 fw-semibold"><a href="report-project-details.html" class="stretched-link">Muktamar ke VI PKB 2024</a></h6>
+													<span class="small">Bali Nusa Dua Convention Center, Badung, Bali</span>	
+												</div>	
+											</div>
+											<p class="my-3">Muktamar ke-6 PKB tahun 2024 diselenggarakan pada 24-25 Agustus 2024 di Bali</p>
+											<div class="clearfix">
+												<h6 class="mb-1 fw-medium">Team</h6>
+												<div class="avatar-list avatar-list-stacked">
+													<img src="assets/images/avatar/small/avatar4.webp" class="avatar avatar-xs rounded-circle border border-2 border-white" alt="">
+													<img src="assets/images/avatar/small/avatar5.webp" class="avatar avatar-xs rounded-circle border border-2 border-white" alt="">
+													<img src="assets/images/avatar/small/avatar6.webp" class="avatar avatar-xs rounded-circle border border-2 border-white" alt="">
+													<img src="assets/images/avatar/small/avatar7.webp" class="avatar avatar-xs rounded-circle border border-2 border-white" alt="">
+												</div>
+											</div>
+											<div class="mt-3">
+												<div class="d-flex justify-content-between">
+													<span>Project Complete</span>
+													<span>60%</span>
+												</div>
+												<div class="progress mt-2">
+													<div class="progress-bar bg-purple" style="width:60%;" role="progressbar"></div>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer d-flex justify-content-between flex-wrap">
+											<p class="mb-0 fw-medium">Due <span class="text-purple">: 25 Jun 2026</span></p>
+											<span class="badge badge-sm badge-primary light">In Progress</span>
+										</div>
+									</div>
+								</div>
+								<!-- End - Figma Design -->
+							</div>
+						</div>
+						<div class="tab-pane fade" id="project-grid-pane" role="tabpanel" aria-labelledby="project-grid-tab" tabindex="0">
+							<div class="row">
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">CRUD Invoices</h5>
+												<span class="fs-14">7 files</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Tower Hill Docs</h5>
+												<span class="fs-14">3 files</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Mivy App</h5>
+												<span class="fs-14">25 files</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Leaf CRM API Co..</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/csv.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Tower Hill bilboa..</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/css.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Orders backup</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/pdf.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Avionica.</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/html.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">9 Degree CRUD Req..</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/ppt.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">User CRUD Styles</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/mp3.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Craft Logo</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End - Billing Statement -->
+				</div>
+                    
+				<!-- End - Attendance -->
+            </div>
+		</main>
+		<!-- End - Content Body -->
+
+		<!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+
+        <!-- Start - Modal Create New Task -->
+		<div class="modal fade" id="create">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Create New Task</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<form class="comment-form">
+							<div class="row"> 
+								<div class="col-12 col-lg-12">
+									<div class="mb-3">
+										<label class="form-label">Task Name <span class="required">*</span></label>
+										<input type="text" class="form-control" name="Author" placeholder="Contoh: Rekap absensi bulanan">
+									</div>
+								</div>
+								<div class="col-12 col-lg-12">
+									<div class="mb-3">
+										<label class="form-label">Due Date <span class="required">*</span></label>
+										<input type="text" class="form-control" name="Email" value="20 May 2026">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End - Modal Create New Task -->
+
+		<!-- Start - Modal Details New Task -->
+		<div class="modal fade" id="details">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Task Details</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Task Name</span>
+							</div>
+							<div class="col-8">
+								<span class="text-gray fw-semibold">Mengerjakan Website Company Profile Rajawali Inti Coal Halmahera</span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Task Description</span>
+							</div>
+							<div class="col-8">
+								<span class="text-gray fw-normal">Rekap laporan cuti bulan Mei 2026 dan serahkan ke divisi keuangan untuk selanjutnya dibuat journal bulanan</span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Date - Due Date</span>
+							</div>
+							<div class="col-8">
+								<span class="text-gray fw-semibold">18 Mei 2026 - 19 Mei 2026 (2 days)</span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Attachment</span>
+							</div>
+							<div class="col-8">
+								<span class="text-primary fw-semibold"><a href="http://" class="text-primary" target="_blank" rel="noopener noreferrer">Drive Link</a></span> / 
+								<span class="text-gray fw-semibold">No attachment</span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Blockers</span>
+							</div>
+							<div class="col-8">
+								<span class="text-gray fw-normal">Menunggu approval dari PIC dan Manager</span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Task Category</span>
+							</div>
+							<div class="col-8">
+								<span class="text-gray fw-semibold">Project Report</span> <br>
+								<span class="text-gray fw-normal">Muktamar PKB IV Bali 2024</span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Assigned by</span>
+							</div>
+							<div class="col-8">
+								<span class="text-gray fw-semibold"><a href="" class="text-primary">Rexy Aldinny</a></span>
+							</div>
+						</div>
+						<div class="row py-2">
+							<div class="col-4">
+								<span>Task Status</span>
+							</div>
+							<div class="col-8">
+								<span class="text-danger fw-semibold">On Progress</span>
+							</div>
+						</div>
+						<div class="alert alert-danger outline-dashed border-2 py-3 px-3 mt-3 mb-0 text-dark d-flex align-items-center">
+							<div class="clearfix">
+								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 30C18.9782 30 22.7936 28.4196 25.6066 25.6066C28.4196 22.7936 30 18.9782 30 15C30 11.0218 28.4196 7.20644 25.6066 4.3934C22.7936 1.58035 18.9782 0 15 0C11.0218 0 7.20644 1.58035 4.3934 4.3934C1.58035 7.20644 0 11.0218 0 15C0 18.9782 1.58035 22.7936 4.3934 25.6066C7.20644 28.4196 11.0218 30 15 30ZM12.6562 19.6875H14.0625V15.9375H12.6562C11.877 15.9375 11.25 15.3105 11.25 14.5312C11.25 13.752 11.877 13.125 12.6562 13.125H15.4688C16.248 13.125 16.875 13.752 16.875 14.5312V19.6875H17.3438C18.123 19.6875 18.75 20.3145 18.75 21.0938C18.75 21.873 18.123 22.5 17.3438 22.5H12.6562C11.877 22.5 11.25 21.873 11.25 21.0938C11.25 20.3145 11.877 19.6875 12.6562 19.6875ZM15 7.5C15.4973 7.5 15.9742 7.69754 16.3258 8.04918C16.6775 8.40081 16.875 8.87772 16.875 9.375C16.875 9.87228 16.6775 10.3492 16.3258 10.7008C15.9742 11.0525 15.4973 11.25 15 11.25C14.5027 11.25 14.0258 11.0525 13.6742 10.7008C13.3225 10.3492 13.125 9.87228 13.125 9.375C13.125 8.87772 13.3225 8.40081 13.6742 8.04918C14.0258 7.69754 14.5027 7.5 15 7.5Z" fill="#F94687"></path>
+								</svg>
+							</div>
+							<div class="mx-3">
+								<h6 class="mb-0 fw-semibold">Pending Tasks Reminder!</h6>
+								<p class="mb-0">You currently have active tasks that are not yet marked as complete.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End - Modal Details New Task -->
+
+		<!-- Start - Modal Filter Task -->
+		<div class="modal fade" id="filter">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Filter Task</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<form class="comment-form">
+							<div class="row"> 
+								<div class="col-12 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label">Month <span class="required">*</span></label>
+										<select class="form-control default-select">
+											<option value="1">January</option>
+											<option value="2">February</option>
+											<option value="3">March</option>
+											<option value="4">April</option>
+											<option value="5" selected>May</option>
+											<option value="6">June</option>
+											<option value="7">July</option>
+											<option value="8">August</option>
+											<option value="9">September</option>
+											<option value="10">October</option>
+											<option value="11">November</option>
+											<option value="12">December</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label">Year <span class="required">*</span></label>
+										<select class="form-control default-select">
+											<option value="2024">2024</option>
+											<option value="2025">2025</option>
+											<option value="2026" selected>2026</option>
+											<option value="2027">2027</option>
+											<option value="2028">2028</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End - Modal Filter Task -->
+
+		<!-- Start - Modal Complete Task -->
+		<div class="modal fade" id="complete">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Complete a Task</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<form class="comment-form">
+							<div class="row"> 
+								<div class="col-12 col-md-12">
+									<div class="mb-3">
+										<label class="form-label">Task Name <span class="required text-danger">*</span></label>
+										<input type="text" class="form-control" name="Author" placeholder="Contoh: Rekap absensi bulanan" value="Mengerjakan Website Company Profile Rajawali Inti Coal Halmahera">
+									</div>
+								</div> 
+								<div class="col-12 col-md-12">
+									<div class="mb-3">
+										<label class="form-label">Task Description <span class="required text-danger">*</span></label>
+										<textarea class="form-control" rows="3" placeholder="Tambahkan detail atau konteks pekerjaan"></textarea>
+									</div>
+								</div>
+								<div class="col-6 col-md-3">
+									<div class="mb-3">
+										<label class="form-label">Date <span class="required text-danger">*</span></label>
+										<input type="text" class="form-control" name="Email" value="20 May 2026">
+									</div>
+								</div>
+								<div class="col-6 col-md-3">
+									<div class="mb-3">
+										<label class="form-label">Duration <span class="required text-danger">*</span></label>
+										<input type="time" class="form-control" name="Email" value="20 May 2026">
+									</div>
+								</div>
+								<div class="col-12 col-md-3">
+									<div class="mb-3">
+										<label class="form-label">Workload <span class="required text-danger">*</span></label>
+										<select class="form-control default-select">
+											<option>Light</option>
+											<option selected>Moderate</option>
+											<option>Heavy</option>
+										</select>									
+									</div>
+								</div>
+								<div class="col-12 col-md-3">
+									<div class="mb-3">
+										<label class="form-label">Priority <span class="required text-danger">*</span></label>
+										<select class="form-control default-select">
+											<option class="text-success fw-semibold">Low</option>
+											<option  class="text-warning fw-semibold" selected>Medium</option>
+											<option  class="text-danger fw-semibold">High</option>
+										</select>									
+									</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="mb-3">
+										<label class="form-label">Attachment</label>
+										<input type="text" class="form-control" name="Author" placeholder="Contoh: Link Google Drive, Figma, atau Docs">
+									</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="mb-3">
+										<label class="form-label">Blockers</label>
+										<input type="text" class="form-control" name="Author" placeholder="Contoh: Menunggu persetujuan (approval) dokumen dari manajer">
+									</div>
+								</div>
+								<div class="col-6 col-md-6">
+									<div class="mb-3">
+										<label class="form-label">Task Category <span class="required text-danger">*</span></label>
+										<select class="form-control default-select">
+											<option selected>Daily Task Report</option>
+											<option>Project Report</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-6 col-md-6">
+									<div class="mb-3">
+										<label class="form-label">Project Name <span class="required text-danger">*</span></label>
+										<select class="form-control default-select" disabled>
+											<option>Pilih Nama Project</option>
+											<option>Option 2</option>
+											<option>Option 3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-md-12">
+									<div class="mb-3">
+										<label class="form-label">Task Status <span class="required text-danger">*</span></label>
+										<select class="form-control default-select">
+											<option>To Do</option>
+											<option>On Progress</option>
+											<option>In Review</option>
+											<option>Completed</option>
+											<option>On Hold</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End - Modal Send Message -->
+
+        <!-- Modal Box Start -->
+        <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="deleteLabel">Delete Task</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <h5 class="text-muted fw-bold text-center">Withdraw Task Submission?</h5>
+                                    <p class="form-label text-muted mb-3">
+                                        Do you want to cancel this pending task? We will remove it from the reviewer's queue so you can submit a revised one later if necessary.
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark light" data-bs-dismiss="modal">Nevermind</button>
+                        <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Yes, Delete It</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal-Box-End -->
+
+	</div>
+    <!-- End - Main Wrapper -->
+	
+	<!-- Start - Script -->
+	<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+		<!-- Chart piety plugin files -->
+    <script src="assets/vendor/peity/jquery.peity.min.js"></script>
+
+	<!-- Script For Apexchart -->
+	<script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+
+    	<!-- Script For Bootstrap Datetimepicker -->
+	<script src="assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+	<script src="assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script>
+		(function($){
+
+		var dzProfile = function(){
+			var chartProfileProgress = function(){
+				var options = {
+					series: [
+						{
+							name: 'Attendance Score',
+							data: [18, 18, 18, 20, 20, 22, 13, 15, 16, 17, 18, 12],
+						},
+					],
+					chart: {
+						type: 'area',
+						height: 100,
+						toolbar: {
+							show: false,
+						},
+						zoom: {
+							enabled: false
+						},
+						sparkline: {
+							enabled: true
+						}
+					},
+					colors:[
+						'var(--bs-primary)'
+					],
+					dataLabels: {
+						enabled: false,
+					},
+					legend: {
+						show: false,
+					},
+					stroke: {
+						show: true,
+						width: 2,
+						curve:'straight',
+						colors:['var(--bs-primary)'],
+					},
+					grid: {
+						show:false,
+						borderColor: '#eee',
+						padding: {
+							top: 0,
+							right: 0,
+							bottom: 0,
+							left: -1
+						}
+					},
+					states: {
+						normal: {
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						},
+						hover: {
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						},
+						active: {
+							allowMultipleDataPointsSelection: false,
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						}
+					},
+					xaxis: {
+						categories: [
+							'January',
+							'February',
+							'March',
+							'April',
+							'May',
+							'June',
+							'July',
+							'August',
+							'September',
+							'October',
+							'November',
+							'December'
+						],
+						axisBorder: {
+							show: false,
+						},
+						axisTicks: {
+							show: false
+						},
+						labels: {
+							show: false,
+							style: {
+								fontSize: '12px',
+							}
+						},
+						crosshairs: {
+							show: false,
+							position: 'front',
+							stroke: {
+								width: 1,
+								dashArray: 3
+							}
+						},
+						tooltip: {
+							enabled: false,
+							formatter: undefined,
+							offsetY: 0,
+							style: {
+								fontSize: '12px',
+							}
+						}
+					},
+					yaxis: {
+						show: false,
+					},
+					fill: {
+						opacity: 0.9,
+						colors:'var(--bs-primary)',
+						type: 'gradient', 
+						gradient: {
+							colorStops:[
+								{
+									offset: 0,
+									color: 'var(--bs-primary)',
+									opacity: .4
+								},
+								{
+									offset: 0.6,
+									color: 'var(--bs-primary)',
+									opacity: .4
+								},
+								{
+									offset: 100,
+									color: 'white',
+									opacity: 0
+								}
+							],
+						}
+					},
+					tooltip: {
+						enabled:true,
+						style: {
+							fontSize: '12px',
+						},
+						y: {
+							formatter: function(val) {
+								return val + " days"
+							}
+						}
+					}
+				};
+
+				if($('#chartProfileProgress').length > 0){
+					var handleProfileProgress = new ApexCharts(document.querySelector("#chartProfileProgress"), options);
+					handleProfileProgress.render();
+				}
+			
+			}
+			
+			/* Function ============ */
+			return {
+				
+				load:function(){
+					chartProfileProgress();
+				},
+				
+				resize:function(){
+					lineChartSecuritySummary();
+				}
+			}
+			
+		}();
+
+		jQuery(window).on('load',function(){
+			setTimeout(function(){
+				dzProfile.load();
+			}, 1000); 
+		});
+
+		jQuery(window).on('resize',function () {
+			setTimeout(function(){
+				dzProfile.resize();
+			}, 1000);
+			
+		});
+
+		})(jQuery);
+
+	</script>
+	
+	<!-- Script For Multiple Languages -->
+	<script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+	
+	<!-- Script For Custom JS -->
+	<script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#datetimepicker1').datetimepicker({
+				inline: true,
+			});
+		});
+	</script>
+</body>
+</html>
