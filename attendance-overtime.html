@@ -1,0 +1,1970 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <!-- Title -->
+    <title>SIAP - HRIS</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="RNB">
+    <meta name="robots" content="">
+
+    <meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+    <meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+    <meta property="og:title" content="SIAP - HRIS">
+    <meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+    <meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+    <!-- All Required CSS -->
+
+    <!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+    <!-- Start - Switcher CSS -->
+    <link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+    <!-- End - Switcher CSS -->
+
+    <!-- Start - Style Css -->
+    <link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+    <link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+    <!-- End - Style Css -->
+</head>
+
+<body>
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Attendance</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+        <!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+            
+            <div class="container-fluid">
+
+                <!-- Start - Page Title & Breadcrumb -->
+                <div class="page-title">
+                        <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><h1>Attendance</h1></li>
+                            <li class="breadcrumb-item">
+                                <a href="index.html">
+                                    <svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page">Attendance</li>
+                            <li class="breadcrumb-item active" aria-current="page">Overtime</li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- End - Page Title & Breadcrumb -->
+                
+                <div class="card h-auto px-md-2 pt-md-2">
+
+                    <!-- Start - Profile Header -->
+                    <div class="card-body d-flex py-md-4" id="profile-header">
+						<script>
+							fetch('fundamentals/layouts/attendance/profile-header.html')
+							.then(response => response.text()).then(data => { document.getElementById('profile-header').innerHTML = data; });
+						</script>
+					</div>
+                    <!-- End - Profile Header -->
+
+                    <!-- Start - Profile Navigation -->
+                    <div class="card-footer py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
+                        <ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a href="attendances.html" class="nav-link py-3 px-1 border-3">Overview</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-recap.html" class="nav-link py-3 px-1 border-3">Recap</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-leave.html" class="nav-link py-3 px-1 border-3">Leave</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-business-trip.html" class="nav-link py-3 px-1 border-3">Business Trip</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-overtime.html" class="nav-link py-3 px-1 border-3 active">Overtime</a>
+							</li>
+						</ul>
+                        <ul class="d-xl-flex d-none py-2">
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End - Profile Navigation -->
+                
+                </div>
+
+                <!-- Start - My Projects -->
+                <div class="col-lg-12">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Overtime</h5>
+                        <div class="d-flex align-items-center">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End - My Projects -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-info rounded-circle border-0">
+                                        <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.64826 26.5285C0.547125 26.7394 -0.174308 27.8026 0.0366371 28.9038C0.222269 29.8741 1.07449 30.5491 2.02796 30.5491C2.15453 30.5491 2.28531 30.5364 2.41188 30.5112L10.7653 28.908C11.242 28.8152 11.6682 28.5578 11.9719 28.1781L15.558 23.6554L14.3599 23.0437C13.4739 22.5965 12.8579 21.7865 12.6469 20.8035L9.26338 25.0688L1.64826 26.5285Z" fill="#A02CFA"/>
+                                            <path d="M31.3999 8.89345C33.8558 8.89345 35.8467 6.90258 35.8467 4.44673C35.8467 1.99087 33.8558 0 31.3999 0C28.9441 0 26.9532 1.99087 26.9532 4.44673C26.9532 6.90258 28.9441 8.89345 31.3999 8.89345Z" fill="#A02CFA"/>
+                                            <path d="M21.6965 3.33297C21.2282 2.85202 20.7937 2.66217 20.3169 2.66217C20.1439 2.66217 19.971 2.68748 19.7853 2.72967L12.1534 4.53958C11.0986 4.78849 10.4489 5.84744 10.6979 6.89795C10.913 7.80079 11.7146 8.40831 12.6048 8.40831C12.7567 8.40831 12.9086 8.39144 13.0605 8.35347L19.5618 6.81357C19.9837 7.28187 22.0974 9.57273 22.4813 9.97775C19.7938 12.855 17.1064 15.7281 14.4189 18.6054C14.3767 18.6519 14.3388 18.6982 14.3008 18.7446C13.5161 19.7445 13.7566 21.3139 14.9379 21.9088L23.1774 26.1151L18.8994 33.0467C18.313 34.0002 18.6083 35.249 19.5618 35.8396C19.8951 36.0464 20.2621 36.1434 20.6249 36.1434C21.3042 36.1434 21.9707 35.8017 22.3547 35.1815L27.7886 26.3766C28.0882 25.8915 28.1683 25.305 28.0122 24.7608C27.8561 24.2123 27.4806 23.7567 26.9702 23.4993L21.3885 20.66L27.2571 14.3823L31.6869 18.1371C32.0539 18.4493 32.5054 18.6012 32.9526 18.6012C33.4335 18.6012 33.9145 18.424 34.2899 18.078L39.3737 13.3402C40.1669 12.6019 40.2133 11.3615 39.475 10.5684C39.0868 10.1549 38.5637 9.944 38.0406 9.944C37.5638 9.944 37.0829 10.117 36.7074 10.4671L32.9019 14.0068C32.8977 14.011 23.363 5.04163 21.6965 3.33297Z" fill="#A02CFA"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Total Logged Hours (May)</p>
+                                        <span class="title text-black fs-28 fw-semibold">15 Hours</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-info" style="width: 100%; height:5px;" aria-label="Progess-info" role="progressbar">
+                                            <span class="sr-only">100% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-success rounded-circle border-0">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip2)">
+                                            <path d="M14.6406 24.384C14.4639 24.1871 14.421 23.904 14.5305 23.6633C15.9635 20.513 14.4092 18.7501 14.564 11.6323C14.5713 11.2944 14.8346 10.9721 15.2564 10.9801C15.6201 10.987 15.905 11.2962 15.8971 11.6598C15.8902 11.9762 15.8871 12.2939 15.8875 12.6123C15.888 12.9813 16.1893 13.2826 16.5583 13.2776C17.6426 13.2628 19.752 12.9057 20.5684 10.4567L20.9744 9.23876C21.7257 6.9847 20.4421 4.55115 18.1335 3.91572L13.9816 2.77294C12.3274 2.31768 10.5363 2.94145 9.52387 4.32498C4.66826 10.9599 1.44452 18.5903 0.0754914 26.6727C-0.300767 28.8937 0.754757 31.1346 2.70222 32.2488C13.6368 38.5051 26.6023 39.1113 38.35 33.6379C39.3524 33.1709 40.0002 32.1534 40.0002 31.0457V19.1321C40.0002 18.182 39.5322 17.2976 38.7484 16.7664C34.5339 13.91 29.1672 14.2521 25.5723 18.0448C25.2519 18.3828 25.3733 18.937 25.8031 19.1166C27.4271 19.7957 28.9625 20.7823 30.2439 21.9475C30.5225 22.2008 30.542 22.6396 30.2654 22.9155C30.0143 23.1658 29.6117 23.1752 29.3485 22.9376C25.9907 19.9053 21.4511 18.5257 16.935 19.9686C16.658 20.0571 16.4725 20.3193 16.477 20.61C16.496 21.8194 16.294 22.9905 15.7421 24.2172C15.5453 24.6544 14.9607 24.7409 14.6406 24.384Z" fill="#27BC48"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip2">
+                                            <rect width="40" height="40" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Overtime Cap (40 Hours)</p>
+                                        <span class="title text-black fs-28 fw-semibold">15 H (37%)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar bg-success position-absolute rounded bootom-0" style="width: 95%; height:5px;" aria-label="Progess-success" role="progressbar">
+                                            <span class="sr-only">95% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-success"></div>
+                        </div>
+                    </div>
+                    <!-- Start - Daily Cycling -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-danger rounded-circle border-0">
+                                        <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.0977 7.90402L9.78535 16.7845C9.17929 17.6683 9.40656 18.872 10.2862 19.4738L18.6574 25.2104V30.787C18.6574 31.8476 19.4992 32.7357 20.5598 32.7568C21.6456 32.7735 22.5295 31.9023 22.5295 30.8207V24.1961C22.5295 23.5564 22.2138 22.9588 21.6877 22.601L16.3174 18.9184L20.8376 14.1246L23.1524 19.3982C23.4596 20.101 24.1582 20.5556 24.9243 20.5556H31.974C33.0346 20.5556 33.9226 19.7139 33.9437 18.6532C33.9605 17.5674 33.0893 16.6835 32.0076 16.6835H26.1953C25.4293 14.9411 24.6128 13.2155 23.9015 11.4478C23.5395 10.5556 23.3376 10.1684 22.6726 9.55389C22.5379 9.42763 21.5993 8.56904 20.7618 7.80305C19.9916 7.10435 18.8047 7.15065 18.0977 7.90402Z" fill="#FF3282"/>
+                                            <path d="M26.0269 8.87206C28.4769 8.87206 30.463 6.88598 30.463 4.43603C30.463 1.98608 28.4769 0 26.0269 0C23.577 0 21.5909 1.98608 21.5909 4.43603C21.5909 6.88598 23.577 8.87206 26.0269 8.87206Z" fill="#FF3282"/>
+                                            <path d="M8.16498 38.388C12.6744 38.388 16.33 34.7325 16.33 30.2231C16.33 25.7137 12.6744 22.0581 8.16498 22.0581C3.65559 22.0581 0 25.7137 0 30.2231C0 34.7325 3.65559 38.388 8.16498 38.388Z" fill="#FF3282"/>
+                                            <path d="M31.835 38.388C36.3444 38.388 40 34.7325 40 30.2231C40 25.7137 36.3444 22.0581 31.835 22.0581C27.3256 22.0581 23.67 25.7137 23.67 30.2231C23.67 34.7325 27.3256 38.388 31.835 38.388Z" fill="#FF3282"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Average Extra Hours</p>
+                                        <span class="title text-black fs-28 fw-semibold">3.5 H / Week</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-danger" style="width: 10%; height:5px;" aria-label="Progess-danger"  role="progressbar">
+                                            <span class="sr-only">10% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-danger"></div>
+                        </div>
+                    </div>
+                    <!-- End - Daily Cycling -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-secondary rounded-circle border-0">
+                                        <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.64826 26.5285C0.547125 26.7394 -0.174308 27.8026 0.0366371 28.9038C0.222269 29.8741 1.07449 30.5491 2.02796 30.5491C2.15453 30.5491 2.28531 30.5364 2.41188 30.5112L10.7653 28.908C11.242 28.8152 11.6682 28.5578 11.9719 28.1781L15.558 23.6554L14.3599 23.0437C13.4739 22.5965 12.8579 21.7865 12.6469 20.8035L9.26338 25.0688L1.64826 26.5285Z" fill="#A02CFA"/>
+                                            <path d="M31.3999 8.89345C33.8558 8.89345 35.8467 6.90258 35.8467 4.44673C35.8467 1.99087 33.8558 0 31.3999 0C28.9441 0 26.9532 1.99087 26.9532 4.44673C26.9532 6.90258 28.9441 8.89345 31.3999 8.89345Z" fill="#A02CFA"/>
+                                            <path d="M21.6965 3.33297C21.2282 2.85202 20.7937 2.66217 20.3169 2.66217C20.1439 2.66217 19.971 2.68748 19.7853 2.72967L12.1534 4.53958C11.0986 4.78849 10.4489 5.84744 10.6979 6.89795C10.913 7.80079 11.7146 8.40831 12.6048 8.40831C12.7567 8.40831 12.9086 8.39144 13.0605 8.35347L19.5618 6.81357C19.9837 7.28187 22.0974 9.57273 22.4813 9.97775C19.7938 12.855 17.1064 15.7281 14.4189 18.6054C14.3767 18.6519 14.3388 18.6982 14.3008 18.7446C13.5161 19.7445 13.7566 21.3139 14.9379 21.9088L23.1774 26.1151L18.8994 33.0467C18.313 34.0002 18.6083 35.249 19.5618 35.8396C19.8951 36.0464 20.2621 36.1434 20.6249 36.1434C21.3042 36.1434 21.9707 35.8017 22.3547 35.1815L27.7886 26.3766C28.0882 25.8915 28.1683 25.305 28.0122 24.7608C27.8561 24.2123 27.4806 23.7567 26.9702 23.4993L21.3885 20.66L27.2571 14.3823L31.6869 18.1371C32.0539 18.4493 32.5054 18.6012 32.9526 18.6012C33.4335 18.6012 33.9145 18.424 34.2899 18.078L39.3737 13.3402C40.1669 12.6019 40.2133 11.3615 39.475 10.5684C39.0868 10.1549 38.5637 9.944 38.0406 9.944C37.5638 9.944 37.0829 10.117 36.7074 10.4671L32.9019 14.0068C32.8977 14.011 23.363 5.04163 21.6965 3.33297Z" fill="#A02CFA"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Tasks Finalized</p>
+                                        <span class="title text-black fs-28 fw-semibold">5 Tasks</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-secondary" style="width: 10%; height:5px;" aria-label="Progess-secondary" role="progressbar">
+                                            <span class="sr-only">10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-info rounded-circle border-0">
+                                        <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.64826 26.5285C0.547125 26.7394 -0.174308 27.8026 0.0366371 28.9038C0.222269 29.8741 1.07449 30.5491 2.02796 30.5491C2.15453 30.5491 2.28531 30.5364 2.41188 30.5112L10.7653 28.908C11.242 28.8152 11.6682 28.5578 11.9719 28.1781L15.558 23.6554L14.3599 23.0437C13.4739 22.5965 12.8579 21.7865 12.6469 20.8035L9.26338 25.0688L1.64826 26.5285Z" fill="#A02CFA"/>
+                                            <path d="M31.3999 8.89345C33.8558 8.89345 35.8467 6.90258 35.8467 4.44673C35.8467 1.99087 33.8558 0 31.3999 0C28.9441 0 26.9532 1.99087 26.9532 4.44673C26.9532 6.90258 28.9441 8.89345 31.3999 8.89345Z" fill="#A02CFA"/>
+                                            <path d="M21.6965 3.33297C21.2282 2.85202 20.7937 2.66217 20.3169 2.66217C20.1439 2.66217 19.971 2.68748 19.7853 2.72967L12.1534 4.53958C11.0986 4.78849 10.4489 5.84744 10.6979 6.89795C10.913 7.80079 11.7146 8.40831 12.6048 8.40831C12.7567 8.40831 12.9086 8.39144 13.0605 8.35347L19.5618 6.81357C19.9837 7.28187 22.0974 9.57273 22.4813 9.97775C19.7938 12.855 17.1064 15.7281 14.4189 18.6054C14.3767 18.6519 14.3388 18.6982 14.3008 18.7446C13.5161 19.7445 13.7566 21.3139 14.9379 21.9088L23.1774 26.1151L18.8994 33.0467C18.313 34.0002 18.6083 35.249 19.5618 35.8396C19.8951 36.0464 20.2621 36.1434 20.6249 36.1434C21.3042 36.1434 21.9707 35.8017 22.3547 35.1815L27.7886 26.3766C28.0882 25.8915 28.1683 25.305 28.0122 24.7608C27.8561 24.2123 27.4806 23.7567 26.9702 23.4993L21.3885 20.66L27.2571 14.3823L31.6869 18.1371C32.0539 18.4493 32.5054 18.6012 32.9526 18.6012C33.4335 18.6012 33.9145 18.424 34.2899 18.078L39.3737 13.3402C40.1669 12.6019 40.2133 11.3615 39.475 10.5684C39.0868 10.1549 38.5637 9.944 38.0406 9.944C37.5638 9.944 37.0829 10.117 36.7074 10.4671L32.9019 14.0068C32.8977 14.011 23.363 5.04163 21.6965 3.33297Z" fill="#A02CFA"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Pending SPV Approval</p>
+                                        <span class="title text-black fs-28 fw-semibold">4 Hours</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-info" style="width: 100%; height:5px;" aria-label="Progess-info" role="progressbar">
+                                            <span class="sr-only">100% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-success rounded-circle border-0">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip2)">
+                                            <path d="M14.6406 24.384C14.4639 24.1871 14.421 23.904 14.5305 23.6633C15.9635 20.513 14.4092 18.7501 14.564 11.6323C14.5713 11.2944 14.8346 10.9721 15.2564 10.9801C15.6201 10.987 15.905 11.2962 15.8971 11.6598C15.8902 11.9762 15.8871 12.2939 15.8875 12.6123C15.888 12.9813 16.1893 13.2826 16.5583 13.2776C17.6426 13.2628 19.752 12.9057 20.5684 10.4567L20.9744 9.23876C21.7257 6.9847 20.4421 4.55115 18.1335 3.91572L13.9816 2.77294C12.3274 2.31768 10.5363 2.94145 9.52387 4.32498C4.66826 10.9599 1.44452 18.5903 0.0754914 26.6727C-0.300767 28.8937 0.754757 31.1346 2.70222 32.2488C13.6368 38.5051 26.6023 39.1113 38.35 33.6379C39.3524 33.1709 40.0002 32.1534 40.0002 31.0457V19.1321C40.0002 18.182 39.5322 17.2976 38.7484 16.7664C34.5339 13.91 29.1672 14.2521 25.5723 18.0448C25.2519 18.3828 25.3733 18.937 25.8031 19.1166C27.4271 19.7957 28.9625 20.7823 30.2439 21.9475C30.5225 22.2008 30.542 22.6396 30.2654 22.9155C30.0143 23.1658 29.6117 23.1752 29.3485 22.9376C25.9907 19.9053 21.4511 18.5257 16.935 19.9686C16.658 20.0571 16.4725 20.3193 16.477 20.61C16.496 21.8194 16.294 22.9905 15.7421 24.2172C15.5453 24.6544 14.9607 24.7409 14.6406 24.384Z" fill="#27BC48"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip2">
+                                            <rect width="40" height="40" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Approved & Locked</p>
+                                        <span class="title text-black fs-28 fw-semibold">11 Hours</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar bg-success position-absolute rounded bootom-0" style="width: 95%; height:5px;" aria-label="Progess-success" role="progressbar">
+                                            <span class="sr-only">95% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-success"></div>
+                        </div>
+                    </div>
+                    <!-- Start - Daily Cycling -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-danger rounded-circle border-0">
+                                        <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.0977 7.90402L9.78535 16.7845C9.17929 17.6683 9.40656 18.872 10.2862 19.4738L18.6574 25.2104V30.787C18.6574 31.8476 19.4992 32.7357 20.5598 32.7568C21.6456 32.7735 22.5295 31.9023 22.5295 30.8207V24.1961C22.5295 23.5564 22.2138 22.9588 21.6877 22.601L16.3174 18.9184L20.8376 14.1246L23.1524 19.3982C23.4596 20.101 24.1582 20.5556 24.9243 20.5556H31.974C33.0346 20.5556 33.9226 19.7139 33.9437 18.6532C33.9605 17.5674 33.0893 16.6835 32.0076 16.6835H26.1953C25.4293 14.9411 24.6128 13.2155 23.9015 11.4478C23.5395 10.5556 23.3376 10.1684 22.6726 9.55389C22.5379 9.42763 21.5993 8.56904 20.7618 7.80305C19.9916 7.10435 18.8047 7.15065 18.0977 7.90402Z" fill="#FF3282"/>
+                                            <path d="M26.0269 8.87206C28.4769 8.87206 30.463 6.88598 30.463 4.43603C30.463 1.98608 28.4769 0 26.0269 0C23.577 0 21.5909 1.98608 21.5909 4.43603C21.5909 6.88598 23.577 8.87206 26.0269 8.87206Z" fill="#FF3282"/>
+                                            <path d="M8.16498 38.388C12.6744 38.388 16.33 34.7325 16.33 30.2231C16.33 25.7137 12.6744 22.0581 8.16498 22.0581C3.65559 22.0581 0 25.7137 0 30.2231C0 34.7325 3.65559 38.388 8.16498 38.388Z" fill="#FF3282"/>
+                                            <path d="M31.835 38.388C36.3444 38.388 40 34.7325 40 30.2231C40 25.7137 36.3444 22.0581 31.835 22.0581C27.3256 22.0581 23.67 25.7137 23.67 30.2231C23.67 34.7325 27.3256 38.388 31.835 38.388Z" fill="#FF3282"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Estimated Extra Earnings</p>
+                                        <span class="title text-black fs-28 fw-semibold">Rp 225.000</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-danger" style="width: 10%; height:5px;" aria-label="Progess-danger"  role="progressbar">
+                                            <span class="sr-only">10% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-danger"></div>
+                        </div>
+                    </div>
+                    <!-- End - Daily Cycling -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <span class="avatar avatar-lg avatar-secondary rounded-circle border-0">
+                                        <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.64826 26.5285C0.547125 26.7394 -0.174308 27.8026 0.0366371 28.9038C0.222269 29.8741 1.07449 30.5491 2.02796 30.5491C2.15453 30.5491 2.28531 30.5364 2.41188 30.5112L10.7653 28.908C11.242 28.8152 11.6682 28.5578 11.9719 28.1781L15.558 23.6554L14.3599 23.0437C13.4739 22.5965 12.8579 21.7865 12.6469 20.8035L9.26338 25.0688L1.64826 26.5285Z" fill="#A02CFA"/>
+                                            <path d="M31.3999 8.89345C33.8558 8.89345 35.8467 6.90258 35.8467 4.44673C35.8467 1.99087 33.8558 0 31.3999 0C28.9441 0 26.9532 1.99087 26.9532 4.44673C26.9532 6.90258 28.9441 8.89345 31.3999 8.89345Z" fill="#A02CFA"/>
+                                            <path d="M21.6965 3.33297C21.2282 2.85202 20.7937 2.66217 20.3169 2.66217C20.1439 2.66217 19.971 2.68748 19.7853 2.72967L12.1534 4.53958C11.0986 4.78849 10.4489 5.84744 10.6979 6.89795C10.913 7.80079 11.7146 8.40831 12.6048 8.40831C12.7567 8.40831 12.9086 8.39144 13.0605 8.35347L19.5618 6.81357C19.9837 7.28187 22.0974 9.57273 22.4813 9.97775C19.7938 12.855 17.1064 15.7281 14.4189 18.6054C14.3767 18.6519 14.3388 18.6982 14.3008 18.7446C13.5161 19.7445 13.7566 21.3139 14.9379 21.9088L23.1774 26.1151L18.8994 33.0467C18.313 34.0002 18.6083 35.249 19.5618 35.8396C19.8951 36.0464 20.2621 36.1434 20.6249 36.1434C21.3042 36.1434 21.9707 35.8017 22.3547 35.1815L27.7886 26.3766C28.0882 25.8915 28.1683 25.305 28.0122 24.7608C27.8561 24.2123 27.4806 23.7567 26.9702 23.4993L21.3885 20.66L27.2571 14.3823L31.6869 18.1371C32.0539 18.4493 32.5054 18.6012 32.9526 18.6012C33.4335 18.6012 33.9145 18.424 34.2899 18.078L39.3737 13.3402C40.1669 12.6019 40.2133 11.3615 39.475 10.5684C39.0868 10.1549 38.5637 9.944 38.0406 9.944C37.5638 9.944 37.0829 10.117 36.7074 10.4671L32.9019 14.0068C32.8977 14.011 23.363 5.04163 21.6965 3.33297Z" fill="#A02CFA"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="fs-14 mb-2">Disputed Hours</p>
+                                        <span class="title text-black fs-28 fw-semibold">0 Hours</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-secondary" style="width: 10%; height:5px;" aria-label="Progess-secondary" role="progressbar">
+                                            <span class="sr-only">10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-secondary"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0">Overtime List</h5>
+                            <div class="d-flex align-items-center">
+                                <a class="btn rounded btn-primary mt-xxl-0 mt-xl-3 mt-lg-0 mt-3" data-bs-toggle="modal" data-bs-target="#filter">
+                                    <svg class="me-2" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.31615 6H14.4744C14.4744 6.53043 14.6882 7.03914 15.0686 7.41421C15.4491 7.78929 15.9651 8 16.5032 8H18.532C19.07 8 19.5861 7.78929 19.9665 7.41421C20.347 7.03914 20.5607 6.53043 20.5607 6H21.5751C21.8442 6 22.1022 5.89464 22.2924 5.70711C22.4827 5.51957 22.5895 5.26522 22.5895 5C22.5895 4.73478 22.4827 4.48043 22.2924 4.29289C22.1022 4.10536 21.8442 4 21.5751 4H20.5607C20.5607 3.46957 20.347 2.96086 19.9665 2.58579C19.5861 2.21071 19.07 2 18.532 2H16.5032C15.9651 2 15.4491 2.21071 15.0686 2.58579C14.6882 2.96086 14.4744 3.46957 14.4744 4H3.31615C3.04711 4 2.7891 4.10536 2.59887 4.29289C2.40863 4.48043 2.30176 4.73478 2.30176 5C2.30176 5.26522 2.40863 5.51957 2.59887 5.70711C2.7891 5.89464 3.04711 6 3.31615 6ZM16.5032 4H18.532V5V6H16.5032V4ZM21.5751 11H12.4456C12.4456 10.4696 12.2319 9.96086 11.8514 9.58579C11.471 9.21071 10.9549 9 10.4169 9H8.38809C7.85002 9 7.334 9.21071 6.95353 9.58579C6.57306 9.96086 6.35931 10.4696 6.35931 11H3.31615C3.04711 11 2.7891 11.1054 2.59887 11.2929C2.40863 11.4804 2.30176 11.7348 2.30176 12C2.30176 12.2652 2.40863 12.5196 2.59887 12.7071C2.7891 12.8946 3.04711 13 3.31615 13H6.35931C6.35931 13.5304 6.57306 14.0391 6.95353 14.4142C7.334 14.7893 7.85002 15 8.38809 15H10.4169C10.9549 15 11.471 14.7893 11.8514 14.4142C12.2319 14.0391 12.4456 13.5304 12.4456 13H21.5751C21.8442 13 22.1022 12.8946 22.2924 12.7071C22.4827 12.5196 22.5895 12.2652 22.5895 12C22.5895 11.7348 22.4827 11.4804 22.2924 11.2929C22.1022 11.1054 21.8442 11 21.5751 11ZM8.38809 13V11H10.4169V12V13H8.38809ZM21.5751 18H18.532C18.532 17.4696 18.3182 16.9609 17.9378 16.5858C17.5573 16.2107 17.0413 16 16.5032 16H14.4744C13.9364 16 13.4203 16.2107 13.0399 16.5858C12.6594 16.9609 12.4456 17.4696 12.4456 18H3.31615C3.04711 18 2.7891 18.1054 2.59887 18.2929C2.40863 18.4804 2.30176 18.7348 2.30176 19C2.30176 19.2652 2.40863 19.5196 2.59887 19.7071C2.7891 19.8946 3.04711 20 3.31615 20H12.4456C12.4456 20.5304 12.6594 21.0391 13.0399 21.4142C13.4203 21.7893 13.9364 22 14.4744 22H16.5032C17.0413 22 17.5573 21.7893 17.9378 21.4142C18.3182 21.0391 18.532 20.5304 18.532 20H21.5751C21.8442 20 22.1022 19.8946 22.2924 19.7071C22.4827 19.5196 22.5895 19.2652 22.5895 19C22.5895 18.7348 22.4827 18.4804 22.2924 18.2929C22.1022 18.1054 21.8442 18 21.5751 18ZM14.4744 20V18H16.5032V19V20H14.4744Z" fill="#fff"></path>
+                                    </svg>
+                                    Filter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xxl-3 col-xl-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="clearfix d-flex">
+                                        <div class="avatar avatar-sm rounded me-3 p-2">
+                                            <img src="assets/images/logo/figma.avif" alt="">
+                                        </div>
+                                        <div class="clearfix">
+                                            <h6 class="mb-0 fw-semibold"><a href="attendance-overtime-details.html" class="stretched-link">#OVT-2605-0101</a></h6>
+                                            <span class="small">10 May 2026, 10:00 - 12:00 (2 hours)</span>	
+                                        </div>	
+                                    </div>
+                                    <p class="my-3">Kerjakan renovasi fasad dan desain interior rumah bintaro.</p>
+                                    <div class="mt-3">
+										<div class="d-flex justify-content-between">
+											<span>Complete</span>
+											<span>60%</span>
+										</div>
+										<div class="progress mt-2">
+											<div class="progress-bar bg-purple" style="width:60%;" role="progressbar"></div>
+										</div>
+									</div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between flex-wrap">
+                                    <p class="mb-0 fw-medium">Due <span class="text-purple">: 10 May 2026, 12:00</span></p>
+                                    <span class="badge badge-sm badge-primary light">Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <!-- End - Content Body -->
+
+        <!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+        
+    </div>
+    <!-- End - Main Wrapper -->
+
+    <!-- Modal Box Start -->
+    <div class="modal fade" id="filter" tabindex="-1" aria-labelledby="filterLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Filter Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Filter by Status</label>
+                                    <select class="form-control selectpicker">
+                                        <option selected="">Select All</option>
+                                        <option>Approved</option>
+                                        <option>Pending Review</option>
+                                        <option>Rejected</option>
+                                        <option>Canceled</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Filter by Leave Type</label>
+                                    <select class="form-control selectpicker">
+                                        <option selected="">Select All</option>
+                                        <option>Annual Leave</option>
+                                        <option>Sick Leave</option>
+                                        <option>Special Leave</option>
+                                        <option>Unpaid Leave</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Filter by Timeframe</label>
+                                    <select class="form-control selectpicker">
+                                        <option>Select All</option>
+                                        <option>This Month</option>
+                                        <option>Last Month</option>
+                                        <option selected="">Year-to-Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-Box-End -->
+
+    <!-- Start - Script -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+    <script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+    <script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+    <!-- Script For Apexchart -->
+    <script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+
+    <script>
+        (function($){
+
+        var dzProfile = function(){
+            
+            var chartTasksSummary = function(){
+                var options = {
+                    series: [25, 17, 20, 38],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                    ],
+                    labels: [
+                        "Employee",
+                        "Present",
+                        "Absent",
+                        "Holiday"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                };
+                
+                if($('#chartTasksSummary').length > 0){
+                    var handleTasksSummary = new ApexCharts(document.querySelector("#chartTasksSummary"), options);
+                    handleTasksSummary.render();			
+                }
+            }
+            
+            var chartTopSelling = function(){
+                var options = {
+                    series: [17, 8, 8, 17, 17, 8, 25],
+                    chart: {
+                        type: 'donut',
+                        width: 320,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                        'var(--bs-purple)',
+                        'var(--bs-dark)',
+                        'var(--bs-secondary)',
+                    ],
+                    labels: [
+                        "Laptop",
+                        "Phone",
+                        "Keyboard",
+                        "Mouse",
+                        "Monitors",
+                        "Watch",
+                        "Earbuds",
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 1480,
+                            options: {
+                                chart: {
+                                    type: 'donut',
+                                    width: 250,
+                                },
+                            }
+                        }
+                    ]
+                };
+                
+                if($('#chartTopSelling').length > 0){
+                    var handleTopSelling = new ApexCharts(document.querySelector("#chartTopSelling"), options);
+                    handleTopSelling.render();	
+                }
+            }
+            
+            var chartRecentStats = function(){
+                var options  = {
+                    series: [
+                        {
+                            name: 'Income',
+                            data: [80, 105, 140, 115, 130, 150, 85]
+                        }, 
+                        {
+                            name: 'Expense',
+                            data: [70, 95, 125, 110, 115, 145, 75]
+                        },
+                    ],
+                    chart: {
+                        type: 'bar',
+                        height: 300,
+                        
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape:'rounded',
+                            columnWidth: '45%',
+                            borderRadius: 5,
+                        },
+                    },
+                    colors:['#', '#77248B'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        shape: "circle",
+                    },
+                    legend: {
+                        show: false,
+                        fontSize: '12px',
+                        labels: {
+                            colors: '#000000',
+                        },
+                        markers: {
+                            width: 30,
+                            height: 30,
+                            strokeWidth: 0,
+                            strokeColor: '#fff',
+                            fillColors: undefined,
+                            radius: 35,	
+                        }
+                    },
+                    stroke: {
+                        show: true,
+                        width: 15,
+                        colors: ['transparent']
+                    },
+                    grid: {
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        labels: {
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false,
+                            borderType: 'solid',
+                            color: '#78909C',
+                            height: 6,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                        crosshairs: {
+                            show: false,
+                        }
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 150,
+                        tickAmount: 6,
+                        labels: {
+                            offsetX: 0,
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                        colors:[
+                            'var(--bs-primary)',
+                            'var(--bs-gray)'
+                        ],
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "$ " + val + " thousands"
+                            }
+                        }
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 1480,
+                            options: {
+                                stroke: {
+                                    show: true,
+                                    width: 8,
+                                    colors: ['transparent']
+                                },
+                            }
+                        },
+                        {
+                            breakpoint: 591,
+                            options: {
+                                chart: {
+                                    height: 250,
+                                },
+                                stroke: {
+                                    show: true,
+                                    width: 4,
+                                    colors: ['transparent']
+                                },
+                            }
+                        }
+                    ]
+                };
+
+                if(jQuery("#chartRecentStats").length > 0){
+                    var chartRecentStats = new ApexCharts(document.querySelector("#chartRecentStats"), options);
+                    chartRecentStats.render();
+                    
+                    jQuery('.chart-recent-stats-tab .nav-link').on('click',function(){
+                        if($(this).attr("href") == "#monthly"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [80, 105, 140, 115, 130, 150, 85]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [70, 95, 125, 110, 115, 145, 75]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#weekly"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [55, 85, 135, 125, 145, 120, 65]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [75, 105, 100, 125, 76, 95, 65]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#today"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [58, 75, 135, 125, 145, 138, 95]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [80, 135, 60, 85, 135, 148, 85]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#all"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [85, 100, 145, 110, 135, 145, 90]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [75, 100, 120, 115, 120, 140, 80]
+                                }
+                            ])
+                        }
+                    })
+                }
+            }
+            
+            var chartSecuritySummary = function(){
+                var options  = {
+                    series: [
+                        {
+                            name: 'Income',
+                            data: [31, 40,  28, 31, 40, 28, 31, 40, 28, 31, 40, 28]
+                        }, 
+                        {
+                            name: 'Expense',
+                            data: [11, 32, 45, 38, 25, 20, 36, 45, 15, 11, 32, 45]
+                        },
+                    ],
+                    chart: {
+                        type: 'bar',
+                        height: 280,
+                        
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape:'rounded',
+                            columnWidth: '45%',
+                            borderRadius: 5,
+                        },
+                    },
+                    colors:['#', '#77248B'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        shape: "circle",
+                    },
+                    legend: {
+                        show: false,
+                        fontSize: '12px',
+                        labels: {
+                            colors: '#000000',
+                        },
+                        markers: {
+                            width: 30,
+                            height: 30,
+                            strokeWidth: 0,
+                            strokeColor: '#fff',
+                            fillColors: undefined,
+                            radius: 35,	
+                        }
+                    },
+                    stroke: {
+                        show: true,
+                        width: 6,
+                        colors: ['transparent']
+                    },
+                    grid: {
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug', 'Sep', 'Oct','Nov','Dec'],
+                        labels: {
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false,
+                            borderType: 'solid',
+                            color: '#78909C',
+                            height: 6,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                        crosshairs: {
+                            show: false,
+                        }
+                    },
+                    yaxis: {
+                        labels: {
+                            offsetX: 0,
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                        colors:[
+                            'var(--bs-primary)',
+                            'var(--bs-dark)'
+                        ],
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "$ " + val + " thousands"
+                            }
+                        }
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '1%',
+                                    borderRadius: -1,
+                                },
+                            },
+                            chart:{
+                                height:250,
+                            },
+                            series: [
+                                {
+                                    name: 'Projects',
+                                    data: [31, 40, 28,31, 40, 28,31, 40]
+                                }, 
+                                {
+                                    name: 'Projects',
+                                    data: [11, 32, 45,31, 40, 28,31, 40]
+                                },
+                            ],
+                        }
+                    }]
+                };
+                
+                if(jQuery("#chartSecuritySummary").length > 0){
+                    var handleSecuritySummary = new ApexCharts(document.querySelector("#chartSecuritySummary"), options);
+                    handleSecuritySummary.render();
+                    
+                    jQuery('.chart-summary-tab .nav-link').on('click',function(){
+                        if($(this).attr("href") == "#summaryAgents"){
+                            handleSecuritySummary.updateSeries([
+                                {
+                                    name: "Income",
+                                    data: [31, 40,  28, 31, 40, 28, 31, 40, 28, 31, 40, 28]
+                                },
+                                {
+                                    name: "Expense",
+                                    data: [11, 32, 45, 38, 25, 20, 36, 45, 15, 11, 32, 45]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#summaryClients"){
+                            handleSecuritySummary.updateSeries([
+                                {
+                                    name: "Income",
+                                    data: [25, 45,  26, 32, 46, 22, 34, 46, 26, 24, 38, 27]
+                                },
+                                {
+                                    name: "Expense",
+                                    data: [18, 38, 36, 24, 23, 26, 25, 42, 18, 15, 26, 32]
+                                }
+                            ])
+                        }
+                    })
+                }	
+            }
+            
+            var chartTasksOverTime = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Incomplete',
+                            data: [90, 120, 120, 100, 100, 90]
+                        },
+                        {
+                            name: 'Complete',
+                            data: [50, 75, 75, 55, 55, 70]
+                        }
+                    ],
+                    chart: {
+                        height: 280,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-danger)",
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 120,
+                        tickAmount: 4,
+                        labels: {
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '14px',
+                            },
+                            formatter: function (value) {
+                                return value;
+                            }
+                        },
+                    },
+                    xaxis: {
+                        categories: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+                        labels:{
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px',
+                            },
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 50,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 80,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0
+                                    }
+                                ],
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+        
+                if(jQuery("#chartTasksOverTime").length > 0){
+                    var handleTasksOverTime = new ApexCharts(document.querySelector("#chartTasksOverTime"), options);
+                    handleTasksOverTime.render();
+                    
+                    jQuery('#seriesIncomplete').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Incomplete');
+                    });
+                    
+                    jQuery('#seriesComple').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Comple');
+                    });
+                }
+            }
+            
+            var chartDeals = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Agents',
+                            data: [75, 85, 72, 100, 50, 100, 80, 75, 95, 35, 75,100]
+                        }
+                    ],
+                    chart: {
+                        height: 250,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        labels:{
+                            show : false
+                        },
+                    },
+                    xaxis: {
+                        labels:{
+                            show : false
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+                
+                if(jQuery("#chartDeals").length > 0){
+
+                    var handleDeals = new ApexCharts(document.querySelector("#chartDeals"), options);
+                    handleDeals.render();
+                    
+                    $(".chart-deals-tab .nav-link").on('click',function(){
+                        var seriesType = $(this).attr('data-series');
+                        var columnData = [];
+                        
+                        switch(seriesType) {
+                            case "dealsAgents":
+                                columnData = [75, 85, 72, 100, 50, 100, 80, 75, 95, 35, 75,100];
+                                break;
+                                
+                            case "dealsClients":
+                                columnData = [40, 25, 85, 45, 85, 25, 95, 65, 45, 45, 20,12];
+                                break;
+                                
+                            default:
+                                columnData = [75, 80, 72, 100, 50, 100, 80, 30, 95, 35, 75,100];
+                        }
+                        handleDeals.updateSeries([
+                            {
+                                name: "Agents",
+                                data: columnData
+                            }
+                        ]);
+                    })
+                    
+                }	
+            }
+            
+            var tableLicenseUsage = function(){
+                if($('#tableLicenseUsage').length > 0){
+                    var table = $('#tableLicenseUsage').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+            
+            var tableLogs = function(){
+                if($('#tableLogs').length > 0){
+                    var table = $('#tableLogs').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLogs_wrapper .dt-buttons').detach();
+                            $('#tableLogsExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+            
+            var cardCarousel = function () {
+                var isRTL = $('body').attr('direction') === 'rtl';
+
+                if ($('.card-carousel').length > 0) {
+
+                    $('.card-carousel').trigger('destroy.owl.carousel');
+                    $('.card-carousel').removeClass('owl-loaded owl-hidden');
+                    $('.card-carousel').find('.owl-stage-outer').children().unwrap();
+
+                    $('.card-carousel').owlCarousel({
+                        items: 1,
+                        rtl: isRTL,
+                        loop: true,
+                        margin: 5,
+                        nav: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true
+                    });
+                }
+            }
+
+            var chartProjectChart = function(){
+                var options = {
+                    series: [30, 40, 20, 10],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 12,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontFamily:'Arial',
+                                        fontWeight:'500',
+                                        offsetY: -17,
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '11px',
+                                        fontWeight:'500',
+                                        fontFamily:'Arial',
+                                        label: 'Total projects',
+                                    
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        '#FF9F00',
+                        'var(--bs-primary)',
+                        '#3AC977',
+                        '#FF5E5E'
+                    ],
+                    labels: [
+                        "Compete",
+                        "Pending",
+                        "Not Start"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                };
+                
+                if($('#chartProjectChart').length > 0){
+                    var handleProjectChart = new ApexCharts(document.querySelector("#chartProjectChart"), options);
+                    handleProjectChart.render();
+                }
+                
+            }
+            
+            var lineChartSecuritySummary = function(){
+                
+                var chartWidth = $("#lineChartSecuritySummary").width();
+                
+                var options = {
+                    series: [
+                        {
+                            name: 'Net Profit',
+                            data: [700, 650, 680, 590, 720, 610, 760, 530, 610],
+                        },
+                    ],
+                    chart: {
+                        type: 'area',
+                        height: 280,
+                        width: chartWidth + 55,
+                        toolbar: {
+                            show: false,
+                        },
+                        offsetX: -45,
+                        zoom: {
+                            enabled: false
+                        },
+                    },
+                    colors:[
+                        'var(--bs-primary)'
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        curve:'straight',
+                        colors:['var(--bs-primary)'],
+                    },
+                    grid: {
+                        show:true,
+                        borderColor: 'var(--bs-border-color)',
+                        
+                        xaxis: {
+                            lines: {
+                                show: true
+                            }
+                        },   
+                        yaxis: {
+                            lines: {
+                                show: false
+                            }
+                        },  
+                    },
+                    yaxis: {
+                        show: true,
+                        tickAmount: 4,
+                        min: 0,
+                        max: 800,
+                        labels:{
+                            offsetX:50,
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px'
+                            }
+                        }
+                    },
+                    xaxis: {
+                        categories: [
+                            'May',
+                            'June',
+                            'July',
+                            'Aug',
+                            'Sep',
+                            'Oct',
+                            'Nov',
+                            'Dec'
+                        ],
+                        overwriteCategories: undefined,
+                        
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            show: true,
+                            offsetX: 25,
+                            
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px'
+                            }
+                        },
+                    },
+                    fill: {
+                        opacity: 0.5,
+                        colors:'var(--primary)',
+                        type: 'gradient', 
+                        gradient: {
+                            colorStops:[
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .2
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .15
+                                },
+                                {
+                                    offset: 100,
+                                    color: 'var(--bs-primary)',
+                                    opacity: 0
+                                },
+                            ],
+                        }
+                    },
+                    tooltip: {
+                        enabled:true,
+                        style: {
+                            fontSize: '12px',
+                        },
+                        y: {
+                            formatter: function(val) {
+                                return "$" + val + ""
+                            }
+                        }
+                    }
+                };
+                
+                if($('#lineChartSecuritySummary').length > 0){
+                    var handleLineChartSecuritySummary = new ApexCharts(document.querySelector("#lineChartSecuritySummary"), options);
+                    handleLineChartSecuritySummary.render();
+                }
+                
+                $(".chart-summary-tab .nav-link").on('click',function(){
+                    var seriesType = $(this).attr('data-series');
+                    var columnData = [];
+                    switch(seriesType) {
+                        case "agents":
+                            columnData = [700, 650, 680, 590, 720, 610, 760, 530, 610];
+                            break;
+                        case "clients":
+                            columnData = [680, 620, 540, 680, 640, 655, 730, 580, 620];
+                            break;
+                        default:
+                            columnData = [700, 650, 680, 590, 720, 610, 760, 530, 610];
+                    }
+                    handleLineChartSecuritySummary.updateSeries([
+                        {
+                            name: "Net Profit",
+                            data: columnData
+                        }
+                    ]);
+                })
+            
+            }
+            
+            var chartProfileProgress = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Attendance Score',
+                            data: [18, 18, 18, 20, 20, 22, 13, 15, 16, 17, 18, 12],
+                        },
+                    ],
+                    chart: {
+                        type: 'area',
+                        height: 100,
+                        toolbar: {
+                            show: false,
+                        },
+                        zoom: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        }
+                    },
+                    colors:[
+                        'var(--bs-primary)'
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        curve:'straight',
+                        colors:['var(--bs-primary)'],
+                    },
+                    grid: {
+                        show:false,
+                        borderColor: '#eee',
+                        padding: {
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            left: -1
+                        }
+                    },
+                    states: {
+                        normal: {
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        },
+                        hover: {
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        },
+                        active: {
+                            allowMultipleDataPointsSelection: false,
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        }
+                    },
+                    xaxis: {
+                        categories: [
+                            'January',
+                            'February',
+                            'March',
+                            'April',
+                            'May',
+                            'June',
+                            'July',
+                            'August',
+                            'September',
+                            'October',
+                            'November',
+                            'December'
+                        ],
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            show: false,
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                        crosshairs: {
+                            show: false,
+                            position: 'front',
+                            stroke: {
+                                width: 1,
+                                dashArray: 3
+                            }
+                        },
+                        tooltip: {
+                            enabled: false,
+                            formatter: undefined,
+                            offsetY: 0,
+                            style: {
+                                fontSize: '12px',
+                            }
+                        }
+                    },
+                    yaxis: {
+                        show: false,
+                    },
+                    fill: {
+                        opacity: 0.9,
+                        colors:'var(--bs-primary)',
+                        type: 'gradient', 
+                        gradient: {
+                            colorStops:[
+                                {
+                                    offset: 0,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .4
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .4
+                                },
+                                {
+                                    offset: 100,
+                                    color: 'white',
+                                    opacity: 0
+                                }
+                            ],
+                        }
+                    },
+                    tooltip: {
+                        enabled:true,
+                        style: {
+                            fontSize: '12px',
+                        },
+                        y: {
+                            formatter: function(val) {
+                                return val + " days"
+                            }
+                        }
+                    }
+                };
+
+                if($('#chartProfileProgress').length > 0){
+                    var handleProfileProgress = new ApexCharts(document.querySelector("#chartProfileProgress"), options);
+                    handleProfileProgress.render();
+                }
+            
+            }
+            
+            var projectChart = function(){
+                if(jQuery("#projectChart").length>0) {
+                    var options = {
+                        series: [30, 40, 20, 10],
+                        chart: {
+                            type: 'donut',
+                            width: 250,
+                        },
+                        plotOptions: {
+                            pie: {
+                                donut: {
+                                    size: '90%',
+                                    labels: {
+                                        show: true,
+                                        name: {
+                                            show: true,
+                                            offsetY: 12,
+                                            color: 'var(--bs-body-color)',
+                                        },
+                                        value: {
+                                            show: true,
+                                            fontSize: '24px',
+                                            fontFamily:'Arial',
+                                            fontWeight:'500',
+                                            offsetY: -17,
+                                            color:' var(--bs-heading-color)',
+                                        },
+                                        total: {
+                                            show: true,
+                                            fontSize: '11px',
+                                            fontWeight:'500',
+                                            fontFamily:'Arial',
+                                            label: 'Total projects',
+                                            color: 'var(--bs-body-color)',
+                                        
+                                            formatter: function (w) {
+                                                return w.globals.seriesTotals.reduce((a, b) => {
+                                                    return a + b
+                                                }, 0)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        stroke: {
+                            show: true,
+                            width: 2,
+                            colors: ['var(--bs-body-bg)'],
+                        },
+                        legend: {
+                            show: false,
+                        },
+                        colors: ['var(--bs-warning)', 'var(--bs-primary)', 'var(--bs-success)', 'var(--bs-danger)'],
+                        labels: ["Pending", "Completed", "Progress", "Cancelled"],
+                        dataLabels: {
+                            enabled: false,
+                        },
+                    };
+                    var chartBar1 = new ApexCharts(document.querySelector("#projectChart"), options);
+                    chartBar1.render();
+                }
+            }
+                
+            /* Function ============ */
+            return {
+                
+                load:function(){
+                    chartTasksSummary();
+                    chartTopSelling();
+                    chartRecentStats();
+                    chartSecuritySummary();
+                    chartTasksOverTime();
+                    chartDeals();
+                    tableLicenseUsage();
+                    tableLogs();
+                    cardCarousel();
+                    chartProfileProgress();
+                    chartProjectChart();
+                    lineChartSecuritySummary();
+                    projectChart();
+                },
+                
+                resize:function(){
+                    lineChartSecuritySummary();
+                }
+            }
+            
+        }();
+
+        jQuery(window).on('load',function(){
+            setTimeout(function(){
+                dzProfile.load();
+            }, 1000); 
+        });
+
+        jQuery(window).on('resize',function () {
+            setTimeout(function(){
+                dzProfile.resize();
+            }, 1000);
+            
+        });
+
+        })(jQuery);
+
+    </script>
+
+    <!-- Script For Multiple Languages -->
+    <script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+
+    <!-- Script For Custom JS -->
+    <script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2690 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <!-- Title -->
+    <title>SIAP - HRIS</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="RNB">
+    <meta name="robots" content="">
+
+    <meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+    <meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+    <meta property="og:title" content="SIAP - HRIS">
+    <meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+    <meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+    <!-- All Required CSS -->
+
+    <!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+    <!-- Start - Switcher CSS -->
+    <link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+    <!-- End - Switcher CSS -->
+
+    <!-- Start - Style Css -->
+    <link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+    <link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+    <!-- End - Style Css -->
+</head>
+
+<body>
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Attendance</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+        <!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+            
+            <div class="container-fluid">
+
+                <!-- Start - Page Title & Breadcrumb -->
+                <div class="page-title">
+                        <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><h1>Attendance</h1></li>
+                            <li class="breadcrumb-item">
+                                <a href="index.html">
+                                    <svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page">Attendance</li>
+                            <li class="breadcrumb-item active" aria-current="page">Overtime</li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- End - Page Title & Breadcrumb -->
+                
+                <div class="card h-auto px-md-2 pt-md-2">
+
+                    <!-- Start - Profile Header -->
+                    <div class="card-body d-flex py-md-4" id="profile-header">
+						<script>
+							fetch('fundamentals/layouts/attendance/profile-header.html')
+							.then(response => response.text()).then(data => { document.getElementById('profile-header').innerHTML = data; });
+						</script>
+					</div>
+                    <!-- End - Profile Header -->
+
+                    <!-- Start - Profile Navigation -->
+                    <div class="card-footer py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
+                        <ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a href="attendances.html" class="nav-link py-3 px-1 border-3">Overview</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-recap.html" class="nav-link py-3 px-1 border-3">Recap</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-leave.html" class="nav-link py-3 px-1 border-3">Leave</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-business-trip.html" class="nav-link py-3 px-1 border-3">Business Trip</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="attendance-overtime.html" class="nav-link py-3 px-1 border-3 active">Overtime</a>
+							</li>
+						</ul>
+                        <ul class="d-xl-flex d-none py-2">
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </li>
+                            <li class="px-1">
+                                <a class="btn btn-square btn-light btn-sm" >
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End - Profile Navigation -->
+                
+                </div>
+
+                <!-- Start - My Projects -->
+                <div class="col-lg-12">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Overtime Details</h5>
+                        <div class="d-flex align-items-center">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End - My Projects -->
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header border-0 pb-0">
+                                        <div>
+                                            <h4 class="card-title">Your Extra Mile</h4>
+                                            <p class="fs-13 mb-0">Here is a breakdown of your overtime shift, the tasks you crushed, and your reward details.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span class="fw-semibold">Employee Profile</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Record ID</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">#OVT-2605-0089</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Full Name</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Thomas Jefferson</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Supervisor</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Michael Scott</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span class="fw-semibold">Overtime Log (Approved)</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Date</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">22 May 2026</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Time</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray text-decoration-line-through">17:00 - 21:00</span>
+                                                <span class="text-gray">, 17:00 - 20:30</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Total Duration</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray text-decoration-line-through">4 Hours</span>
+                                                <span class="text-gray">, 3 Hours, 30 Minutes</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Brief and Instructions</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">Renovasi fasad dan desain interior rumah bintaro.</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span class="fw-semibold">Compensation & Payroll Details</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Compensation Type</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Overtime Pay</span> <br>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Rate Multiplier</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">1.5x</span> <br>
+                                                <span class="text-gray">Standard Weekday Overtime</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Estimated Calculated Earnings</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Rp. 100.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Payout Period</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Included in May 2026 Payroll</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span class="fw-semibold">Approval Trail</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Verified by System</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">Clock-out matched requested time</span> <br>
+                                                <span class="text-gray">23 May 2026, 09:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Approved by Supervisor</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">Michael Scott</span> <br>
+                                                <span class="text-gray">23 May 2026, 09:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Approved by Director</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">Steven Johansson</span> <br>
+                                                <span class="text-gray">23 May 2026, 12:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="row sticky-top z-0">
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header border-0 pb-3">
+                                        <div>
+                                            <h4 class="card-title">Overtime Confirmation</h4>
+                                            <p class="fs-13 mb-0">Please ensure your task details are updated. Remote and flexible work locations are supported.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="d-flex gap-3 align-items-center avatar-info p-4">
+                                            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="51" height="51" rx="25.5" fill="#1EA7C5"></rect>
+                                                <g clip-path="url()">
+                                                <path d="M23.8586 19.226L18.8712 24.5542C18.5076 25.0845 18.6439 25.8068 19.1717 26.1679L24.1945 29.6098L24.1945 32.9558C24.1945 33.5921 24.6995 34.125 25.3359 34.1376C25.9874 34.1477 26.5177 33.6249 26.5177 32.976L26.5177 29.0012C26.5177 28.6174 26.3283 28.2588 26.0126 28.0442L22.7904 25.8346L25.5025 22.9583L26.8914 26.1225C27.0758 26.5442 27.4949 26.8169 27.9546 26.8169L32.1844 26.8169C32.8207 26.8169 33.3536 26.3119 33.3662 25.6755C33.3763 25.024 32.8536 24.4937 32.2046 24.4937L28.7172 24.4937C28.2576 23.4482 27.7677 22.4129 27.3409 21.3522C27.1237 20.8169 27.0025 20.5846 26.6036 20.2159C26.5227 20.1401 25.9596 19.625 25.4571 19.1654C24.995 18.7462 24.2828 18.7739 23.8586 19.226Z" fill="white"></path>
+                                                <path d="M28.6162 19.8068C30.0861 19.8068 31.2778 18.6151 31.2778 17.1452C31.2778 15.6752 30.0861 14.4836 28.6162 14.4836C27.1462 14.4836 25.9545 15.6752 25.9545 17.1452C25.9545 18.6151 27.1462 19.8068 28.6162 19.8068Z" fill="white"></path>
+                                                <path d="M17.899 37.5164C20.6046 37.5164 22.798 35.323 22.798 32.6174C22.798 29.9117 20.6046 27.7184 17.899 27.7184C15.1934 27.7184 13 29.9117 13 32.6174C13 35.323 15.1934 37.5164 17.899 37.5164Z" fill="white"></path>
+                                                <path d="M32.101 37.5164C34.8066 37.5164 37 35.323 37 32.6174C37 29.9118 34.8066 27.7184 32.101 27.7184C29.3954 27.7184 27.202 29.9118 27.202 32.6174C27.202 35.323 29.3954 37.5164 32.101 37.5164Z" fill="white"></path>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip8">
+                                                <rect width="24" height="24" fill="white" transform="translate(13 14)"></rect>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <div>
+                                                <h6 class="fs-16 text-black mb-0">Ready for the Extra Mile?</h6>
+                                                <span class="fs-12">Don't forget to clock in to keep your overtime hours tracked and recorded accurately for compensation.</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+                                            <div class="text-center">
+                                                <p class="fs-14 mb-2">Duration</p>
+                                                <span class="fs-20 text-black">01:20</span>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="fs-14 mb-2">Time</p>
+                                                <span class="fs-20 text-black">08:34:53</span>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="fs-14 mb-2">Start</p>
+                                                <span class="fs-20 text-black">08:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn light btn-info m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockIn">Overtime Clock In</a>
+                                    <div class="mb-3"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header border-0 pb-3">
+                                    <div>
+                                        <h4 class="card-title">End of Overtime</h4>
+                                        <p class="fs-13 mb-0">Ensure your overtime tasks and deliverables have been documented before ending your session.</p>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="d-flex gap-3 align-items-center avatar-warning p-4">
+                                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="51" height="51" rx="25.5" fill="#FFBC11"></rect>
+                                            <g clip-path="url()">
+                                                <path d="M23.8586 19.226L18.8712 24.5542C18.5076 25.0845 18.6439 25.8068 19.1717 26.1679L24.1945 29.6098L24.1945 32.9558C24.1945 33.5921 24.6995 34.125 25.3359 34.1376C25.9874 34.1477 26.5177 33.6249 26.5177 32.976L26.5177 29.0012C26.5177 28.6174 26.3283 28.2588 26.0126 28.0442L22.7904 25.8346L25.5025 22.9583L26.8914 26.1225C27.0758 26.5442 27.4949 26.8169 27.9546 26.8169L32.1844 26.8169C32.8207 26.8169 33.3536 26.3119 33.3662 25.6755C33.3763 25.024 32.8536 24.4937 32.2046 24.4937L28.7172 24.4937C28.2576 23.4482 27.7677 22.4129 27.3409 21.3522C27.1237 20.8169 27.0025 20.5846 26.6036 20.2159C26.5227 20.1401 25.9596 19.625 25.4571 19.1654C24.995 18.7462 24.2828 18.7739 23.8586 19.226Z" fill="white"></path>
+                                                <path d="M28.6162 19.8068C30.0861 19.8068 31.2778 18.6151 31.2778 17.1452C31.2778 15.6752 30.0861 14.4836 28.6162 14.4836C27.1462 14.4836 25.9545 15.6752 25.9545 17.1452C25.9545 18.6151 27.1462 19.8068 28.6162 19.8068Z" fill="white"></path>
+                                                <path d="M17.899 37.5164C20.6046 37.5164 22.798 35.323 22.798 32.6174C22.798 29.9117 20.6046 27.7184 17.899 27.7184C15.1934 27.7184 13 29.9117 13 32.6174C13 35.323 15.1934 37.5164 17.899 37.5164Z" fill="white"></path>
+                                                <path d="M32.101 37.5164C34.8066 37.5164 37 35.323 37 32.6174C37 29.9118 34.8066 27.7184 32.101 27.7184C29.3954 27.7184 27.202 29.9118 27.202 32.6174C27.202 35.323 29.3954 37.5164 32.101 37.5164Z" fill="white"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip8">
+                                                <rect width="24" height="24" fill="white" transform="translate(13 14)"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <div>
+                                            <h6 class="fs-16 text-black mb-0">Time to Recharge!</h6>
+                                            <span class="fs-12">Thanks for the hard work! End your session to save your overtime hours.</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+                                        <div class="text-center">
+                                            <p class="fs-14 mb-2">Duration</p>
+                                            <span class="fs-20 text-black">01:20</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="fs-14 mb-2">Time</p>
+                                            <span class="fs-20 text-black">08:34:53</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="fs-14 mb-2">Ended</p>
+                                            <span class="fs-20 text-black">08:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn light btn-warning m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockOut">Overtime Clock Out</a>
+                                <div class="mb-3"></div>
+                            </div>
+                        </div>
+                            
+                        <!-- Start - Activity -->
+                        <div class="col-xxl-6 col-xl-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0">Activity #OVT-2605-0001</h4>
+                                </div>
+                                <div class="card-body dz-scroll height380">
+                                    <div class="widget-timeline1">
+                                        <ul class="timeline">
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        <span class="text-black fs-14 fw-semibold">Phase 1: Assignment & Request</span> <br>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        1. Overtime Assignment Submitted <br>
+                                                        Datetime : 22 May 2026, 17:00 <br>
+                                                        Actor : Michael (Supervisor) <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Complete</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        <span class="text-black fs-14 fw-semibold">Phase 2: Execution (Time Tracking)</span> <br>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        2. Overtime Session Started <br>
+                                                        Datetime : 22 May 2026, 17:00 <br>
+                                                        Actor : System Tracker <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Clock In</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        3. Task & Deliverables Submitted <br>
+                                                        Datetime : 22 May 2026, 20:00 <br>
+                                                        Actor : Thomas (Employee) <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Completed</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        4. Overtime Session Ended <br>
+                                                        Datetime : 22 May 2026, 20:00 <br>
+                                                        Actor : System Tracker <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Clock Out</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        <span class="text-black fs-14 fw-semibold">Phase 3: Review & Approval</span> <br>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        5. Task & Hours Verification <br>
+                                                        Datetime : 22 May 2026, 20:00 <br>
+                                                        Actor : Michael (Supervisor) <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Verified</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        <span class="text-black fs-14 fw-semibold">Phase 4: Payroll & Payment</span> <br>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        6. HR / Payroll Processing <br>
+                                                        Datetime : 22 May 2026, 20:00 <br>
+                                                        Actor : Ana (Finance) <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Calculated & Locked</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-success"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        7. Director Approval <br>
+                                                        Datetime : 22 May 2026, 20:00 <br>
+                                                        Actor : Josh (Director) <br>
+                                                        Status : <span class="badge badge-xs badge-success light fw-semibold">Approved</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="timeline-status">22 May</span>
+                                                <div class="timeline-badge border-dark"></div>
+                                                <div class="timeline-panel">
+                                                    <span>
+                                                        8. Payment Disbursement <br>
+                                                        Scheduled Date: 31 May 2026 <br>
+                                                        Actor : Ana (Finance) <br>
+                                                        Status : <span class="badge badge-xs badge-info light fw-semibold">Upcoming</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End - Activity -->
+                        
+                        <!-- Start - To Do -->
+                        <div class="col-xxl-6 col-xl-12 col-md-6">
+                            <div class="card overflow-hidden">
+                                <div class="card-header">
+                                    <h4 class="card-title">My Task Items</h4>
+                                    <div class="clearfix">
+                                        <a class="text-success" data-bs-toggle="modal" data-bs-target="#task">+ Add Task</a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="list-group list-group-flush dz-draggable dropzoneContainer dz-scroll height400">
+                                        <div class="list-group-item draggable p-3">
+                                            <span class="text-warning d-block mb-2">
+                                                <svg class="me-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.61051 15.3276H14.3978C15.5843 15.3276 16.329 14.0451 15.7395 13.0146L10.35 3.59085C9.75676 2.5536 8.26126 2.55285 7.66726 3.5901L2.26876 13.0139C1.67926 14.0444 2.42326 15.3276 3.61051 15.3276Z" stroke="var(--bs-warning)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M9.00189 10.0611V7.7361" stroke="var(--bs-warning)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M8.99625 12.375H9.00375" stroke="var(--bs-warning)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                                Latest to do's
+                                            </span>
+                                            <div class="d-flex justify-content-between flex-wrap">
+                                                <div class="d-flex gap-3">
+                                                    <div class="draggable-handle">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="customCheckBox1">
+                                                            <label class="form-check-label text-black" for="customCheckBox1">Desain Interior Ruang Tamu</label>
+                                                        </div>
+                                                        <span>20 May 2026</span>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#delete">
+                                                        <div class="btn btn-square btn-danger light btn-sm">
+                                                            <i class="fa-regular fa-trash-can "></i>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#update">
+                                                        <div class="btn btn-square btn-primary light btn-sm ms-1">
+                                                            <i class="fa fa-pen "></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item draggable p-3">
+                                            <span class="text-success d-block mb-2">
+                                                <svg class="me-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 4.5L6.75 12.75L3 9" stroke="var(--bs-success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                Latest finished to do's
+                                            </span>
+                                            <div class="d-flex justify-content-between flex-wrap">
+                                                <div class="d-flex gap-3">
+                                                    <div class="draggable-handle">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="customCheckBox2">
+                                                            <label class="form-check-label text-black" for="customCheckBox2">Compete this projects Monday</label>
+                                                        </div>
+                                                        <span>2023-12-26 07:15:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="btn btn-square btn-danger light btn-sm">
+                                                        <i class="fa-regular fa-trash-can "></i>
+                                                    </div>
+                                                    <div class="btn btn-square btn-primary light btn-sm ms-1">
+                                                        <i class="fa fa-pen "></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item draggable p-3">
+                                            <div class="d-flex justify-content-between flex-wrap">
+                                                <div class="d-flex gap-3">
+                                                    <div class="draggable-handle">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="customCheckBox3">
+                                                            <label class="form-check-label text-black" for="customCheckBox3">Compete this projects Monday</label>
+                                                        </div>
+                                                        <span>2023-12-26 07:15:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="btn btn-square btn-danger light btn-sm">
+                                                        <i class="fa-regular fa-trash-can "></i>
+                                                    </div>
+                                                    <div class="btn btn-square btn-primary light btn-sm ms-1">
+                                                        <i class="fa fa-pen "></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item draggable p-3">
+                                            <div class="d-flex justify-content-between flex-wrap">
+                                                <div class="d-flex gap-3">
+                                                    <div class="draggable-handle">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="customCheckBox4">
+                                                            <label class="form-check-label text-black" for="customCheckBox4">Compete this projects Monday</label>
+                                                        </div>
+                                                        <span>2023-12-26 07:15:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="btn btn-square btn-danger light btn-sm">
+                                                        <i class="fa-regular fa-trash-can "></i>
+                                                    </div>
+                                                    <div class="btn btn-square btn-primary light btn-sm ms-1">
+                                                        <i class="fa fa-pen "></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item draggable p-3">
+                                            <div class="d-flex justify-content-between flex-wrap">
+                                                <div class="d-flex gap-3">
+                                                    <div class="draggable-handle">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="customCheckBox5">
+                                                            <label class="form-check-label text-black" for="customCheckBox5">Compete this projects Monday</label>
+                                                        </div>
+                                                        <span>2023-12-26 07:15:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="btn btn-square btn-danger light btn-sm">
+                                                        <i class="fa-regular fa-trash-can "></i>
+                                                    </div>
+                                                    <div class="btn btn-square btn-primary light btn-sm ms-1">
+                                                        <i class="fa fa-pen "></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item draggable p-3">
+                                            <div class="d-flex justify-content-between flex-wrap">
+                                                <div class="d-flex gap-3">
+                                                    <div class="draggable-handle">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="4" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="3" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="6" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="9" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="12" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                            <rect x="8" y="15" width="1" height="1" fill="var(--bs-body-color)"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="customCheckBox6">
+                                                            <label class="form-check-label text-black" for="customCheckBox6">Compete this projects Monday</label>
+                                                        </div>
+                                                        <span>2023-12-26 07:15:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="btn btn-square btn-danger light btn-sm">
+                                                        <i class="fa-regular fa-trash-can "></i>
+                                                    </div>
+                                                    <div class="btn btn-square btn-primary light btn-sm ms-1">
+                                                        <i class="fa fa-pen "></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End - To Do -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End - Content Body -->
+
+        <!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+        
+    </div>
+    <!-- End - Main Wrapper -->
+
+    <!-- Start - Modal Complete Task -->
+    <div class="modal fade" id="task">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create a Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="comment-form">
+                        <div class="row"> 
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Name <span class="required text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="Author" placeholder="Contoh: Rekap absensi bulanan" value="Mengerjakan Website Company Profile Rajawali Inti Coal Halmahera">
+                                </div>
+                            </div> 
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Description <span class="required text-danger">*</span></label>
+                                    <textarea class="form-control" rows="3" placeholder="Tambahkan detail atau konteks pekerjaan"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Date <span class="required text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="Email" value="20 May 2026">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Due Date <span class="required text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="Email" value="20 May 2026">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Volume Workload <span class="required text-danger">*</span></label>
+                                    <select class="form-control default-select">
+                                        <option>Light</option>
+                                        <option selected>Moderate</option>
+                                        <option>Heavy</option>
+                                    </select>									
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Attachment</label>
+                                    <input type="text" class="form-control" name="Author" placeholder="Contoh: Link Google Drive, Figma, atau Docs">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Blockers</label>
+                                    <input type="text" class="form-control" name="Author" placeholder="Contoh: Menunggu persetujuan (approval) dokumen dari manajer">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Category <span class="required text-danger">*</span></label>
+                                    <div class="form-group mb-0">
+                                        <div class="form-check d-inline-block me-3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                            <label class="form-check-label" for="flexRadioDefault4">Daily Task</label>
+                                        </div>
+                                        <div class="form-check d-inline-block mx-2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                                            <label class="form-check-label" for="flexRadioDefault5">Project Task</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Project Name <span class="required text-danger">*</span></label>
+                                    <select class="form-control default-select" disabled>
+                                        <option>Pilih Nama Project</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Status <span class="required text-danger">*</span></label>
+                                    <select class="form-control default-select">
+                                        <option>To Do</option>
+                                        <option>On Progress</option>
+                                        <option>Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End - Modal Send Message -->
+
+    <!-- Start - Modal Complete Task -->
+    <div class="modal fade" id="update">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update a Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="comment-form">
+                        <div class="row"> 
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Name <span class="required text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="Author" placeholder="Contoh: Rekap absensi bulanan" value="Mengerjakan Website Company Profile Rajawali Inti Coal Halmahera">
+                                </div>
+                            </div> 
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Description <span class="required text-danger">*</span></label>
+                                    <textarea class="form-control" rows="3" placeholder="Tambahkan detail atau konteks pekerjaan"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Date <span class="required text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="Email" value="20 May 2026">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Due Date <span class="required text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="Email" value="20 May 2026">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Volume Workload <span class="required text-danger">*</span></label>
+                                    <select class="form-control default-select">
+                                        <option>Light</option>
+                                        <option selected>Moderate</option>
+                                        <option>Heavy</option>
+                                    </select>									
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Attachment</label>
+                                    <input type="text" class="form-control" name="Author" placeholder="Contoh: Link Google Drive, Figma, atau Docs">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Blockers</label>
+                                    <input type="text" class="form-control" name="Author" placeholder="Contoh: Menunggu persetujuan (approval) dokumen dari manajer">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Category <span class="required text-danger">*</span></label>
+                                    <div class="form-group mb-0">
+                                        <div class="form-check d-inline-block me-3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                            <label class="form-check-label" for="flexRadioDefault4">Daily Task</label>
+                                        </div>
+                                        <div class="form-check d-inline-block mx-2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                                            <label class="form-check-label" for="flexRadioDefault5">Project Task</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Project Name <span class="required text-danger">*</span></label>
+                                    <select class="form-control default-select" disabled>
+                                        <option>Pilih Nama Project</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Task Status <span class="required text-danger">*</span></label>
+                                    <select class="form-control default-select">
+                                        <option>To Do</option>
+                                        <option>On Progress</option>
+                                        <option>Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End - Modal Send Message -->
+
+    <!-- Modal Box Start -->
+    <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="deleteLabel">Delete Task</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <h5 class="text-muted mb-3 fw-bold text-center">Delete Task? 🗑️</h5>
+                                <p class="form-label text-muted mb-3">
+                                    Are you sure you want to delete <span class="fw-semibold">"Desain Interior Ruang Tamu"</span> task? <br> This action cannot be undone and will permanently remove the record from your current timesheet.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Yes, Delete Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-Box-End -->
+
+    <!-- Modal Box Start -->
+    <div class="modal fade" id="clockIn" tabindex="-1" aria-labelledby="clockInLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="clockInLabel">Overtime Confirmation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <p class="form-label mb-3 text-center">Wed, 20 May 2026 - 
+                                    <span class="text-success fw-semibold">08:00:10</span>
+                                </p>
+                                <p class="form-label text-muted mb-3">
+                                    Grab your coffee and let's get things done. Start your session when you're ready to crush this extra hustle!
+                                </p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Scheduled Start Time</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Scheduled End Time</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Target Duration</label>
+                                            <p class="fs-13 mb-0">3 Hours</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <a class="btn light btn-info mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Overtime Clock In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-Box-End -->
+
+    <!-- Modal Box Start -->
+    <div class="modal fade" id="clockOut" tabindex="-1" aria-labelledby="clockOutLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="clockOutLabel">Overtime Completed</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <p class="form-label mb-3 text-center">Wed, 20 May 2026 - 
+                                    <span class="text-success fw-semibold">08:00:10</span>
+                                </p>
+                                <p class="form-label text-muted mb-3">
+                                    Great hustle today! Make sure your tasks are updated, then clock out and get some well-deserved rest.
+                                </p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Scheduled Start Time</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Scheduled End Time</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Actual Start Time</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Actual End Time</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Target Duration</label>
+                                            <p class="fs-13 mb-0">3 Hours</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Actual Duration</label>
+                                            <p class="fs-13 mb-0">3 Hours, 10 Minutes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <a class="btn light btn-warning mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">End Overtime Session</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-Box-End -->
+
+    <!-- Start - Script -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+    <script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+    <script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+    <!-- Script For Apexchart -->
+    <script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+
+    <script>
+        (function($){
+
+        var dzProfile = function(){
+            
+            var chartTasksSummary = function(){
+                var options = {
+                    series: [25, 17, 20, 38],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                    ],
+                    labels: [
+                        "Employee",
+                        "Present",
+                        "Absent",
+                        "Holiday"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                };
+                
+                if($('#chartTasksSummary').length > 0){
+                    var handleTasksSummary = new ApexCharts(document.querySelector("#chartTasksSummary"), options);
+                    handleTasksSummary.render();			
+                }
+            }
+            
+            var chartTopSelling = function(){
+                var options = {
+                    series: [17, 8, 8, 17, 17, 8, 25],
+                    chart: {
+                        type: 'donut',
+                        width: 320,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                        'var(--bs-purple)',
+                        'var(--bs-dark)',
+                        'var(--bs-secondary)',
+                    ],
+                    labels: [
+                        "Laptop",
+                        "Phone",
+                        "Keyboard",
+                        "Mouse",
+                        "Monitors",
+                        "Watch",
+                        "Earbuds",
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 1480,
+                            options: {
+                                chart: {
+                                    type: 'donut',
+                                    width: 250,
+                                },
+                            }
+                        }
+                    ]
+                };
+                
+                if($('#chartTopSelling').length > 0){
+                    var handleTopSelling = new ApexCharts(document.querySelector("#chartTopSelling"), options);
+                    handleTopSelling.render();	
+                }
+            }
+            
+            var chartRecentStats = function(){
+                var options  = {
+                    series: [
+                        {
+                            name: 'Income',
+                            data: [80, 105, 140, 115, 130, 150, 85]
+                        }, 
+                        {
+                            name: 'Expense',
+                            data: [70, 95, 125, 110, 115, 145, 75]
+                        },
+                    ],
+                    chart: {
+                        type: 'bar',
+                        height: 300,
+                        
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape:'rounded',
+                            columnWidth: '45%',
+                            borderRadius: 5,
+                        },
+                    },
+                    colors:['#', '#77248B'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        shape: "circle",
+                    },
+                    legend: {
+                        show: false,
+                        fontSize: '12px',
+                        labels: {
+                            colors: '#000000',
+                        },
+                        markers: {
+                            width: 30,
+                            height: 30,
+                            strokeWidth: 0,
+                            strokeColor: '#fff',
+                            fillColors: undefined,
+                            radius: 35,	
+                        }
+                    },
+                    stroke: {
+                        show: true,
+                        width: 15,
+                        colors: ['transparent']
+                    },
+                    grid: {
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        labels: {
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false,
+                            borderType: 'solid',
+                            color: '#78909C',
+                            height: 6,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                        crosshairs: {
+                            show: false,
+                        }
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 150,
+                        tickAmount: 6,
+                        labels: {
+                            offsetX: 0,
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                        colors:[
+                            'var(--bs-primary)',
+                            'var(--bs-gray)'
+                        ],
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "$ " + val + " thousands"
+                            }
+                        }
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 1480,
+                            options: {
+                                stroke: {
+                                    show: true,
+                                    width: 8,
+                                    colors: ['transparent']
+                                },
+                            }
+                        },
+                        {
+                            breakpoint: 591,
+                            options: {
+                                chart: {
+                                    height: 250,
+                                },
+                                stroke: {
+                                    show: true,
+                                    width: 4,
+                                    colors: ['transparent']
+                                },
+                            }
+                        }
+                    ]
+                };
+
+                if(jQuery("#chartRecentStats").length > 0){
+                    var chartRecentStats = new ApexCharts(document.querySelector("#chartRecentStats"), options);
+                    chartRecentStats.render();
+                    
+                    jQuery('.chart-recent-stats-tab .nav-link').on('click',function(){
+                        if($(this).attr("href") == "#monthly"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [80, 105, 140, 115, 130, 150, 85]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [70, 95, 125, 110, 115, 145, 75]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#weekly"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [55, 85, 135, 125, 145, 120, 65]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [75, 105, 100, 125, 76, 95, 65]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#today"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [58, 75, 135, 125, 145, 138, 95]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [80, 135, 60, 85, 135, 148, 85]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#all"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [85, 100, 145, 110, 135, 145, 90]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [75, 100, 120, 115, 120, 140, 80]
+                                }
+                            ])
+                        }
+                    })
+                }
+            }
+            
+            var chartSecuritySummary = function(){
+                var options  = {
+                    series: [
+                        {
+                            name: 'Income',
+                            data: [31, 40,  28, 31, 40, 28, 31, 40, 28, 31, 40, 28]
+                        }, 
+                        {
+                            name: 'Expense',
+                            data: [11, 32, 45, 38, 25, 20, 36, 45, 15, 11, 32, 45]
+                        },
+                    ],
+                    chart: {
+                        type: 'bar',
+                        height: 280,
+                        
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape:'rounded',
+                            columnWidth: '45%',
+                            borderRadius: 5,
+                        },
+                    },
+                    colors:['#', '#77248B'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        shape: "circle",
+                    },
+                    legend: {
+                        show: false,
+                        fontSize: '12px',
+                        labels: {
+                            colors: '#000000',
+                        },
+                        markers: {
+                            width: 30,
+                            height: 30,
+                            strokeWidth: 0,
+                            strokeColor: '#fff',
+                            fillColors: undefined,
+                            radius: 35,	
+                        }
+                    },
+                    stroke: {
+                        show: true,
+                        width: 6,
+                        colors: ['transparent']
+                    },
+                    grid: {
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug', 'Sep', 'Oct','Nov','Dec'],
+                        labels: {
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false,
+                            borderType: 'solid',
+                            color: '#78909C',
+                            height: 6,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                        crosshairs: {
+                            show: false,
+                        }
+                    },
+                    yaxis: {
+                        labels: {
+                            offsetX: 0,
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                        colors:[
+                            'var(--bs-primary)',
+                            'var(--bs-dark)'
+                        ],
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "$ " + val + " thousands"
+                            }
+                        }
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '1%',
+                                    borderRadius: -1,
+                                },
+                            },
+                            chart:{
+                                height:250,
+                            },
+                            series: [
+                                {
+                                    name: 'Projects',
+                                    data: [31, 40, 28,31, 40, 28,31, 40]
+                                }, 
+                                {
+                                    name: 'Projects',
+                                    data: [11, 32, 45,31, 40, 28,31, 40]
+                                },
+                            ],
+                        }
+                    }]
+                };
+                
+                if(jQuery("#chartSecuritySummary").length > 0){
+                    var handleSecuritySummary = new ApexCharts(document.querySelector("#chartSecuritySummary"), options);
+                    handleSecuritySummary.render();
+                    
+                    jQuery('.chart-summary-tab .nav-link').on('click',function(){
+                        if($(this).attr("href") == "#summaryAgents"){
+                            handleSecuritySummary.updateSeries([
+                                {
+                                    name: "Income",
+                                    data: [31, 40,  28, 31, 40, 28, 31, 40, 28, 31, 40, 28]
+                                },
+                                {
+                                    name: "Expense",
+                                    data: [11, 32, 45, 38, 25, 20, 36, 45, 15, 11, 32, 45]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#summaryClients"){
+                            handleSecuritySummary.updateSeries([
+                                {
+                                    name: "Income",
+                                    data: [25, 45,  26, 32, 46, 22, 34, 46, 26, 24, 38, 27]
+                                },
+                                {
+                                    name: "Expense",
+                                    data: [18, 38, 36, 24, 23, 26, 25, 42, 18, 15, 26, 32]
+                                }
+                            ])
+                        }
+                    })
+                }	
+            }
+            
+            var chartTasksOverTime = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Incomplete',
+                            data: [90, 120, 120, 100, 100, 90]
+                        },
+                        {
+                            name: 'Complete',
+                            data: [50, 75, 75, 55, 55, 70]
+                        }
+                    ],
+                    chart: {
+                        height: 280,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-danger)",
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 120,
+                        tickAmount: 4,
+                        labels: {
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '14px',
+                            },
+                            formatter: function (value) {
+                                return value;
+                            }
+                        },
+                    },
+                    xaxis: {
+                        categories: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+                        labels:{
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px',
+                            },
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 50,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 80,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0
+                                    }
+                                ],
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+        
+                if(jQuery("#chartTasksOverTime").length > 0){
+                    var handleTasksOverTime = new ApexCharts(document.querySelector("#chartTasksOverTime"), options);
+                    handleTasksOverTime.render();
+                    
+                    jQuery('#seriesIncomplete').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Incomplete');
+                    });
+                    
+                    jQuery('#seriesComple').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Comple');
+                    });
+                }
+            }
+            
+            var chartDeals = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Agents',
+                            data: [75, 85, 72, 100, 50, 100, 80, 75, 95, 35, 75,100]
+                        }
+                    ],
+                    chart: {
+                        height: 250,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        labels:{
+                            show : false
+                        },
+                    },
+                    xaxis: {
+                        labels:{
+                            show : false
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+                
+                if(jQuery("#chartDeals").length > 0){
+
+                    var handleDeals = new ApexCharts(document.querySelector("#chartDeals"), options);
+                    handleDeals.render();
+                    
+                    $(".chart-deals-tab .nav-link").on('click',function(){
+                        var seriesType = $(this).attr('data-series');
+                        var columnData = [];
+                        
+                        switch(seriesType) {
+                            case "dealsAgents":
+                                columnData = [75, 85, 72, 100, 50, 100, 80, 75, 95, 35, 75,100];
+                                break;
+                                
+                            case "dealsClients":
+                                columnData = [40, 25, 85, 45, 85, 25, 95, 65, 45, 45, 20,12];
+                                break;
+                                
+                            default:
+                                columnData = [75, 80, 72, 100, 50, 100, 80, 30, 95, 35, 75,100];
+                        }
+                        handleDeals.updateSeries([
+                            {
+                                name: "Agents",
+                                data: columnData
+                            }
+                        ]);
+                    })
+                    
+                }	
+            }
+            
+            var tableLicenseUsage = function(){
+                if($('#tableLicenseUsage').length > 0){
+                    var table = $('#tableLicenseUsage').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+            
+            var tableLogs = function(){
+                if($('#tableLogs').length > 0){
+                    var table = $('#tableLogs').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLogs_wrapper .dt-buttons').detach();
+                            $('#tableLogsExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+            
+            var cardCarousel = function () {
+                var isRTL = $('body').attr('direction') === 'rtl';
+
+                if ($('.card-carousel').length > 0) {
+
+                    $('.card-carousel').trigger('destroy.owl.carousel');
+                    $('.card-carousel').removeClass('owl-loaded owl-hidden');
+                    $('.card-carousel').find('.owl-stage-outer').children().unwrap();
+
+                    $('.card-carousel').owlCarousel({
+                        items: 1,
+                        rtl: isRTL,
+                        loop: true,
+                        margin: 5,
+                        nav: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true
+                    });
+                }
+            }
+
+            var chartProjectChart = function(){
+                var options = {
+                    series: [30, 40, 20, 10],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 12,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontFamily:'Arial',
+                                        fontWeight:'500',
+                                        offsetY: -17,
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '11px',
+                                        fontWeight:'500',
+                                        fontFamily:'Arial',
+                                        label: 'Total projects',
+                                    
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        '#FF9F00',
+                        'var(--bs-primary)',
+                        '#3AC977',
+                        '#FF5E5E'
+                    ],
+                    labels: [
+                        "Compete",
+                        "Pending",
+                        "Not Start"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                };
+                
+                if($('#chartProjectChart').length > 0){
+                    var handleProjectChart = new ApexCharts(document.querySelector("#chartProjectChart"), options);
+                    handleProjectChart.render();
+                }
+                
+            }
+            
+            var lineChartSecuritySummary = function(){
+                
+                var chartWidth = $("#lineChartSecuritySummary").width();
+                
+                var options = {
+                    series: [
+                        {
+                            name: 'Net Profit',
+                            data: [700, 650, 680, 590, 720, 610, 760, 530, 610],
+                        },
+                    ],
+                    chart: {
+                        type: 'area',
+                        height: 280,
+                        width: chartWidth + 55,
+                        toolbar: {
+                            show: false,
+                        },
+                        offsetX: -45,
+                        zoom: {
+                            enabled: false
+                        },
+                    },
+                    colors:[
+                        'var(--bs-primary)'
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        curve:'straight',
+                        colors:['var(--bs-primary)'],
+                    },
+                    grid: {
+                        show:true,
+                        borderColor: 'var(--bs-border-color)',
+                        
+                        xaxis: {
+                            lines: {
+                                show: true
+                            }
+                        },   
+                        yaxis: {
+                            lines: {
+                                show: false
+                            }
+                        },  
+                    },
+                    yaxis: {
+                        show: true,
+                        tickAmount: 4,
+                        min: 0,
+                        max: 800,
+                        labels:{
+                            offsetX:50,
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px'
+                            }
+                        }
+                    },
+                    xaxis: {
+                        categories: [
+                            'May',
+                            'June',
+                            'July',
+                            'Aug',
+                            'Sep',
+                            'Oct',
+                            'Nov',
+                            'Dec'
+                        ],
+                        overwriteCategories: undefined,
+                        
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            show: true,
+                            offsetX: 25,
+                            
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px'
+                            }
+                        },
+                    },
+                    fill: {
+                        opacity: 0.5,
+                        colors:'var(--primary)',
+                        type: 'gradient', 
+                        gradient: {
+                            colorStops:[
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .2
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .15
+                                },
+                                {
+                                    offset: 100,
+                                    color: 'var(--bs-primary)',
+                                    opacity: 0
+                                },
+                            ],
+                        }
+                    },
+                    tooltip: {
+                        enabled:true,
+                        style: {
+                            fontSize: '12px',
+                        },
+                        y: {
+                            formatter: function(val) {
+                                return "$" + val + ""
+                            }
+                        }
+                    }
+                };
+                
+                if($('#lineChartSecuritySummary').length > 0){
+                    var handleLineChartSecuritySummary = new ApexCharts(document.querySelector("#lineChartSecuritySummary"), options);
+                    handleLineChartSecuritySummary.render();
+                }
+                
+                $(".chart-summary-tab .nav-link").on('click',function(){
+                    var seriesType = $(this).attr('data-series');
+                    var columnData = [];
+                    switch(seriesType) {
+                        case "agents":
+                            columnData = [700, 650, 680, 590, 720, 610, 760, 530, 610];
+                            break;
+                        case "clients":
+                            columnData = [680, 620, 540, 680, 640, 655, 730, 580, 620];
+                            break;
+                        default:
+                            columnData = [700, 650, 680, 590, 720, 610, 760, 530, 610];
+                    }
+                    handleLineChartSecuritySummary.updateSeries([
+                        {
+                            name: "Net Profit",
+                            data: columnData
+                        }
+                    ]);
+                })
+            
+            }
+            
+            var chartProfileProgress = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Attendance Score',
+                            data: [18, 18, 18, 20, 20, 22, 13, 15, 16, 17, 18, 12],
+                        },
+                    ],
+                    chart: {
+                        type: 'area',
+                        height: 100,
+                        toolbar: {
+                            show: false,
+                        },
+                        zoom: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        }
+                    },
+                    colors:[
+                        'var(--bs-primary)'
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        curve:'straight',
+                        colors:['var(--bs-primary)'],
+                    },
+                    grid: {
+                        show:false,
+                        borderColor: '#eee',
+                        padding: {
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            left: -1
+                        }
+                    },
+                    states: {
+                        normal: {
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        },
+                        hover: {
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        },
+                        active: {
+                            allowMultipleDataPointsSelection: false,
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        }
+                    },
+                    xaxis: {
+                        categories: [
+                            'January',
+                            'February',
+                            'March',
+                            'April',
+                            'May',
+                            'June',
+                            'July',
+                            'August',
+                            'September',
+                            'October',
+                            'November',
+                            'December'
+                        ],
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            show: false,
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                        crosshairs: {
+                            show: false,
+                            position: 'front',
+                            stroke: {
+                                width: 1,
+                                dashArray: 3
+                            }
+                        },
+                        tooltip: {
+                            enabled: false,
+                            formatter: undefined,
+                            offsetY: 0,
+                            style: {
+                                fontSize: '12px',
+                            }
+                        }
+                    },
+                    yaxis: {
+                        show: false,
+                    },
+                    fill: {
+                        opacity: 0.9,
+                        colors:'var(--bs-primary)',
+                        type: 'gradient', 
+                        gradient: {
+                            colorStops:[
+                                {
+                                    offset: 0,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .4
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .4
+                                },
+                                {
+                                    offset: 100,
+                                    color: 'white',
+                                    opacity: 0
+                                }
+                            ],
+                        }
+                    },
+                    tooltip: {
+                        enabled:true,
+                        style: {
+                            fontSize: '12px',
+                        },
+                        y: {
+                            formatter: function(val) {
+                                return val + " days"
+                            }
+                        }
+                    }
+                };
+
+                if($('#chartProfileProgress').length > 0){
+                    var handleProfileProgress = new ApexCharts(document.querySelector("#chartProfileProgress"), options);
+                    handleProfileProgress.render();
+                }
+            
+            }
+            
+            var projectChart = function(){
+                if(jQuery("#projectChart").length>0) {
+                    var options = {
+                        series: [30, 40, 20, 10],
+                        chart: {
+                            type: 'donut',
+                            width: 250,
+                        },
+                        plotOptions: {
+                            pie: {
+                                donut: {
+                                    size: '90%',
+                                    labels: {
+                                        show: true,
+                                        name: {
+                                            show: true,
+                                            offsetY: 12,
+                                            color: 'var(--bs-body-color)',
+                                        },
+                                        value: {
+                                            show: true,
+                                            fontSize: '24px',
+                                            fontFamily:'Arial',
+                                            fontWeight:'500',
+                                            offsetY: -17,
+                                            color:' var(--bs-heading-color)',
+                                        },
+                                        total: {
+                                            show: true,
+                                            fontSize: '11px',
+                                            fontWeight:'500',
+                                            fontFamily:'Arial',
+                                            label: 'Total projects',
+                                            color: 'var(--bs-body-color)',
+                                        
+                                            formatter: function (w) {
+                                                return w.globals.seriesTotals.reduce((a, b) => {
+                                                    return a + b
+                                                }, 0)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        stroke: {
+                            show: true,
+                            width: 2,
+                            colors: ['var(--bs-body-bg)'],
+                        },
+                        legend: {
+                            show: false,
+                        },
+                        colors: ['var(--bs-warning)', 'var(--bs-primary)', 'var(--bs-success)', 'var(--bs-danger)'],
+                        labels: ["Pending", "Completed", "Progress", "Cancelled"],
+                        dataLabels: {
+                            enabled: false,
+                        },
+                    };
+                    var chartBar1 = new ApexCharts(document.querySelector("#projectChart"), options);
+                    chartBar1.render();
+                }
+            }
+                
+            /* Function ============ */
+            return {
+                
+                load:function(){
+                    chartTasksSummary();
+                    chartTopSelling();
+                    chartRecentStats();
+                    chartSecuritySummary();
+                    chartTasksOverTime();
+                    chartDeals();
+                    tableLicenseUsage();
+                    tableLogs();
+                    cardCarousel();
+                    chartProfileProgress();
+                    chartProjectChart();
+                    lineChartSecuritySummary();
+                    projectChart();
+                },
+                
+                resize:function(){
+                    lineChartSecuritySummary();
+                }
+            }
+            
+        }();
+
+        jQuery(window).on('load',function(){
+            setTimeout(function(){
+                dzProfile.load();
+            }, 1000); 
+        });
+
+        jQuery(window).on('resize',function () {
+            setTimeout(function(){
+                dzProfile.resize();
+            }, 1000);
+            
+        });
+
+        })(jQuery);
+
+    </script>
+
+    <!-- Script For Multiple Languages -->
+    <script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+
+    <!-- Script For Custom JS -->
+    <script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
