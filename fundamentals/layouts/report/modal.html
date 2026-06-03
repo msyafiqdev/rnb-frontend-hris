@@ -33,6 +33,116 @@
 </div>
 <!-- End - Modal Create New Task -->
 
+<!-- Start - Modal Update Task -->
+<div class="modal fade" id="update">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Complete a Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form class="comment-form">
+                    <div class="row"> 
+                        <div class="col-12 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Task Name <span class="required text-danger">*</span></label>
+                                <input type="text" class="form-control" name="Author" placeholder="Contoh: Rekap absensi bulanan" value="Mengerjakan Website Company Profile Rajawali Inti Coal Halmahera">
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Task Description <span class="required text-danger">*</span></label>
+                                <textarea class="form-control" rows="3" placeholder="Tambahkan detail atau konteks pekerjaan"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label">Date <span class="required text-danger">*</span></label>
+                                <input type="text" class="form-control" name="Email" value="20 May 2026">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label">Due Date <span class="required text-danger">*</span></label>
+                                <input type="text" class="form-control" name="Email" value="20 May 2026">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label">Workload <span class="required text-danger">*</span></label>
+                                <select class="form-control default-select">
+                                    <option>Light</option>
+                                    <option selected>Moderate</option>
+                                    <option>Heavy</option>
+                                </select>									
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="mb-3">
+                                <label class="form-label">Priority <span class="required text-danger">*</span></label>
+                                <select class="form-control default-select">
+                                    <option class="text-success fw-semibold">Low</option>
+                                    <option  class="text-warning fw-semibold" selected>Medium</option>
+                                    <option  class="text-danger fw-semibold">High</option>
+                                </select>									
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Attachment</label>
+                                <input type="text" class="form-control" name="Author" placeholder="Contoh: Link Google Drive, Figma, atau Docs">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Blockers</label>
+                                <input type="text" class="form-control" name="Author" placeholder="Contoh: Menunggu persetujuan (approval) dokumen dari manajer">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Task Category <span class="required text-danger">*</span></label>
+                                <select class="form-control default-select">
+                                    <option selected>Daily Task Report</option>
+                                    <option>Project Report</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Project Name <span class="required text-danger">*</span></label>
+                                <select class="form-control default-select" disabled>
+                                    <option>Pilih Nama Project</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Task Status <span class="required text-danger">*</span></label>
+                                <select class="form-control default-select">
+                                    <option>To Do</option>
+                                    <option>On Progress</option>
+                                    <option>In Review</option>
+                                    <option>Completed</option>
+                                    <option>On Hold</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End - Modal Update Task -->
+
 <!-- Start - Modal Details New Task -->
 <div class="modal fade" id="details">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -130,7 +240,7 @@
 
 <!-- Start - Modal Delete -->
 <div class="modal fade" id="delete">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="deleteLabel">Delete Task</h1>
