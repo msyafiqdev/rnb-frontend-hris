@@ -202,7 +202,7 @@
 										</svg>
 									</span>
 									<div>
-										<p class="fs-14 mb-2">Attendance Rate</p>
+										<p class="fs-14 mb-2">Task Completion Rate</p>
 										<span class="title text-black fs-28 fw-semibold">100%</span>
 									</div>
 								</div>
@@ -234,8 +234,8 @@
 										</svg>
 									</span>
 									<div>
-										<p class="fs-14 mb-2">On Time Rate</p>
-										<span class="title text-black fs-28 fw-semibold">95%</span>
+										<p class="fs-14 mb-2">Total Tasks</p>
+										<span class="title text-black fs-28 fw-semibold">40 Task</span>
 									</div>
 								</div>
 								<div>
@@ -263,8 +263,8 @@
 										</svg>
 									</span>
 									<div>
-										<p class="fs-14 mb-2">Lateness Rate</p>
-										<span class="title text-black fs-28 fw-semibold">10%</span>
+										<p class="fs-14 mb-2">Task Completed</p>
+										<span class="title text-black fs-28 fw-semibold">30 Task</span>
 									</div>
 								</div>
 								<div>
@@ -291,8 +291,8 @@
 										</svg>
 									</span>
 									<div>
-										<p class="fs-14 mb-2">Overtime Rate</p>
-										<span class="title text-black fs-28 fw-semibold">60%</span>
+										<p class="fs-14 mb-2">Task In Progress</p>
+										<span class="title text-black fs-28 fw-semibold">10 Task</span>
 									</div>
 								</div>
 								<div>
@@ -313,7 +313,7 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Attendance Overview (May)</h4>
+										<h4 class="card-title">Task Overview (May)</h4>
 									</div>
 									<div class="card-body">
                                         <div class="position-relative mb-4">
@@ -335,19 +335,11 @@
 										<ul class="d-flex flex-wrap justify-content-center">
 											<li class="d-flex align-items-center gap-3 me-5 mb-2">
 												<i class="fa fa-circle text-success"></i>
-												<span class="fs-12 text-black">On Time</span> 
+												<span class="fs-12 text-black">Completed</span> 
 											</li>
 											<li class="d-flex align-items-center gap-3 me-5 mb-2">
 												<i class="fa fa-circle text-danger"></i>
-												<span class="fs-12 text-black">Late</span>
-											</li>
-											<li class="d-flex align-items-center gap-3 me-5 mb-2">
-												<i class="fa fa-circle text-info"></i>
-												<span class="fs-12 text-black">Leave</span>
-											</li>
-											<li class="d-flex align-items-center gap-3 me-5 mb-2">
-												<i class="fa fa-circle text-secondary"></i>
-												<span class="fs-12 text-black">Deviation</span>
+												<span class="fs-12 text-black">In Progress</span>
 											</li>
 										</ul>
 									</div>
@@ -364,8 +356,8 @@
 								<div class="row align-items-center">
 									<div class="col-lg-4 mb-lg-0 mb-4 text-center radialBar">
 										<div id="radialBar"></div>
-										<h4 class="fs-18 text-black">Days Worked (17/22 Days)</h4>
-										<p class="fs-14">Tracking your scheduled attendance and active working days for the current month.</p>
+										<h4 class="fs-18 text-black">Tasks Completed (30/10 Completed)</h4>
+										<p class="fs-14">Tracking your assigned tasks and active deliverables for the current month.</p>
 									</div>
 									<div class="col-lg-8">
 										<div class="row">
@@ -390,7 +382,7 @@
 														</small>
 													</div>
 													<div>
-														<h4 class="fs-18 text-black">On Time (45%)</h4>
+														<h4 class="fs-18 text-black">Daily Tasks (45%)</h4>
 														<span>16 Days / 17 Days</span>
 													</div>
 												</div>
@@ -417,7 +409,7 @@
 														</small>
 													</div>
 													<div>
-														<h4 class="fs-18 text-black">Late (78%)</h4>
+														<h4 class="fs-18 text-black">Project Tasks (78%)</h4>
 														<span>1 Day / 17 Days</span>
 													</div>
 												</div>
@@ -443,7 +435,7 @@
 														</small>
 													</div>
 													<div>
-														<h4 class="fs-18 text-black">Weekly Required Hours (80%)</h4>
+														<h4 class="fs-18 text-black">Completed Tasks This Week (80%)</h4>
 														<span>32 Hrs / 40 Hrs Per Week</span>
 													</div>
 												</div>
@@ -466,7 +458,7 @@
 														</small>
 													</div>
 													<div>
-														<h4 class="fs-18 text-black">Overtime Logged (80%)</h4>
+														<h4 class="fs-18 text-black">Incomplete Tasks This Week (20%)</h4>
 														<span>18 Hrs / 18 Hrs Per Week</span>
 													</div>
 												</div>
@@ -482,7 +474,15 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Attendance Overview (2026)</h4>
+										<h4 class="card-title">Task Overview (May 2026)</h4>
+										<div class="clearfix">
+											<select class="selectpicker form-select form-select-sm">
+												<option value="2020">Week 23 (01-07 June 2026)</option>
+												<option value="2021">Week 24 (08-14 June 2026)</option>
+												<option value="2021">Week 25 (15-21 June 2026)</option>
+												<option value="2021">Week 26 (22-28 June 2026)</option>
+											</select>
+										</div>
 									</div>
 									<div class="card-body">
                                         <canvas id="barChart_3"></canvas>
@@ -496,38 +496,10 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Leave Overview (2026)</h4>
+										<h4 class="card-title">Task Overview (2026)</h4>
 									</div>
 									<div class="card-body">
                                         <canvas id="lineChart_3"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </div>
-					<div class="col-md-6 col-12">
-                        <div class="row">
-							<div class="col-md-12">
-								<div class="card">
-									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Business Trip Overview (2026)</h4>
-									</div>
-									<div class="card-body">
-                                        <canvas id="barChart_1"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </div>
-					<div class="col-md-6 col-12">
-                        <div class="row">
-							<div class="col-md-12">
-								<div class="card">
-									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Overtime Overview (2026)</h4>
-									</div>
-									<div class="card-body">
-                                        <canvas id="lineChart_2"></canvas>
 									</div>
 								</div>
 							</div>
@@ -630,49 +602,26 @@
 					const barChart_3gradientStroke2 = barChart_3.createLinearGradient(50, 100, 50, 50);
 					barChart_3gradientStroke2.addColorStop(0, "rgba(249, 69, 135, 1)");
 					barChart_3gradientStroke2.addColorStop(1, "rgba(249, 69, 135, 1)");
-
-					const barChart_3gradientStroke3 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke3.addColorStop(0, "rgba(160, 44, 250, 1)");
-					barChart_3gradientStroke3.addColorStop(1, "rgba(160, 44, 250, 1)");
-
-					const barChart_3gradientStroke4 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke4.addColorStop(0, "rgba(30, 167, 197, 1)");
-					barChart_3gradientStroke4.addColorStop(1, "rgba(30, 167, 197, 1)");
 					
 					barChart_3.height = 100;
 
 					let barChartData = {
 						defaultFontFamily: 'Poppins',
 						labels: [
-							'Jan (21 days)', 'Feb (19 days)', 'Mar (19 days)', 
-							'Apr (20 days)', 'May (18 days)', 'Jun (21 days)', 
-							'Jul (22 days)', 'Aug (20 days)', 'Sep (22 days)', 
-							'Oct (22 days)', 'Nov (21 days)', 'Dec (20 days)'
+							'01-Monday', '02-Tuesday', '03-Wednesday', '04-Thursday', '05-Friday'
 						],
 						datasets: [{
-							label: 'On Time',
+							label: 'Completed',
 							backgroundColor: barChart_3gradientStroke,
 							hoverBackgroundColor: barChart_3gradientStroke, 
 							// Majority of the days are usually on time
-							data: ['18', '17', '15', '18', '16', '19', '18', '16', '20', '19', '18', '15']
+							data: ['18', '17', '15', '18', '16']
 						}, {
-							label: 'Late',
+							label: 'Incomplete',
 							backgroundColor: barChart_3gradientStroke2,
 							hoverBackgroundColor: barChart_3gradientStroke2, 
 							// A realistic handful of late days scattered throughout the year
-							data: ['2', '1', '3', '1', '0', '1', '2', '1', '1', '2', '1', '2']
-						}, {
-							label: 'Deviation',
-							backgroundColor: barChart_3gradientStroke3,
-							hoverBackgroundColor: barChart_3gradientStroke3, 
-							// Rare occurrences (e.g., leaving early, unusual shifts)
-							data: ['0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0']
-						}, {
-							label: 'Leave',
-							backgroundColor: barChart_3gradientStroke4,
-							hoverBackgroundColor: barChart_3gradientStroke4, 
-							// Leaves factored in, peaking slightly around summer/holidays
-							data: ['1', '0', '1', '1', '2', '0', '2', '3', '0', '1', '1', '3']
+							data: ['2', '1', '3', '1', '0']
 						}]
 					};
 
@@ -807,14 +756,6 @@
 				lineChart_3gradientStroke2.addColorStop(0, "rgba(255, 188, 17, 1)");
 				lineChart_3gradientStroke2.addColorStop(1, "rgba(255, 188, 17, 1)");
 
-				const lineChart_3gradientStroke3 = lineChart_3.createLinearGradient(500, 0, 100, 0);
-				lineChart_3gradientStroke3.addColorStop(0, "rgba(110, 197, 30, 1)");
-				lineChart_3gradientStroke3.addColorStop(1, "rgba(110, 197, 30, 1)");
-
-				const lineChart_3gradientStroke4 = lineChart_3.createLinearGradient(500, 0, 100, 0);
-				lineChart_3gradientStroke4.addColorStop(0, "rgba(30, 167, 197, 1)");
-				lineChart_3gradientStroke4.addColorStop(1, "rgba(30, 167, 197, 1)");
-
 				class Custom extends Chart.LineController {
 					draw() {
 						// Call bubble controller method to draw all the points
@@ -853,7 +794,7 @@
 						],
 						datasets: [
 							{
-								label: "Annual Leave",
+								label: "Daily Task",
 								// Spikes heavily in the summer (June, July, August) and December for holidays.
 								data: [15, 12, 18, 20, 25, 45, 55, 50, 20, 15, 22, 60],
 								borderColor: lineChart_3gradientStroke1,
@@ -862,32 +803,14 @@
 								tension: 0.5,
 								pointBackgroundColor: 'rgba(11, 42, 151, 0.5)'
 							}, {
-								label: "Special Leave",
+								label: "Project Task",
 								// Random but consistently low (represents jury duty, bereavement, unpaid leave, etc.)
-								data: [2, 1, 3, 2, 4, 1, 2, 0, 1, 2, 1, 3],
+								data: [12, 11, 13, 12, 14, 11, 12, 10, 11, 12, 11, 13],
 								borderColor: lineChart_3gradientStroke2,
 								borderWidth: "2",
 								backgroundColor: 'transparent', 
 								tension: 0.5,
 								pointBackgroundColor: 'rgba(254, 176, 25, 1)'
-							}, {
-								label: "Sick Leave",
-								// Higher during flu season/winter months (Jan-Mar, Nov-Dec) and drops during the summer.
-								data: [35, 30, 25, 15, 10, 8, 5, 8, 12, 20, 28, 30],
-								borderColor: lineChart_3gradientStroke3,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension: 0.5,
-								pointBackgroundColor: 'rgba(110, 197, 30, 1)'
-							}, {
-								label: "Unpaid Leave",
-								// Scattered randomly throughout the year with no clear pattern.
-								data: [1, 0, 2, 1, 3, 0, 2, 1, 0, 1, 2, 1],
-								borderColor: lineChart_3gradientStroke4,
-								borderWidth: "2",
-								backgroundColor: 'transparent', 
-								tension: 0.5,
-								pointBackgroundColor: 'rgba(30, 167, 197, 1)'
 							}
 						]
 					},
@@ -1459,7 +1382,7 @@
 			
 			var pieChart = function(){
 				var options = {
-				series: [2, 18, 1, 1],
+				series: [10, 30],
 				chart: {
 				type: 'donut',
 				height:200,
@@ -1468,12 +1391,12 @@
 					show:false,
 				},
 				fill:{
-					colors:['#F94687', '#2BC155', '#A02CFA', '#1EA7C5']
+					colors:['#F94687', '#2BC155']
 				},
 				stroke:{
 					width:0,
 				},
-				colors:['#F94687', '#2BC155', '#A02CFA', '#1EA7C5'],
+				colors:['#F94687', '#2BC155'],
 				dataLabels: {
 				enabled: false
 				}
