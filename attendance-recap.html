@@ -208,7 +208,7 @@
 
                 <div class="card">
                     <div class="card-header border-0 align-items-center gap-2 flex-wrap">
-                        <h4 class="card-title m-0">Attendance Report</h4>
+                        <h4 class="card-title m-0">Attendance Recap</h4>
                         <div class="clearfix d-flex align-items-center">
                             <div class="clearfix me-2">
                                 <select class="selectpicker form-select form-select-sm" >
@@ -524,125 +524,12 @@
         </footer>
         <!-- End - Footer -->
 
-        <!-- Modal Box Start -->
-		<div class="modal fade" id="annualLeave" tabindex="-1" aria-labelledby="annualLeaveLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="annualLeaveLabel">Annual Leave</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<form>
-							<div class="row">
-								<div class="col-xl-12">
-									<h5 class="text-muted mb-0 fw-bold">Out of Office mode: ON</h5>
-									<p class="form-label text-muted mb-3">
-										Whether you’re traveling the globe or just relaxing on the couch, enjoy your well-deserved break. Disconnect, recharge, and have fun!
-									</p>
-									<div class="row py-2">
-										<div class="col-4">
-											<span>Leave Type</span>
-										</div>
-										<div class="col-8">
-											<span class="text-gray fw-semibold">Annual Leave</span>
-										</div>
-									</div>
-									<div class="row py-2">
-										<div class="col-4">
-											<span>Reason</span>
-										</div>
-										<div class="col-8">
-											<span class="text-gray">Liburan keluarga dan istirahat sejenak</span>
-										</div>
-									</div>
-									<div class="row py-2">
-										<div class="col-4">
-											<span>Leave Duration</span>
-										</div>
-										<div class="col-8">
-											<span class="text-gray fw-semibold">18 May 2026 - 19 May 2026 (2 days)</span>
-										</div>
-									</div>
-									<div class="row py-2">
-										<div class="col-4">
-											<span>Status</span>
-										</div>
-										<div class="col-8">
-											<span class="text-success fw-semibold">Approved</span> <span class="text-gray">on 18 May 2026</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
+        <div id="modal">
+			<script>
+				fetch('fundamentals/layouts/attendance/modal.html')
+				.then(response => response.text()).then(data => { document.getElementById('modal').innerHTML = data; });
+			</script>
 		</div>
-		<!-- Modal-Box-End -->
-
-        <!-- Modal Box Start -->
-		<div class="modal fade" id="exception" tabindex="-1" aria-labelledby="exceptionLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exceptionLabel">Attendance Exception</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<form>
-							<div class="row">
-								<div class="col-xl-12">
-									<p class="form-label mb-3 text-center">Wed, 20 May 2026 - 
-										<span class="fw-semibold">17:00:10</span>
-									</p>
-									<p class="form-label text-muted mb-3">
-										Clocking in late or heading out early? Just make sure your <span class="fw-bold">supervisor</span> is in the loop 
-										and there are <span class="fw-bold">no urgent tasks</span> left behind. <br> Oh, and don't forget to leave a quick note!
-									</p>
-									<div class="mb-3">
-										<label for="exampleFormControlInput1" class="form-label text-secondary">Quick Note</label>
-										<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Contoh: Izin ke dokter, macet, atau ada urusan keluarga">
-									</div>
-									<div class="mb-3">
-										<label for="exampleFormControlInput1" class="form-label text-secondary">Request Type</label>
-										<div class="form-group mb-0">
-											<div class="form-check d-inline-block me-3">
-												<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-												<label class="form-check-label" for="flexRadioDefault4">Late Arrival</label>
-											</div>
-											<div class="form-check d-inline-block mx-2">
-												<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-												<label class="form-check-label" for="flexRadioDefault5">Early Departure</label>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-6">
-											<div class="mb-3">
-												<label for="exampleFormControlInput1" class="form-label text-secondary">From</label>
-												<input type="time" class="form-control" id="exampleFormControlInput1">
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="mb-3">
-												<label for="exampleFormControlInput1" class="form-label text-secondary">To</label>
-												<input type="time" class="form-control" id="exampleFormControlInput1">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-						<a class="btn light btn-secondary mt-2 mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">Got it!</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Modal-Box-End -->
         
     </div>
     <!-- End - Main Wrapper -->
