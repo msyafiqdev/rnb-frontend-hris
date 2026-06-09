@@ -191,11 +191,11 @@
                                 </div>
                             </div>
                             <div class="row py-2">
-                                <div class="col-4">
+                                <div class="col-12">
                                     <span>Medical Notes</span>
                                 </div>
-                                <div class="col-8">
-                                    <a href="ecom-product-detail.html"><img src="assets/images/menus/8.avif" alt="" class="avatar avatar-lg rounded me-3" width="86"></a>
+                                <div class="col-12">
+                                    <a href=""><img src="files/attendances/medical-note.jpg" alt="" class="mt-3 w-100 rounded"></a>
                                 </div>
                             </div>
                         </div>
@@ -1033,6 +1033,75 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal-Box-End -->
+
+<!-- Modal Box Start -->
+<div class="modal fade" id="clockInAdmin" tabindex="-1" aria-labelledby="clockInLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="clockInLabel">Attendance Status</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Clock In Location</label>
+                                <iframe class="border-0 rounded" height="250"  width="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Location</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray fw-semibold">Branch Office Yogyakarta</span> <br>
+                                    <span class="text-gray">Sanggrahan, Condongcatur, Kec. Depok, Kab. Sleman, Daerah Istimewa Yogyakarta </span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Attendance Status</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-success fw-semibold">On-Time Arrival</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Clock In Time</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray fw-semibold"> <span class="text-success">07:50 WIB</span> (08:00 - 17:00)</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Clock Out Time</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray fw-semibold">17:00 WIB (08:00 - 17:00)</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Working Hours</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray fw-semibold">8 Hours</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

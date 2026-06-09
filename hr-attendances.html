@@ -453,84 +453,6 @@
 								</div>
 							</div>
 
-							<!-- Start - logs -->
-							<div class="col-md-12 col-12">
-								<div class="card">
-									<div class="card-header border-0 align-items-center">
-										<h4 class="card-title m-0">Attendance Logs (01 June 2026)</h4>
-										<div class="d-flex align-items-center">
-											<div class="clearfix">
-												<button class="btn btn-sm btn-primary light ms-2">Capture</button>
-											</div>	
-										</div>	
-									</div>
-									<div class="card-body table-card-body p-0">
-										<h6 class="text-center  fw-bold mb-3">Senin, 01 June 2025 - 08:00:10 WIB</h6>
-										<div class="table-responsive">
-											<table class="table table-sm mb-0 table-bottom-borderless">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Clock In</th>
-														<th>Clock Out</th>
-														<th>Note</th>
-														<th>Working Hours</th>
-														<th>Attachment</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td class="fw-semibold">John Doe</td>
-														<td><span class="badge badge-sm badge-success light fw-bold ">08:00</span></td>
-														<td><span class="badge badge-sm badge-light light fw-bold ">17:00</span></td>
-														<td><span>On Time</span></td>
-														<td>8 Hours</td>
-														<td class="text-end"></td>
-													</tr>
-													<tr>
-														<td class="fw-semibold">Adam Doe</td>
-														<td><span class="badge badge-sm badge-danger light fw-bold ">08:10</span></td>
-														<td><span class="badge badge-sm badge-light light fw-bold ">---</span></td>
-														<td><span>Late 10 Minutes</span></td>
-														<td>7 Hours 50 Minutes</td>
-														<td class="text-end"></td>
-													</tr>
-													<tr>
-														<td class="fw-semibold">Noah Doe</td>
-														<td><span class="badge badge-sm badge-secondary light fw-bold ">10:00</span></td>
-														<td><span class="badge badge-sm badge-light light fw-bold ">17:00</span></td>
-														<td><span>Deviation Late 2 Hours</span></td>
-														<td>6 Hours</td>
-														<td>
-															<a data-bs-toggle="modal" data-bs-target="#deviation">
-																<div class="btn btn-square btn-secondary light btn-xs">
-																	<i class="fa-regular fa-file-lines"></i>
-																</div>
-															</a>
-														</td>
-													</tr>
-													<tr>
-														<td class="fw-semibold">Abraham Doe</td>
-														<td><span class="badge badge-sm badge-info light fw-bold ">Annual Leave</span></td>
-														<td><span class="badge badge-sm badge-light light fw-bold ">Annual Leave</span></td>
-														<td><span>Annual Leave</span></td>
-														<td>0 Hours</td>
-														<td>
-															<a data-bs-toggle="modal" data-bs-target="#annualLeave">
-																<div class="btn btn-square btn-info light btn-xs">
-																	<i class="fa-regular fa-file-lines"></i>
-																</div>
-															</a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- End - logs -->
-
 							<!-- Start - Top On Time -->
 							<div class="col-md-3 col-12">
 								<div class="card">
@@ -758,14 +680,16 @@
 											<a href="ecom-product-detail.html"><img src="files/employees/bussiness-man.png" alt="menus" class="avatar rounded me-3"></a>
 											<div class="pe-3 me-auto">
 												<h6 class="fs-16 mb-0"><a href="ecom-product-detail.html" class="text-black">John Doe</a></h6>
-												<span class="fs-12">Annual Leave</span>
+												<span class="fs-12">Annual Leave</span> <br>
+												<span class="badge badge-xs light badge-primary fw-semibold"><a data-bs-toggle="modal" data-bs-target="#annualLeave">Details</a></span>
 											</div>
 										</div>
 										<div class="d-flex border-bottom py-3">
 											<a href="ecom-product-detail.html"><img src="files/employees/ceo.png" alt="menus" class="avatar rounded me-3"></a>
 											<div class="pe-3 me-auto">
 												<h6 class="fs-16 mb-0"><a href="ecom-product-detail.html" class="text-black">Adam Doe</a></h6>
-												<span class="fs-12">Sick Leave</span>
+												<span class="fs-12">Sick Leave</span> <br>
+												<span class="badge badge-xs light badge-primary fw-semibold"><a data-bs-toggle="modal" data-bs-target="#sick">Details</a></span>
 											</div>
 										</div>
 									</div>
@@ -812,24 +736,10 @@
 									<div class="col-md-12">
 										<div class="card">
 											<div class="card-header border-0 pb-0">
-												<h4 class="card-title">Overtime Overview (2026)</h4>
+												<h4 class="card-title">Overtime Overview (01-05 June 2026)</h4>
 											</div>
 											<div class="card-body">
 												<canvas id="overtimeChart"></canvas>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-12">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="card">
-											<div class="card-header border-0 pb-0">
-												<h4 class="card-title">Business Trip Overview (2026)</h4>
-											</div>
-											<div class="card-body">
-												<canvas id="barChart_1"></canvas>
 											</div>
 										</div>
 									</div>
@@ -873,16 +783,6 @@
 					<!-- Start - Lunch -->
 					<div class="tab-pane fade" id="nav-lunch" role="tabpanel" aria-labelledby="nav-lunch-tab" tabindex="0">
 						<div class="row">
-							<div class="col-md-6">
-								<div class="card">
-									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Attendance Overview (2026)</h4>
-									</div>
-									<div class="card-body">
-										<canvas id="barChart_3"></canvas>
-									</div>
-								</div>
-							</div>
 							<div class="col-md-6 col-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
@@ -1003,104 +903,6 @@
 				}
 			}
 
-			var barChart3 = function(){
-				//stalked bar chart
-				if(jQuery('#barChart_3').length > 0 ){
-					const barChart_3 = document.getElementById("barChart_3").getContext('2d');
-					//generate gradient
-					const barChart_3gradientStroke = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke.addColorStop(0, "rgba(111, 207, 151, 1)");
-					barChart_3gradientStroke.addColorStop(1, "rgba(111, 207, 151, 1)");
-
-					const barChart_3gradientStroke2 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke2.addColorStop(0, "rgba(255, 112, 191, 1)");
-					barChart_3gradientStroke2.addColorStop(1, "rgba(255, 112, 191, 1)");
-
-					const barChart_3gradientStroke3 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke3.addColorStop(0, "rgba(129, 0, 209, 1)");
-					barChart_3gradientStroke3.addColorStop(1, "rgba(129, 0, 209, 1)");
-
-					const barChart_3gradientStroke4 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke4.addColorStop(0, "rgba(174, 226, 255, 1)");
-					barChart_3gradientStroke4.addColorStop(1, "rgba(174, 226, 255, 1)");
-
-					const barChart_3gradientStroke5 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke5.addColorStop(0, "rgba(254, 236, 65, 1)");
-					barChart_3gradientStroke5.addColorStop(1, "rgba(254, 236, 65, 1)");
-
-					barChart_3.height = 100;
-
-					let barChartData = {
-						defaultFontFamily: 'Poppins',
-						labels: [
-							'Jan (21)', 'Feb (19)', 'Mar (19)', 
-							'Apr (20)', 'May (18)', 'Jun (21)', 
-							'Jul (22)', 'Aug (20)', 'Sep (22)', 
-							'Oct (22)', 'Nov (21)', 'Dec (20)'
-						],
-						datasets: [{
-							label: 'On Time',
-							backgroundColor: barChart_3gradientStroke,
-							hoverBackgroundColor: barChart_3gradientStroke, 
-							// Majority of the days are usually on time
-							data: ['118', '117', '115', '118', '116', '119', '118', '116', '120', '119', '118', '115']
-						}, {
-							label: 'Late',
-							backgroundColor: barChart_3gradientStroke2,
-							hoverBackgroundColor: barChart_3gradientStroke2, 
-							// A realistic handful of late days scattered throughout the year
-							data: ['2', '1', '3', '1', '0', '1', '2', '1', '1', '2', '1', '2']
-						}, {
-							label: 'Deviation',
-							backgroundColor: barChart_3gradientStroke3,
-							hoverBackgroundColor: barChart_3gradientStroke3, 
-							// Rare occurrences (e.g., leaving early, unusual shifts)
-							data: ['0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0']
-						}, {
-							label: 'Business Trip',
-							backgroundColor: barChart_3gradientStroke5,
-							hoverBackgroundColor: barChart_3gradientStroke5, 
-							// Overtime hours logged
-							data: ['0', '1', '0', '1', '0', '2', '1', '0', '1', '0', '1', '0']
-						}, {
-							label: 'Leave',
-							backgroundColor: barChart_3gradientStroke4,
-							hoverBackgroundColor: barChart_3gradientStroke4, 
-							// Leaves factored in, peaking slightly around summer/holidays
-							data: ['1', '0', '1', '1', '2', '0', '2', '3', '0', '1', '1', '3']
-						}, ]
-					};
-
-					new Chart(barChart_3, {
-						type: 'bar',
-						data: barChartData,
-						options: {
-							plugins:{
-								legend:false,
-								tooltip: {
-									mode: 'index',
-									intersect: false
-								},
-								
-							},
-							title: {
-								display: false
-							},
-							responsive: true,
-							scales: {
-								x:{
-									stacked: true,
-								},
-								y:{
-									stacked: true
-								}
-							}
-						}
-					});
-
-
-				}
-			}
 
 			var overtimeChart = function(){
 				//stalked bar chart
@@ -1241,7 +1043,7 @@
 						],
 						datasets: [
 							{
-								label: "My Overtime Hours",
+								label: "Overtime Hours",
 								data: [25, 20, 60, 41, 66, 45, 80, 25, 20, 60, 41, 12],
 								borderColor: lineChart_2gradientStroke,
 								borderWidth: "2",
@@ -1407,7 +1209,6 @@
 					
 					load:function(){
 						barChart1();
-						barChart3();
 						lineChart2();	
 						lineChart3();
 						overtimeChart();
@@ -1415,7 +1216,6 @@
 					
 					resize:function(){
 						barChart1();
-						barChart3();	
 						lineChart2();
 						lineChart3();
 						overtimeChart();
