@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<!-- Title -->
+	<title>SIAP - HRIS</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="RNB">
+	<meta name="robots" content="">
+
+	<meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+	<meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+	<meta property="og:title" content="SIAP - HRIS">
+	<meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+	<meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+	<!-- All Required CSS -->
+    <link href="assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+	<!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+	<!-- Start - Switcher CSS -->
+	<link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+	<!-- End - Switcher CSS -->
+
+	<!-- Start - Style Css -->
+	<link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+	<link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+	<!-- End - Style Css -->
+    
+</head>
+<body>
+
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Attendance</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+		<!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+			<div class="container-fluid">
+				
+				<div class="card h-auto px-md-2 pt-md-2" >
+					<!-- Start - Profile Navigation -->
+					<div class="card-header py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
+						<ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendances.html" class="nav-link py-3 px-1 border-3">Overview</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance-leave.html" class="nav-link py-3 px-1 border-3 active">Leave</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance-business-trip.html" class="nav-link py-3 px-1 border-3">Business Trip</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance-overtime.html" class="nav-link py-3 px-1 border-3">Overtime</a>
+							</li>
+						</ul>
+					</div>
+					<!-- End - Profile Navigation -->
+				</div>
+
+				<!-- Start - Attendance -->
+				<div class="col-lg-12">
+					<div class="d-flex justify-content-between align-items-center mb-3">
+						<h5 class="mb-0">Leave</h5>
+                        <div class="d-flex align-items-center">
+							<ul class="nav nav-pills nav-pills-square-sm gap-2" id="myTabView" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="project-list-tab" data-bs-toggle="tab" data-bs-target="#project-list-pane" type="button" role="tab" aria-controls="project-list-pane" aria-selected="true">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+											<line x1="8" y1="6" x2="21" y2="6"></line>
+											<line x1="8" y1="12" x2="21" y2="12"></line>
+											<line x1="8" y1="18" x2="21" y2="18"></line>
+											<line x1="3" y1="6" x2="3.01" y2="6"></line>
+											<line x1="3" y1="12" x2="3.01" y2="12"></line>
+											<line x1="3" y1="18" x2="3.01" y2="18"></line>
+										</svg>
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="project-grid-tab" data-bs-toggle="tab" data-bs-target="#project-grid-pane" type="button" role="tab" aria-controls="project-grid-pane" aria-selected="false">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+											<rect x="3" y="3" width="7" height="7"></rect>
+											<rect x="14" y="3" width="7" height="7"></rect>
+											<rect x="14" y="14" width="7" height="7"></rect>
+											<rect x="3" y="14" width="7" height="7"></rect>
+										</svg>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-4 col-4 mb-3">
+                                <div class="bg-dark-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-black fw-semibold fw-semibold">Pending</span>
+                                    <h5 class="mb-0 fw-semibold">5 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-4 mb-3">
+                                <div class="bg-danger-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-danger fw-semibold">Rejected</span>
+                                    <h5 class="mb-0 fw-semibold">0 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-4 mb-3">
+                                <div class="bg-success-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-success fw-semibold">Approved</span>
+                                    <h5 class="mb-0 fw-semibold">0 request</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-2 col-4 mb-3">
+                                <div class="bg-danger-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-danger fw-semibold">This Week</span>
+                                    <h5 class="mb-0 fw-semibold">20 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4 mb-3">
+                                <div class="bg-info-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-info fw-semibold fw-semibold">Next Week</span>
+                                    <h5 class="mb-0 fw-semibold">5 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4 mb-3">
+                                <div class="bg-primary-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-primary fw-semibold">Annual LV</span>
+                                    <h5 class="mb-0 fw-semibold">20 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4 mb-3">
+                                <div class="bg-warning-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-warning fw-semibold fw-semibold">Sick LV</span>
+                                    <h5 class="mb-0 fw-semibold">5 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4 mb-3">
+                                <div class="bg-secondary-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-secondary fw-semibold">Special LV</span>
+                                    <h5 class="mb-0 fw-semibold">1 request</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4 mb-3">
+                                <div class="bg-light-subtle rounded px-3 py-2 text-center">
+                                    <span class="fs-14 text-black fw-semibold">Unpaid LV</span>
+                                    <h5 class="mb-0 fw-semibold">3 request</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start - Billing Statement -->
+                <div class="tab-content mt-3" id="myTabContentView">
+                    <div class="tab-pane fade show active" id="project-list-pane" role="tabpanel" aria-labelledby="project-list-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                                        <h4 class="card-title m-0">Pending <span class="text-danger">(High Priority)</span></h4>
+                                        <div class="clearfix d-flex align-items-center">
+                                            <div class="clearfix me-1">
+                                                <select class="selectpicker form-select form-select-sm" >
+                                                    <option value="May">May</option>
+                                                    <option value="June">June</option>
+                                                    <option value="July">July</option>
+                                                    <option value="August">August</option>
+                                                </select>
+                                            </div>
+                                            <div class="clearfix">
+                                                <select class="selectpicker form-select form-select-sm" >
+                                                    <option value="2026">2026</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2023">2023</option>
+                                                </select>
+                                            </div>
+                                            <div class="ms-2">
+                                                <div id="licenseUsageExcelBTN"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="mw-10">No</th>
+                                                        <th class="mw-100">Date</th>
+                                                        <th class="mw-80">Name</th>
+                                                        <th class="mw-80">Type</th>
+                                                        <th class="mw-50">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>01 Jun 2026 (1 day)</td>
+                                                        <td>Syafiq</td>
+                                                        <td><span class="badge badge-xs badge-outline-secondary fw-semibold">Annual</span></td>
+                                                        <td>
+                                                            <div class="dropdown dropdown-xs">
+                                                                <button class="btn btn-xs btn-light btn-square" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <i class="bi bi-pencil"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" >Edit</a></li>
+                                                                    <li><a class="dropdown-item" >Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>01 - 02 Jun 2026 (2 days)</td>
+                                                        <td>Rexy</td>
+                                                        <td><span class="badge badge-xs badge-outline-warning fw-semibold">Sick</span></td>
+                                                        <td>
+                                                            <div class="dropdown dropdown-xs">
+                                                                <button class="btn btn-xs btn-light btn-square" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <i class="bi bi-pencil"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <li><a class="dropdown-item" >Edit</a></li>
+                                                                    <li><a class="dropdown-item" >Delete</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header border-0 align-items-center">
+                                        <h4 class="card-title">Status : <span class="text-success">Approved</span> </h4>
+                                        <div class="clearfix d-flex align-items-center">
+                                            <div class="clearfix me-1">
+                                                <select class="selectpicker form-select form-select-sm" >
+                                                    <option value="May">May</option>
+                                                    <option value="June">June</option>
+                                                    <option value="July">July</option>
+                                                    <option value="August">August</option>
+                                                </select>
+                                            </div>
+                                            <div class="clearfix">
+                                                <select class="selectpicker form-select form-select-sm" >
+                                                    <option value="2026">2026</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2023">2023</option>
+                                                </select>
+                                            </div>
+                                            <div class="ms-2">
+                                                <div id="licenseUsageExcelBTN"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                                        <div class="table-responsive">
+                                            <table id="tableLogs" class="table table-sm table-sm-responsive text-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="mw-10">No</th>
+                                                        <th class="mw-100">Date</th>
+                                                        <th class="mw-80">Name</th>
+                                                        <th class="mw-80">Type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>01 Jun 2026 (1 day)</td>
+                                                        <td>Syafiq</td>
+                                                        <td><span class="badge badge-xs badge-outline-secondary fw-semibold">Annual</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>01 - 02 Jun 2026 (2 days)</td>
+                                                        <td>Rexy</td>
+                                                        <td><span class="badge badge-xs badge-outline-warning fw-semibold">Sick</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="clearfix d-flex">
+                                            <div class="avatar avatar-sm rounded me-3">
+                                                <img src="files/employees/bussiness-man.png" alt="">
+                                            </div>
+                                            <div class="clearfix">
+                                                <h6 class="mb-0 fw-semibold">
+                                                    <a href="attendance-business-trip-details.html" class="stretched-link">Muhammad Syafiq</a>
+                                                </h6>
+                                                <span class="small">Annual Leave</span>	
+                                            </div>	
+                                        </div>
+                                        <p class="my-3">Pulang kampung ke rumah jepara jawa tengah.</p>
+                                        <div class="row py-1">
+                                            <div class="col-12">
+                                                <span>Date :</span>
+                                            </div>
+                                            <div class="col-12">
+                                                <span>10 Jun 2026 - 12 Jun 2026 (3 Days)</span> <br>
+                                            </div>
+                                        </div>
+                                        <div class="row py-1">
+                                            <div class="col-12">
+                                                <span>PIC / Supervisor :</span>
+                                            </div>
+                                            <div class="col-12">
+                                                <span>Muhammad SYafiq</span> <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between flex-wrap">
+                                        <p class="mb-0 fw-semibold"><span class="text-success">SPV : Approved</span></p>
+                                        <span class="badge badge-sm badge-success light fw-semibold">Approved</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="project-grid-pane" role="tabpanel" aria-labelledby="project-grid-tab" tabindex="0">
+                        <div class="accordion accordion-left-indicator" id="accordion-five">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header accordion-header-primary" id="headingOne7">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne7">
+                                    <span class="accordion-header-text">Finance And Administration</span>
+                                </button>
+                                </h2>
+                                <div id="collapseOne7" class="accordion-collapse collapse show" aria-labelledby="headingOne7" data-bs-parent="#accordion-five">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-xxl-3 col-xl-4 col-sm-6">
+                                                <div class="card" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                                    <div class="card-body text-center p-md-4">
+                                                        <div class="mx-auto d-inline-block position-relative mb-3">
+                                                            <img src="files/employees/bussiness-man.png" alt="" class="rounded-circle avatar">
+                                                            <span class="fa fa-circle bored border-light text-success position-absolute bottom-0 end-0 mb-0 me-1 fs-12"></span>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <h4 class="mb-0"><a >Evelyn Hope</a></h4>
+                                                            <p class="mb-0">IT and Publication</p>
+                                                        </div>
+                                                        <div class="text-start">
+                                                            <div class="row py-2">
+                                                                <div class="col-md-6 col-12">
+                                                                    <span>Annual Leave</span>
+                                                                </div>
+                                                                <div class="col-md-6 col-12">
+                                                                    <span class="text-gray fw-semibold">2 days</span> <br>
+                                                                    <a href=""><span class="badge badge-xs badge-success light fw-semibold">21 Jun</span></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row py-2">
+                                                                <div class="col-md-6 col-12">
+                                                                    <span>Sick Leave</span>
+                                                                </div>
+                                                                <div class="col-md-6 col-12">
+                                                                    <span class="text-gray fw-semibold">1 days</span> <br>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row py-2">
+                                                                <div class="col-md-6 col-12">
+                                                                    <span>Special Leave</span>
+                                                                </div>
+                                                                <div class="col-md-6 col-12">
+                                                                    <span class="text-gray fw-semibold">1 days</span> <br>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row py-2">
+                                                                <div class="col-md-6 col-12">
+                                                                    <span>Unpaid Leave</span>
+                                                                </div>
+                                                                <div class="col-md-6 col-12">
+                                                                    <span class="text-gray fw-semibold">0 days</span> <br>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header accordion-header-info" id="headingTwo7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo7" >
+                                    <span class="accordion-header-text">Accordion Header Two</span>
+                                </button>
+                                </h2>
+                                <div id="collapseTwo7" class="accordion-collapse collapse" aria-labelledby="headingTwo7" data-bs-parent="#accordion-five">
+                                    <div class="accordion-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header accordion-header-primary" id="headingThree7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree7">
+                                    <span class="accordion-header-text">Accordion Header Three</span>
+                                </button>
+                                </h2>
+                                <div id="collapseThree7" class="accordion-collapse collapse" aria-labelledby="headingThree7" data-bs-parent="#accordion-five">
+                                    <div class="accordion-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End - Billing Statement -->
+
+            </div>
+		</main>
+		<!-- End - Content Body -->
+
+		<!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+
+		<div id="modal">
+			<script>
+				fetch('fundamentals/layouts/attendance/modal.html')
+				.then(response => response.text()).then(data => { document.getElementById('modal').innerHTML = data; });
+			</script>
+		</div>
+
+	</div>
+    <!-- End - Main Wrapper -->
+	
+	<!-- Start - Script -->
+	<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+    <script>
+        (function($){
+
+        var dzProfile = function(){
+            
+            var tableLicenseUsage = function(){
+                if($('#tableLicenseUsage').length > 0){
+                    var table = $('#tableLicenseUsage').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+
+            var tableApproved = function(){
+                if($('#tableApproved').length > 0){
+                    var table = $('#tableApproved').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            // extend: 'excel',
+                            // text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            // className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+            
+            var tableLogs = function(){
+                if($('#tableLogs').length > 0){
+                    var table = $('#tableLogs').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLogs_wrapper .dt-buttons').detach();
+                            $('#tableLogsExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+
+            var tableAll = function(){
+                if($('#tableAll').length > 0){
+                    var table = $('#tableAll').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableAll_wrapper .dt-buttons').detach();
+                            $('#tableAllExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+            
+            /* Function ============ */
+            return {
+                
+                load:function(){
+                    tableLicenseUsage();
+                    tableApproved();
+                    tableLogs();
+                    tableAll();
+                },
+                
+                resize:function(){
+                    // lineChartSecuritySummary();
+                }
+            }
+            
+        }();
+
+        jQuery(window).on('load',function(){
+            setTimeout(function(){
+                dzProfile.load();
+            }, 1000); 
+        });
+
+        jQuery(window).on('resize',function () {
+            setTimeout(function(){
+                dzProfile.resize();
+            }, 1000);
+            
+        });
+
+        })(jQuery);
+    </script>
+
+    <!-- Script For Datatables -->
+    <script src="assets/vendor/datatables/js/jquery.dataTables.bundle.min.js"></script>
+	
+	<!-- Script For Multiple Languages -->
+	<script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+	
+	<!-- Script For Custom JS -->
+	<script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
