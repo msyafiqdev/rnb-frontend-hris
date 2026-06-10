@@ -1,0 +1,2025 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <!-- Title -->
+    <title>SIAP - HRIS</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="RNB">
+    <meta name="robots" content="">
+
+    <meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+    <meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+    <meta property="og:title" content="SIAP - HRIS">
+    <meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+    <meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+    <!-- All Required CSS -->
+
+    <!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+    <!-- Start - Switcher CSS -->
+    <link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+    <!-- End - Switcher CSS -->
+
+    <!-- Start - Style Css -->
+    <link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+    <link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+    <!-- End - Style Css -->
+</head>
+
+<body>
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Attendance</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+        <!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+            
+            <div class="container-fluid">
+
+                <div class="card h-auto px-md-2 pt-md-2" >
+					<!-- Start - Profile Navigation -->
+					<div class="card-header py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
+						<ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendances.html" class="nav-link py-3 px-1 border-3">Overview</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance-leave.html" class="nav-link py-3 px-1 border-3 active">Leave</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance-business-trip.html" class="nav-link py-3 px-1 border-3">Business Trip</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="hr-attendance-overtime.html" class="nav-link py-3 px-1 border-3">Overtime</a>
+							</li>
+						</ul>
+					</div>
+					<!-- End - Profile Navigation -->
+				</div>
+
+                <!-- Start - My Projects -->
+                <div class="col-lg-12">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Leave</h5>
+                        <div class="d-flex align-items-center">
+                            <!-- <a href="javascript:void(0)" class="btn btn-primary btn-sm ms-2">+ New Project</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End - My Projects -->
+
+                <div class="row">
+                    <div class="col-md-2 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <div>
+                                        <p class="fs-14 mb-2">Leave Balance (2026)</p>
+                                        <span class="title text-success fs-28 fw-semibold">2 days</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-info" style="width: 0%; height:5px;" aria-label="Progess-info" role="progressbar">
+                                            <span class="sr-only">100% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-success"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <div>
+                                        <p class="fs-14 mb-2">Joint Holiday (2026)</p>
+                                        <span class="title text-black fs-28 fw-semibold">6 / 8 days</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-info" style="width: 0%; height:5px;" aria-label="Progess-info" role="progressbar">
+                                            <span class="sr-only">100% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <div>
+                                        <p class="fs-14 mb-2">Annual Leave (2026)</p>
+                                        <span class="title text-black fs-28 fw-semibold">1 days</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar bg-success position-absolute rounded bootom-0" style="width: 0%; height:5px;" aria-label="Progess-success" role="progressbar">
+                                            <span class="sr-only">95% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-primary"></div>
+                        </div>
+                    </div>
+                    <!-- End - Daily Cycling -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <div>
+                                        <p class="fs-14 mb-2">Sick Leave (2026)</p>
+                                        <span class="title text-black fs-28 fw-semibold">2 days</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-secondary" style="width: 0%; height:5px;" aria-label="Progess-secondary" role="progressbar">
+                                            <span class="sr-only">10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-warning"></div>
+                        </div>
+                    </div>
+                    <!-- Start - Daily Cycling -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <div>
+                                        <p class="fs-14 mb-2">Special Leave (2026)</p>
+                                        <span class="title text-black fs-28 fw-semibold">0 days</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-danger" style="width: 0%; height:5px;" aria-label="Progess-danger"  role="progressbar">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-info"></div>
+                        </div>
+                    </div>
+                    <!-- Start - Daily Cycling -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="card overflow-hidden avtivity-card">
+                            <div class="card-body">
+                                <div class="d-flex gap-md-4 gap-3 align-items-center">
+                                    <div>
+                                        <p class="fs-14 mb-2">Unpaid Leave (2026)</p>
+                                        <span class="title text-black fs-28 fw-semibold">0 days</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="progress position-absolute bottom-0 start-0 w-100" style="height:5px;">
+                                        <div class="progress-bar rounded bg-danger" style="width: 0%; height:5px;" aria-label="Progess-danger"  role="progressbar">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="effect bg-danger"></div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header d-sm-flex d-block pb-0 border-0">
+                                <div>
+                                    <h4 class="card-title">Leave Summary</h4>
+                                    <p class="fs-13 mb-0">Monitor your time-off and your eligibility status</p>
+                                </div>
+                                <div class="card-action stat-card-tabs">
+                                    <ul class="nav nav-underline" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-black fs-16 fw-medium active" data-bs-toggle="tab" href="#Running" role="tab">
+                                                <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0)">
+                                                    <path d="M0.988957 17.074C0.328275 17.2006 -0.104585 17.8385 0.0219823 18.4992C0.133362 19.0814 0.644694 19.4864 1.21678 19.4864C1.29272 19.4864 1.37119 19.4788 1.44713 19.4636L6.4592 18.5017C6.74524 18.446 7.00091 18.2916 7.18316 18.0638L9.33481 15.3502L8.61593 14.9832C8.08435 14.7148 7.71475 14.2288 7.58818 13.639L5.55804 16.1982L0.988957 17.074Z" fill="#A639FA"/>
+                                                    <path d="M18.84 6.493C20.3135 6.493 21.508 5.29848 21.508 3.82496C21.508 2.35144 20.3135 1.15692 18.84 1.15692C17.3665 1.15692 16.1719 2.35144 16.1719 3.82496C16.1719 5.29848 17.3665 6.493 18.84 6.493Z" fill="#A639FA"/>
+                                                    <path d="M13.0179 3.15671C12.7369 2.86813 12.4762 2.75422 12.1902 2.75422C12.0864 2.75422 11.9826 2.76941 11.8712 2.79472L7.29203 3.88067C6.6592 4.03002 6.26937 4.66539 6.41872 5.29569C6.54782 5.8374 7.02877 6.20192 7.56289 6.20192C7.65404 6.20192 7.74514 6.19179 7.8363 6.16901L11.7371 5.24507C11.9902 5.52605 13.2584 6.90057 13.4888 7.14358C11.8763 8.86996 10.2639 10.5938 8.65137 12.3202C8.62605 12.3481 8.60329 12.3759 8.58049 12.4037C8.10966 13.0036 8.25397 13.9453 8.96275 14.3022L13.9064 16.826L11.3397 20.985C10.9878 21.5571 11.165 22.3063 11.7371 22.6607C11.9371 22.7848 12.1573 22.843 12.375 22.843C12.7825 22.843 13.1824 22.638 13.4128 22.2658L16.6732 16.9829C16.8529 16.6918 16.901 16.34 16.8074 16.0134C16.7137 15.6843 16.4884 15.411 16.1821 15.2565L12.8331 13.5529L16.3543 9.7863L19.0122 12.0392C19.2324 12.2265 19.5032 12.3176 19.7716 12.3176C20.0601 12.3176 20.3487 12.2113 20.574 12.0038L23.6243 9.16106C24.1002 8.71808 24.128 7.97386 23.685 7.49797C23.4521 7.24989 23.1383 7.12333 22.8244 7.12333C22.5383 7.12333 22.2497 7.22711 22.0245 7.43721L19.7412 9.56101C19.7386 9.56354 14.0178 4.1819 13.0179 3.15671Z" fill="#A639FA"/>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                    </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Eligibility
+                                                <span class="bg-secondary"></span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-black fs-16 fw-medium" data-bs-toggle="tab" href="#Cycling" role="tab">
+                                                <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.8586 5.22599L5.87121 10.5543C5.50758 11.0846 5.64394 11.8068 6.17172 12.1679L11.1945 15.6098V18.9558C11.1945 19.5921 11.6995 20.125 12.3359 20.1376C12.9874 20.1477 13.5177 19.625 13.5177 18.976V15.0013C13.5177 14.6174 13.3283 14.2588 13.0126 14.0442L9.79041 11.8346L12.5025 8.95836L13.8914 12.1225C14.0758 12.5442 14.4949 12.817 14.9546 12.817H19.1844C19.8207 12.817 20.3536 12.3119 20.3662 11.6755C20.3763 11.024 19.8536 10.4937 19.2046 10.4937H15.7172C15.2576 9.44824 14.7677 8.41288 14.3409 7.35228C14.1237 6.81693 14.0025 6.5846 13.6036 6.21592C13.5227 6.14016 12.9596 5.62501 12.4571 5.16541C11.995 4.74619 11.2828 4.77397 10.8586 5.22599Z" fill="#FF3282"/>
+                                                    <path d="M15.6162 5.80681C17.0861 5.80681 18.2778 4.61517 18.2778 3.1452C18.2778 1.67523 17.0861 0.483582 15.6162 0.483582C14.1462 0.483582 12.9545 1.67523 12.9545 3.1452C12.9545 4.61517 14.1462 5.80681 15.6162 5.80681Z" fill="#FF3282"/>
+                                                    <path d="M4.89899 23.5164C7.60463 23.5164 9.79798 21.3231 9.79798 18.6174C9.79798 15.9118 7.60463 13.7184 4.89899 13.7184C2.19335 13.7184 0 15.9118 0 18.6174C0 21.3231 2.19335 23.5164 4.89899 23.5164Z" fill="#FF3282"/>
+                                                    <path d="M19.101 23.5164C21.8066 23.5164 24 21.3231 24 18.6174C24 15.9118 21.8066 13.7184 19.101 13.7184C16.3954 13.7184 14.202 15.9118 14.202 18.6174C14.202 21.3231 16.3954 23.5164 19.101 23.5164Z" fill="#FF3282"/>
+                                                </svg>
+                                                Tracker
+                                                <span class="bg-danger"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body pb-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Running" role="tabpanel">
+                                        <div>
+                                            <h4 class="card-title">Leave Balance & Eligibility</h4>
+                                            <p class="fs-13 mb-0">Please ensure you have met the 1-year service requirement and your request does not exceed the maximum monthly limit.</p>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Full Name</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Thomas Jefferson</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Supervisor</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">Michael Scott</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Join Date</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">15 March 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Current Tenure</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">1 Year, 2 Months</span> <br>
+                                                <span class="text-success">Eligible</span> / <span class="text-danger">Not Eligible</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Available Balance</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">2 Days</span> <br>
+                                                <span class="text-success">Eligible</span> / <span class="text-danger">Not Eligible</span> <br>
+                                                <span class="text-gray">Rolled over from previous months</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Next Accrual</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">+1 Day</span> <br>
+                                                <span class="text-gray">Will be automatically added next month</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Joint Holiday</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">8 Days (6 Days Passed)</span> <br>
+                                                <span class="text-gray">
+                                                    Tahun Baru Imlek (16 Feb), <br>
+                                                    Hari Suci Nyepi (18 Mar), <br>
+                                                    Hari Raya Idul Fitri (20, 23, & 24 Mar), <br>
+                                                    Kenaikan Isa Al Masih (15 Mei)
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade mb-3" id="Cycling" role="tabpanel">
+                                        <div>
+                                            <h4 class="card-title">Time Off Tracker</h4>
+                                            <p class="fs-13 mb-0">Review your year-to-date usage and check the status of your recent requests.</p>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Annual Leave Taken</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">2 Days</span> <br>
+                                                <span class="text-gray">16 Jan, 17 Mar</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Annual Leave Taken This Month (May)</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">1 Days</span> <br>
+                                                <span class="text-gray">16 May</span> <br>
+                                                <span class="text-gray">Maximum limit is 2 days per month</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Sick Leave Taken</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">3 Days</span> <br>
+                                                <span class="text-gray">16 Jan, 16-17 Mar</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Sick Leave Taken This Month (May)</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">1 Days</span> <br>
+                                                <span class="text-gray">16 May</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Special Leave Taken</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">2 Days</span> <br>
+                                                <span class="text-gray">16 Jan, 16 May</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Special Leave Taken This Month (May)</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">1 Days</span> <br>
+                                                <span class="text-gray">16 May</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Unpaid Leave Taken</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">2 Days</span> <br>
+                                                <span class="text-gray">16 Jan, 16 May</span>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Unpaid Leave Taken This Month(May)</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray fw-semibold">1 Days</span> <br>
+                                                <span class="text-gray">16 May</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Active / Pending Requests</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">1 Request</span> <br>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Total Approved Leaves</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">2 Requests</span> <br>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                            <div class="col-md-6 col-12">
+                                                <span>Total Rejected Leaves</span>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <span class="text-gray">1 Requests</span> <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header border-0 pb-0">
+                                <div>
+                                    <h4 class="card-title">Confirm Leave Request</h4>
+                                    <p class="fs-13 mb-0">Ensure leave dates are accurate and required attachments are uploaded.</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 mb-3">
+                                        <label class="form-label">Approval Status <span class="text-danger">*</span></label>
+                                        <div class="form-group mb-0">
+                                            <div class="form-check d-inline-block me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                                                <label class="form-check-label fw-semibold text-dark" for="flexRadioDefault4">
+                                                Pending
+                                                </label>
+                                            </div>
+                                            <div class="form-check d-inline-block mx-2 me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                                                <label class="form-check-label fw-semibold text-success" for="flexRadioDefault5">
+                                                Approve
+                                                </label>
+                                            </div>
+                                            <div class="form-check d-inline-block">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
+                                                <label class="form-check-label fw-semibold text-danger" for="flexRadioDefault6">
+                                                Reject
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row py-2">
+                                    <div class="col-md-6 col-12">
+                                        <span>Leave Type</span>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="text-gray">Annual Leave</span>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-md-6 col-12">
+                                        <span>Special Leave Type</span>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="text-gray">-</span>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-md-6 col-12">
+                                        <span>Date</span>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="text-gray">01-02 June 2026 (2 days)</span>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-md-6 col-12">
+                                        <span>Reason</span>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="text-gray">
+                                            I am writing to inform you that I am feeling unwell and need to take a one-day sick leave to rest and recover.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-md-6 col-12">
+                                        <span>Handover Note</span>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="text-gray">
+                                            I have handed my active tasks over to James.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-md-6 col-12">
+                                        <span>Attachment</span>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <span class="text-gray">Thomas Jefferson</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn light btn-success m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockIn">Confirm Leave Request</a>
+                            <div class="mb-3"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </main>
+        <!-- End - Content Body -->
+
+        <!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+
+        <div id="modal">
+            <script>
+                fetch('fundamentals/layouts/attendance/modal.html')
+                .then(response => response.text()).then(data => { document.getElementById('modal').innerHTML = data; });
+            </script>
+        </div>
+        
+    </div>
+    <!-- End - Main Wrapper -->
+
+
+
+    <!-- Start - Script -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+    <script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+    <script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+    <!-- Script For Apexchart -->
+    <script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+
+    <script>
+        (function($){
+
+        var dzProfile = function(){
+            
+            var chartTasksSummary = function(){
+                var options = {
+                    series: [25, 17, 20, 38],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                    ],
+                    labels: [
+                        "Employee",
+                        "Present",
+                        "Absent",
+                        "Holiday"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                };
+                
+                if($('#chartTasksSummary').length > 0){
+                    var handleTasksSummary = new ApexCharts(document.querySelector("#chartTasksSummary"), options);
+                    handleTasksSummary.render();			
+                }
+            }
+            
+            var chartTopSelling = function(){
+                var options = {
+                    series: [17, 8, 8, 17, 17, 8, 25],
+                    chart: {
+                        type: 'donut',
+                        width: 320,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                        'var(--bs-purple)',
+                        'var(--bs-dark)',
+                        'var(--bs-secondary)',
+                    ],
+                    labels: [
+                        "Laptop",
+                        "Phone",
+                        "Keyboard",
+                        "Mouse",
+                        "Monitors",
+                        "Watch",
+                        "Earbuds",
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 1480,
+                            options: {
+                                chart: {
+                                    type: 'donut',
+                                    width: 250,
+                                },
+                            }
+                        }
+                    ]
+                };
+                
+                if($('#chartTopSelling').length > 0){
+                    var handleTopSelling = new ApexCharts(document.querySelector("#chartTopSelling"), options);
+                    handleTopSelling.render();	
+                }
+            }
+            
+            var chartRecentStats = function(){
+                var options  = {
+                    series: [
+                        {
+                            name: 'Income',
+                            data: [80, 105, 140, 115, 130, 150, 85]
+                        }, 
+                        {
+                            name: 'Expense',
+                            data: [70, 95, 125, 110, 115, 145, 75]
+                        },
+                    ],
+                    chart: {
+                        type: 'bar',
+                        height: 300,
+                        
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape:'rounded',
+                            columnWidth: '45%',
+                            borderRadius: 5,
+                        },
+                    },
+                    colors:['#', '#77248B'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        shape: "circle",
+                    },
+                    legend: {
+                        show: false,
+                        fontSize: '12px',
+                        labels: {
+                            colors: '#000000',
+                        },
+                        markers: {
+                            width: 30,
+                            height: 30,
+                            strokeWidth: 0,
+                            strokeColor: '#fff',
+                            fillColors: undefined,
+                            radius: 35,	
+                        }
+                    },
+                    stroke: {
+                        show: true,
+                        width: 15,
+                        colors: ['transparent']
+                    },
+                    grid: {
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        labels: {
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false,
+                            borderType: 'solid',
+                            color: '#78909C',
+                            height: 6,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                        crosshairs: {
+                            show: false,
+                        }
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 150,
+                        tickAmount: 6,
+                        labels: {
+                            offsetX: 0,
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                        colors:[
+                            'var(--bs-primary)',
+                            'var(--bs-gray)'
+                        ],
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "$ " + val + " thousands"
+                            }
+                        }
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 1480,
+                            options: {
+                                stroke: {
+                                    show: true,
+                                    width: 8,
+                                    colors: ['transparent']
+                                },
+                            }
+                        },
+                        {
+                            breakpoint: 591,
+                            options: {
+                                chart: {
+                                    height: 250,
+                                },
+                                stroke: {
+                                    show: true,
+                                    width: 4,
+                                    colors: ['transparent']
+                                },
+                            }
+                        }
+                    ]
+                };
+
+                if(jQuery("#chartRecentStats").length > 0){
+                    var chartRecentStats = new ApexCharts(document.querySelector("#chartRecentStats"), options);
+                    chartRecentStats.render();
+                    
+                    jQuery('.chart-recent-stats-tab .nav-link').on('click',function(){
+                        if($(this).attr("href") == "#monthly"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [80, 105, 140, 115, 130, 150, 85]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [70, 95, 125, 110, 115, 145, 75]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#weekly"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [55, 85, 135, 125, 145, 120, 65]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [75, 105, 100, 125, 76, 95, 65]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#today"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [58, 75, 135, 125, 145, 138, 95]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [80, 135, 60, 85, 135, 148, 85]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#all"){
+                            chartRecentStats.updateSeries([
+                                {
+                                    name: "Running",
+                                    data: [85, 100, 145, 110, 135, 145, 90]
+                                },
+                                {
+                                    name: "Cycling",
+                                    data: [75, 100, 120, 115, 120, 140, 80]
+                                }
+                            ])
+                        }
+                    })
+                }
+            }
+            
+            var chartSecuritySummary = function(){
+                var options  = {
+                    series: [
+                        {
+                            name: 'Income',
+                            data: [31, 40,  28, 31, 40, 28, 31, 40, 28, 31, 40, 28]
+                        }, 
+                        {
+                            name: 'Expense',
+                            data: [11, 32, 45, 38, 25, 20, 36, 45, 15, 11, 32, 45]
+                        },
+                    ],
+                    chart: {
+                        type: 'bar',
+                        height: 280,
+                        
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: false,
+                            endingShape:'rounded',
+                            columnWidth: '45%',
+                            borderRadius: 5,
+                        },
+                    },
+                    colors:['#', '#77248B'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        shape: "circle",
+                    },
+                    legend: {
+                        show: false,
+                        fontSize: '12px',
+                        labels: {
+                            colors: '#000000',
+                        },
+                        markers: {
+                            width: 30,
+                            height: 30,
+                            strokeWidth: 0,
+                            strokeColor: '#fff',
+                            fillColors: undefined,
+                            radius: 35,	
+                        }
+                    },
+                    stroke: {
+                        show: true,
+                        width: 6,
+                        colors: ['transparent']
+                    },
+                    grid: {
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug', 'Sep', 'Oct','Nov','Dec'],
+                        labels: {
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false,
+                            borderType: 'solid',
+                            color: '#78909C',
+                            height: 6,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                        crosshairs: {
+                            show: false,
+                        }
+                    },
+                    yaxis: {
+                        labels: {
+                            offsetX: 0,
+                            style: {
+                                colors: '#888888',
+                                fontSize: '12px',
+                                cssClass: 'apexcharts-xaxis-label',
+                            },
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                        colors:[
+                            'var(--bs-primary)',
+                            'var(--bs-dark)'
+                        ],
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return "$ " + val + " thousands"
+                            }
+                        }
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            plotOptions: {
+                                bar: {
+                                    columnWidth: '1%',
+                                    borderRadius: -1,
+                                },
+                            },
+                            chart:{
+                                height:250,
+                            },
+                            series: [
+                                {
+                                    name: 'Projects',
+                                    data: [31, 40, 28,31, 40, 28,31, 40]
+                                }, 
+                                {
+                                    name: 'Projects',
+                                    data: [11, 32, 45,31, 40, 28,31, 40]
+                                },
+                            ],
+                        }
+                    }]
+                };
+                
+                if(jQuery("#chartSecuritySummary").length > 0){
+                    var handleSecuritySummary = new ApexCharts(document.querySelector("#chartSecuritySummary"), options);
+                    handleSecuritySummary.render();
+                    
+                    jQuery('.chart-summary-tab .nav-link').on('click',function(){
+                        if($(this).attr("href") == "#summaryAgents"){
+                            handleSecuritySummary.updateSeries([
+                                {
+                                    name: "Income",
+                                    data: [31, 40,  28, 31, 40, 28, 31, 40, 28, 31, 40, 28]
+                                },
+                                {
+                                    name: "Expense",
+                                    data: [11, 32, 45, 38, 25, 20, 36, 45, 15, 11, 32, 45]
+                                }
+                            ])
+                        }else if($(this).attr("href") == "#summaryClients"){
+                            handleSecuritySummary.updateSeries([
+                                {
+                                    name: "Income",
+                                    data: [25, 45,  26, 32, 46, 22, 34, 46, 26, 24, 38, 27]
+                                },
+                                {
+                                    name: "Expense",
+                                    data: [18, 38, 36, 24, 23, 26, 25, 42, 18, 15, 26, 32]
+                                }
+                            ])
+                        }
+                    })
+                }	
+            }
+            
+            var chartTasksOverTime = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Incomplete',
+                            data: [90, 120, 120, 100, 100, 90]
+                        },
+                        {
+                            name: 'Complete',
+                            data: [50, 75, 75, 55, 55, 70]
+                        }
+                    ],
+                    chart: {
+                        height: 280,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-danger)",
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 120,
+                        tickAmount: 4,
+                        labels: {
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '14px',
+                            },
+                            formatter: function (value) {
+                                return value;
+                            }
+                        },
+                    },
+                    xaxis: {
+                        categories: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+                        labels:{
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px',
+                            },
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 50,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 80,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0
+                                    }
+                                ],
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+        
+                if(jQuery("#chartTasksOverTime").length > 0){
+                    var handleTasksOverTime = new ApexCharts(document.querySelector("#chartTasksOverTime"), options);
+                    handleTasksOverTime.render();
+                    
+                    jQuery('#seriesIncomplete').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Incomplete');
+                    });
+                    
+                    jQuery('#seriesComple').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Comple');
+                    });
+                }
+            }
+            
+            var chartDeals = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Agents',
+                            data: [75, 85, 72, 100, 50, 100, 80, 75, 95, 35, 75,100]
+                        }
+                    ],
+                    chart: {
+                        height: 250,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        labels:{
+                            show : false
+                        },
+                    },
+                    xaxis: {
+                        labels:{
+                            show : false
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+                
+                if(jQuery("#chartDeals").length > 0){
+
+                    var handleDeals = new ApexCharts(document.querySelector("#chartDeals"), options);
+                    handleDeals.render();
+                    
+                    $(".chart-deals-tab .nav-link").on('click',function(){
+                        var seriesType = $(this).attr('data-series');
+                        var columnData = [];
+                        
+                        switch(seriesType) {
+                            case "dealsAgents":
+                                columnData = [75, 85, 72, 100, 50, 100, 80, 75, 95, 35, 75,100];
+                                break;
+                                
+                            case "dealsClients":
+                                columnData = [40, 25, 85, 45, 85, 25, 95, 65, 45, 45, 20,12];
+                                break;
+                                
+                            default:
+                                columnData = [75, 80, 72, 100, 50, 100, 80, 30, 95, 35, 75,100];
+                        }
+                        handleDeals.updateSeries([
+                            {
+                                name: "Agents",
+                                data: columnData
+                            }
+                        ]);
+                    })
+                    
+                }	
+            }
+            
+            var tableLicenseUsage = function(){
+                if($('#tableLicenseUsage').length > 0){
+                    var table = $('#tableLicenseUsage').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+            
+            var tableLogs = function(){
+                if($('#tableLogs').length > 0){
+                    var table = $('#tableLogs').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLogs_wrapper .dt-buttons').detach();
+                            $('#tableLogsExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+            
+            var cardCarousel = function () {
+                var isRTL = $('body').attr('direction') === 'rtl';
+
+                if ($('.card-carousel').length > 0) {
+
+                    $('.card-carousel').trigger('destroy.owl.carousel');
+                    $('.card-carousel').removeClass('owl-loaded owl-hidden');
+                    $('.card-carousel').find('.owl-stage-outer').children().unwrap();
+
+                    $('.card-carousel').owlCarousel({
+                        items: 1,
+                        rtl: isRTL,
+                        loop: true,
+                        margin: 5,
+                        nav: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true
+                    });
+                }
+            }
+
+            var chartProjectChart = function(){
+                var options = {
+                    series: [30, 40, 20, 10],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 12,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontFamily:'Arial',
+                                        fontWeight:'500',
+                                        offsetY: -17,
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '11px',
+                                        fontWeight:'500',
+                                        fontFamily:'Arial',
+                                        label: 'Total projects',
+                                    
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        '#FF9F00',
+                        'var(--bs-primary)',
+                        '#3AC977',
+                        '#FF5E5E'
+                    ],
+                    labels: [
+                        "Compete",
+                        "Pending",
+                        "Not Start"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                };
+                
+                if($('#chartProjectChart').length > 0){
+                    var handleProjectChart = new ApexCharts(document.querySelector("#chartProjectChart"), options);
+                    handleProjectChart.render();
+                }
+                
+            }
+            
+            var lineChartSecuritySummary = function(){
+                
+                var chartWidth = $("#lineChartSecuritySummary").width();
+                
+                var options = {
+                    series: [
+                        {
+                            name: 'Net Profit',
+                            data: [700, 650, 680, 590, 720, 610, 760, 530, 610],
+                        },
+                    ],
+                    chart: {
+                        type: 'area',
+                        height: 280,
+                        width: chartWidth + 55,
+                        toolbar: {
+                            show: false,
+                        },
+                        offsetX: -45,
+                        zoom: {
+                            enabled: false
+                        },
+                    },
+                    colors:[
+                        'var(--bs-primary)'
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        curve:'straight',
+                        colors:['var(--bs-primary)'],
+                    },
+                    grid: {
+                        show:true,
+                        borderColor: 'var(--bs-border-color)',
+                        
+                        xaxis: {
+                            lines: {
+                                show: true
+                            }
+                        },   
+                        yaxis: {
+                            lines: {
+                                show: false
+                            }
+                        },  
+                    },
+                    yaxis: {
+                        show: true,
+                        tickAmount: 4,
+                        min: 0,
+                        max: 800,
+                        labels:{
+                            offsetX:50,
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px'
+                            }
+                        }
+                    },
+                    xaxis: {
+                        categories: [
+                            'May',
+                            'June',
+                            'July',
+                            'Aug',
+                            'Sep',
+                            'Oct',
+                            'Nov',
+                            'Dec'
+                        ],
+                        overwriteCategories: undefined,
+                        
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            show: true,
+                            offsetX: 25,
+                            
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px'
+                            }
+                        },
+                    },
+                    fill: {
+                        opacity: 0.5,
+                        colors:'var(--primary)',
+                        type: 'gradient', 
+                        gradient: {
+                            colorStops:[
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .2
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .15
+                                },
+                                {
+                                    offset: 100,
+                                    color: 'var(--bs-primary)',
+                                    opacity: 0
+                                },
+                            ],
+                        }
+                    },
+                    tooltip: {
+                        enabled:true,
+                        style: {
+                            fontSize: '12px',
+                        },
+                        y: {
+                            formatter: function(val) {
+                                return "$" + val + ""
+                            }
+                        }
+                    }
+                };
+                
+                if($('#lineChartSecuritySummary').length > 0){
+                    var handleLineChartSecuritySummary = new ApexCharts(document.querySelector("#lineChartSecuritySummary"), options);
+                    handleLineChartSecuritySummary.render();
+                }
+                
+                $(".chart-summary-tab .nav-link").on('click',function(){
+                    var seriesType = $(this).attr('data-series');
+                    var columnData = [];
+                    switch(seriesType) {
+                        case "agents":
+                            columnData = [700, 650, 680, 590, 720, 610, 760, 530, 610];
+                            break;
+                        case "clients":
+                            columnData = [680, 620, 540, 680, 640, 655, 730, 580, 620];
+                            break;
+                        default:
+                            columnData = [700, 650, 680, 590, 720, 610, 760, 530, 610];
+                    }
+                    handleLineChartSecuritySummary.updateSeries([
+                        {
+                            name: "Net Profit",
+                            data: columnData
+                        }
+                    ]);
+                })
+            
+            }
+            
+            var chartProfileProgress = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Attendance Score',
+                            data: [18, 18, 18, 20, 20, 22, 13, 15, 16, 17, 18, 12],
+                        },
+                    ],
+                    chart: {
+                        type: 'area',
+                        height: 100,
+                        toolbar: {
+                            show: false,
+                        },
+                        zoom: {
+                            enabled: false
+                        },
+                        sparkline: {
+                            enabled: true
+                        }
+                    },
+                    colors:[
+                        'var(--bs-primary)'
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    stroke: {
+                        show: true,
+                        width: 2,
+                        curve:'straight',
+                        colors:['var(--bs-primary)'],
+                    },
+                    grid: {
+                        show:false,
+                        borderColor: '#eee',
+                        padding: {
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            left: -1
+                        }
+                    },
+                    states: {
+                        normal: {
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        },
+                        hover: {
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        },
+                        active: {
+                            allowMultipleDataPointsSelection: false,
+                            filter: {
+                                type: 'none',
+                                value: 0
+                            }
+                        }
+                    },
+                    xaxis: {
+                        categories: [
+                            'January',
+                            'February',
+                            'March',
+                            'April',
+                            'May',
+                            'June',
+                            'July',
+                            'August',
+                            'September',
+                            'October',
+                            'November',
+                            'December'
+                        ],
+                        axisBorder: {
+                            show: false,
+                        },
+                        axisTicks: {
+                            show: false
+                        },
+                        labels: {
+                            show: false,
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                        crosshairs: {
+                            show: false,
+                            position: 'front',
+                            stroke: {
+                                width: 1,
+                                dashArray: 3
+                            }
+                        },
+                        tooltip: {
+                            enabled: false,
+                            formatter: undefined,
+                            offsetY: 0,
+                            style: {
+                                fontSize: '12px',
+                            }
+                        }
+                    },
+                    yaxis: {
+                        show: false,
+                    },
+                    fill: {
+                        opacity: 0.9,
+                        colors:'var(--bs-primary)',
+                        type: 'gradient', 
+                        gradient: {
+                            colorStops:[
+                                {
+                                    offset: 0,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .4
+                                },
+                                {
+                                    offset: 0.6,
+                                    color: 'var(--bs-primary)',
+                                    opacity: .4
+                                },
+                                {
+                                    offset: 100,
+                                    color: 'white',
+                                    opacity: 0
+                                }
+                            ],
+                        }
+                    },
+                    tooltip: {
+                        enabled:true,
+                        style: {
+                            fontSize: '12px',
+                        },
+                        y: {
+                            formatter: function(val) {
+                                return val + " days"
+                            }
+                        }
+                    }
+                };
+
+                if($('#chartProfileProgress').length > 0){
+                    var handleProfileProgress = new ApexCharts(document.querySelector("#chartProfileProgress"), options);
+                    handleProfileProgress.render();
+                }
+            
+            }
+            
+            var projectChart = function(){
+                if(jQuery("#projectChart").length>0) {
+                    var options = {
+                        series: [30, 40, 20, 10],
+                        chart: {
+                            type: 'donut',
+                            width: 250,
+                        },
+                        plotOptions: {
+                            pie: {
+                                donut: {
+                                    size: '90%',
+                                    labels: {
+                                        show: true,
+                                        name: {
+                                            show: true,
+                                            offsetY: 12,
+                                            color: 'var(--bs-body-color)',
+                                        },
+                                        value: {
+                                            show: true,
+                                            fontSize: '24px',
+                                            fontFamily:'Arial',
+                                            fontWeight:'500',
+                                            offsetY: -17,
+                                            color:' var(--bs-heading-color)',
+                                        },
+                                        total: {
+                                            show: true,
+                                            fontSize: '11px',
+                                            fontWeight:'500',
+                                            fontFamily:'Arial',
+                                            label: 'Total projects',
+                                            color: 'var(--bs-body-color)',
+                                        
+                                            formatter: function (w) {
+                                                return w.globals.seriesTotals.reduce((a, b) => {
+                                                    return a + b
+                                                }, 0)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        stroke: {
+                            show: true,
+                            width: 2,
+                            colors: ['var(--bs-body-bg)'],
+                        },
+                        legend: {
+                            show: false,
+                        },
+                        colors: ['var(--bs-warning)', 'var(--bs-primary)', 'var(--bs-success)', 'var(--bs-danger)'],
+                        labels: ["Pending", "Completed", "Progress", "Cancelled"],
+                        dataLabels: {
+                            enabled: false,
+                        },
+                    };
+                    var chartBar1 = new ApexCharts(document.querySelector("#projectChart"), options);
+                    chartBar1.render();
+                }
+            }
+                
+            /* Function ============ */
+            return {
+                
+                load:function(){
+                    chartTasksSummary();
+                    chartTopSelling();
+                    chartRecentStats();
+                    chartSecuritySummary();
+                    chartTasksOverTime();
+                    chartDeals();
+                    tableLicenseUsage();
+                    tableLogs();
+                    cardCarousel();
+                    chartProfileProgress();
+                    chartProjectChart();
+                    lineChartSecuritySummary();
+                    projectChart();
+                },
+                
+                resize:function(){
+                    lineChartSecuritySummary();
+                }
+            }
+            
+        }();
+
+        jQuery(window).on('load',function(){
+            setTimeout(function(){
+                dzProfile.load();
+            }, 1000); 
+        });
+
+        jQuery(window).on('resize',function () {
+            setTimeout(function(){
+                dzProfile.resize();
+            }, 1000);
+            
+        });
+
+        })(jQuery);
+
+    </script>
+
+    <!-- Script For Multiple Languages -->
+    <script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+
+    <!-- Script For Custom JS -->
+    <script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
