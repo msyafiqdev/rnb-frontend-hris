@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<!-- Title -->
+	<title>SIAP - HRIS</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="RNB">
+	<meta name="robots" content="">
+
+	<meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+	<meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+	<meta property="og:title" content="SIAP - HRIS">
+	<meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+	<meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+	<!-- All Required CSS -->
+    <link href="assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+	<!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+	<!-- Start - Switcher CSS -->
+	<link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+	<!-- End - Switcher CSS -->
+
+	<!-- Start - Style Css -->
+	<link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+	<link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+	<!-- End - Style Css -->
+    
+</head>
+<body>
+
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Employees</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+		<!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+			<div class="container-fluid">
+				<!-- Start - Page Title & Breadcrumb -->
+				<div class="page-title">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li><h1>Employees</h1></li>
+							<li class="breadcrumb-item">
+								<a href="index.html">
+									<svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Home
+								</a>
+							</li>
+							<li class="breadcrumb-item" aria-current="page">Employees</li>
+							<!-- <li class="breadcrumb-item active" aria-current="page">Overview</li> -->
+						</ol>
+					</nav>
+				</div>
+				<!-- End - Page Title & Breadcrumb -->
+
+                <div class="tab-content" id="tabContentMyProfileBottom">
+
+					<!-- Start - Documents -->
+					<div class="d-flex justify-content-between align-items-center mb-3">
+						<h5 class="mb-0">Employees Database</h5>
+						<div class="d-flex align-items-center">
+							<ul class="nav nav-pills nav-pills-square-sm gap-2" id="myTabView" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="project-list-tab" data-bs-toggle="tab" data-bs-target="#project-list-pane" type="button" role="tab" aria-controls="project-list-pane" aria-selected="true">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+											<line x1="8" y1="6" x2="21" y2="6"></line>
+											<line x1="8" y1="12" x2="21" y2="12"></line>
+											<line x1="8" y1="18" x2="21" y2="18"></line>
+											<line x1="3" y1="6" x2="3.01" y2="6"></line>
+											<line x1="3" y1="12" x2="3.01" y2="12"></line>
+											<line x1="3" y1="18" x2="3.01" y2="18"></line>
+										</svg>
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="project-grid-tab" data-bs-toggle="tab" data-bs-target="#project-grid-pane" type="button" role="tab" aria-controls="project-grid-pane" aria-selected="false">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+											<rect x="3" y="3" width="7" height="7"></rect>
+											<rect x="14" y="3" width="7" height="7"></rect>
+											<rect x="14" y="14" width="7" height="7"></rect>
+											<rect x="3" y="14" width="7" height="7"></rect>
+										</svg>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- End - Documents -->
+
+					<!-- Start - Billing Statement -->
+					<div class="tab-content" id="myTabContentView">
+						<div class="tab-pane fade show active" id="project-list-pane" role="tabpanel" aria-labelledby="project-list-tab" tabindex="0">
+							<div class="row">
+
+								<!-- Start - Plan List -->
+								<div class="col-md-12">
+									<div class="card">
+                                        <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                                            <h4 class="card-title m-0">Employee List</h4>
+                                            <div class="clearfix d-flex align-items-center">
+                                                <div class="clearfix me-1">
+                                                    <select class="selectpicker form-select form-select-sm" >
+                                                        <option value="May">May</option>
+                                                        <option value="June">June</option>
+                                                        <option value="July">July</option>
+                                                        <option value="August">August</option>
+                                                    </select>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <select class="selectpicker form-select form-select-sm" >
+                                                        <option value="2026">2026</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2023">2023</option>
+                                                    </select>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <div id="licenseUsageExcelBTN"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body table-card-body px-0 pt-0 pb-2">
+                                            <div class="table-responsive">
+                                                <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="mw-10">No</th>
+                                                            <th class="mw-80">Name</th>
+                                                            <th class="mw-80">Position</th>
+                                                            <th class="mw-80">Company</th>
+                                                            <th class="mw-80">Contract</th>
+                                                            <th class="mw-100">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>
+																<a href="">
+																	<img src="files/employees/bussiness-man.png" alt="" class="rounded-circle me-2" width="35">
+																	<span>Jordan Henderson</span>
+																</a>
+                                                            </td>
+                                                            <td>
+                                                                <span>IT Web Development</span> <br>
+                                                                <span>Information and Comunication Technology</span>
+                                                            </td>
+                                                            <td>RNB Management</td>
+                                                            <td>
+                                                                <span>01 Jun 2026</span> <br>
+                                                                <span>01 Aug 2026</span>
+                                                            </td>
+                                                            <td class="text-start">
+                                                                <div class="dropdown dropdown-xs">
+                                                                    <button class="btn btn-xs btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Options
+                                                                    </button>
+                                                                    <ul class="dropdown-menu dropdown-menu-end">
+																		<li><a class="dropdown-item" >View More</a></li>
+                                                                        <li><a class="dropdown-item" >Edit</a></li>
+                                                                        <li><a class="dropdown-item" >Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+														<tr>
+                                                            <td>2</td>
+                                                            <td>
+                                                                <img src="files/employees/bussiness-man.png" alt="" class="rounded-circle me-2" width="35">
+                                                                <span>Jordan Henderson</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>IT Web Development</span> <br>
+                                                                <span>Information and Comunication Technology</span>
+                                                            </td>
+                                                            <td>RNB Management</td>
+                                                            <td>
+                                                                <span>01 Jun 2026</span> <br>
+                                                                <span>01 Aug 2026</span>
+                                                            </td>
+                                                            <td class="text-start">
+                                                                <div class="dropdown dropdown-xs">
+                                                                    <button class="btn btn-xs btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Options
+                                                                    </button>
+                                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                                        <li><a class="dropdown-item" >Edit</a></li>
+                                                                        <li><a class="dropdown-item" >Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+								<!-- End - Plan List -->
+								
+							</div>
+						</div>
+						<div class="tab-pane fade" id="project-grid-pane" role="tabpanel" aria-labelledby="project-grid-tab" tabindex="0">
+							<div class="row">
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">CRUD Invoices</h5>
+												<span class="fs-14">7 files</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Tower Hill Docs</h5>
+												<span class="fs-14">3 files</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Mivy App</h5>
+												<span class="fs-14">25 files</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/folder.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Leaf CRM API Co..</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/csv.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Tower Hill bilboa..</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/css.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Orders backup</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/pdf.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Avionica.</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/html.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">9 Degree CRUD Req..</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/ppt.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">User CRUD Styles</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
+									<div class="card">
+										<div class="card-body text-center p-4 d-flex flex-column justify-content-between">
+											<div class="m-auto pb-3">
+												<img src="assets/images/files/mp3.avif" alt="">
+											</div>
+											<div class="clearfix">
+												<h5 class="mb-0">Craft Logo</h5>
+												<span class="fs-14">2 days ago</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End - Billing Statement -->
+				</div>
+
+            </div>
+		</main>
+		<!-- End - Content Body -->
+
+		<!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+
+	</div>
+    <!-- End - Main Wrapper -->
+	
+	<!-- Start - Script -->
+	<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+        <script>
+        (function($){
+
+        var dzProfile = function(){
+            
+            var tableLicenseUsage = function(){
+                if($('#tableLicenseUsage').length > 0){
+                    var table = $('#tableLicenseUsage').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+            
+            var tableLogs = function(){
+                if($('#tableLogs').length > 0){
+                    var table = $('#tableLogs').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLogs_wrapper .dt-buttons').detach();
+                            $('#tableLogsExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+            
+
+            /* Function ============ */
+            return {
+                
+                load:function(){
+                    tableLicenseUsage();
+                    tableLogs();
+                },
+                
+                resize:function(){
+                    lineChartSecuritySummary();
+                }
+            }
+            
+        }();
+
+        jQuery(window).on('load',function(){
+            setTimeout(function(){
+                dzProfile.load();
+            }, 1000); 
+        });
+
+        jQuery(window).on('resize',function () {
+            setTimeout(function(){
+                dzProfile.resize();
+            }, 1000);
+            
+        });
+
+        })(jQuery);
+
+    </script>
+
+    <!-- Script For Datatables -->
+    <script src="assets/vendor/datatables/js/jquery.dataTables.bundle.min.js"></script>
+	
+	<!-- Script For Multiple Languages -->
+	<script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+	
+	<!-- Script For Custom JS -->
+	<script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
