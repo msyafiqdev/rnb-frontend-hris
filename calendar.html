@@ -26,7 +26,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
     
 	<!-- All Required CSS -->
-
+	<link href="assets/vendor/fullcalendar/css/main.min.css" rel="stylesheet">
 
 	<!-- Start - Basic CSS -->
     <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -108,7 +108,72 @@
 		<!-- ========== Start - Content Body ========== -->
         <main class="content-body">
 			<div class="container-fluid">
-				<img src="files/comingsoon/comingsoon.png" alt="" class="rounded">
+				<!-- Start - Page Title & Breadcrumb -->
+				<div class="page-title">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li><h1>Calendar</h1></li>
+							<li class="breadcrumb-item">
+								<a href="index.html">
+									<svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Home
+								</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Calendar</li>
+						</ol>
+					</nav>
+				</div>
+				<!-- End - Page Title & Breadcrumb -->
+
+				<!-- Start - Calendar -->
+                <div class="row">
+                    <div class="col-xxl-3 col-xl-4 d-none">
+                        <div class="card h-auto">
+                            <div class="card-header d-block border-0 pb-0">
+                                <h4 class="card-title">Calendar</h4>
+								<p class="mb-0">Drag and drop your event or click in the calendar</p>
+                            </div>
+                            <div class="card-body">
+								<div id="external-events">
+									<button type="button" class="external-event justify-content-start mb-2 btn btn-primary light" data-class="bg-primary">
+										<i class="fa-solid fa-circle"></i> New Theme Release
+									</button>
+									<button type="button" class="external-event justify-content-start mb-2 btn btn-warning light" data-class="bg-warning">
+										<i class="fa-solid fa-circle"></i> My Event
+									</button>
+									<button type="button" class="external-event justify-content-start mb-2 btn btn-danger light" data-class="bg-danger">
+										<i class="fa-solid fa-circle"></i> Meet Manager
+									</button>
+									<button type="button" class="external-event justify-content-start mb-2 btn btn-info light" data-class="bg-info">
+										<i class="fa-solid fa-circle"></i> Create New theme
+									</button>
+									<button type="button" class="external-event justify-content-start mb-2 btn btn-dark light" data-class="bg-dark">
+										<i class="fa-solid fa-circle"></i> Project Launch
+									</button>
+									<button type="button" class="external-event justify-content-start mb-2 btn btn-secondary light" data-class="bg-secondary">
+										<i class="fa-solid fa-circle"></i> Meeting
+									</button>
+								</div>
+								<div class="form-check checkbox-event my-4">
+									<input class="form-check-input" type="checkbox" value="" id="drop-remove">
+									<label class="form-check-label" for="drop-remove">Remove After Drop</label>
+								</div>
+								<a data-bs-toggle="modal" data-bs-target="#add-category" class="btn-event btn btn-primary w-100">
+									<i class="fa fa-plus"></i> Create New
+								</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-12 col-xl-12">
+                        <div class="card card-body">
+							<div id="calendar" class="app-fullcalendar"></div>
+                        </div>
+                    </div>
+                </div>
+				<!-- End - Calendar -->
             </div>
 		</main>
 		<!-- End - Content Body -->
@@ -132,6 +197,464 @@
 	<script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
 	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
 	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+	<!-- Script For Full Calendar -->
+    <script src="assets/vendor/fullcalendar/js/main.min.js"></script>
+		<script>
+		"use strict"
+		document.addEventListener('DOMContentLoaded', function() {
+
+				/* initialize the external events
+				-----------------------------------------------------------------*/
+
+				var containerEl = document.getElementById('external-events');
+				new FullCalendar.Draggable(containerEl, {
+				itemSelector: '.external-event',
+				eventData: function(eventEl) {
+					return {
+					title: eventEl.innerText.trim()
+					}
+				}
+				
+				});
+				
+
+				/* initialize the calendar
+				-----------------------------------------------------------------*/
+
+				var calendarEl = document.getElementById('calendar');
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth,timeGridWeek,timeGridDay'
+				},
+				
+				selectable: true,
+				selectMirror: true,
+				select: function(arg) {
+					var title = prompt('Event Title:');
+					if (title) {
+					calendar.addEvent({
+						title: title,
+						start: arg.start,
+						end: arg.end,
+						allDay: arg.allDay
+					})
+					}
+					calendar.unselect()
+				},
+				
+				editable: true,
+				droppable: true, // this allows things to be dropped onto the calendar
+				drop: function(arg) {
+					// is the "remove after drop" checkbox checked?
+					if (document.getElementById('drop-remove').checked) {
+					// if so, remove the element from the "Draggable Events" list
+					arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+					}
+				},
+				initialDate: '2026-05-01',
+					weekNumbers: true,
+					firstDay: 1,
+					navLinks: true, // can click day/week names to navigate views
+					editable: true,
+					selectable: true,
+					nowIndicator: true,
+				events: [
+						{
+						title: 'All Day Event',
+						start: '2026-05-01'
+						},
+						{
+						title: 'Long Event',
+						start: '2026-05-07',
+						className: "bg-danger"
+						},
+						{
+						groupId: 999,
+						title: 'Repeating Event',
+						start: '2026-05-09T16:00:00'
+						},
+						{
+						groupId: 999,
+						title: 'Repeating Event',
+						start: '2026-05-16T16:00:00'
+						},
+						{
+						title: 'Conference',
+						start: '2026-05-11',
+						end: '2026-05-13',
+						className: "bg-danger"
+						},
+						{
+						title: 'Meeting',
+						start: '2026-05-12T10:30:00',
+						end: '2026-05-12T12:30:00',
+						className:"bg-info"
+						},
+						{
+						title: 'Lunch',
+						start: '2026-05-12T12:00:00'
+						},
+						{
+						title: 'Meeting',
+						start: '2021-04-12T14:30:00'
+						},
+						{
+						title: 'Happy Hour',
+						start: '2021-07-12T17:30:00'
+						},
+						{
+						title: 'Dinner',
+						start: '2026-05-12T20:00:00',
+						className: "bg-warning"
+						},
+						{
+						title: 'Birthday Party',
+						start: '2026-05-13T07:00:00',
+						className: "bg-secondary"
+						},
+						{
+						title: 'Click for Google',
+						url: 'http://google.com/',
+						start: '2026-05-28'
+						}
+					]
+				});
+				calendar.render();
+
+			});
+		"use strict"
+
+		function fullCalender(){
+			
+			
+			
+			/* initialize the external events
+				-----------------------------------------------------------------*/
+
+				var containerEl = document.getElementById('external-events');
+				new FullCalendar.Draggable(containerEl, {
+				itemSelector: '.external-event',
+				eventData: function(eventEl) {
+					return {
+					title: eventEl.innerText.trim()
+					}
+				}
+				
+				});
+				/* initialize the calendar
+				-----------------------------------------------------------------*/
+
+				var calendarEl = document.getElementById('calendar');
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+					initialView: 'dayGridMonth',
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth,timeGridWeek,timeGridDay'
+				},
+				eventPositioned: function(info)
+				{
+					if (info.view.type === 'dayGridMonth' && info.el.classList.contains('fc-event')) {
+						var eventCount = info.event._def.extendedProps.eventCount;
+						var moreIndicator = '<div class="event-more">+' + (eventCount - 1) + ' more</div>';
+						
+						if (eventCount > 1) {
+						info.el.querySelector('.fc-event-title').insertAdjacentHTML('beforeend', moreIndicator);
+						}
+					}
+					},
+
+				selectable: true,
+				selectMirror: true,
+				select: function(arg) {
+					var title = prompt('Event Title:');
+					if (title) {
+					calendar.addEvent({
+						title: title,
+						start: arg.start,
+						end: arg.end,
+						allDay: arg.allDay
+					})
+					}
+					calendar.unselect()
+				},
+				
+					longPressDelay: 0,
+				editable: true,
+				droppable: true, // this allows things to be dropped onto the calendar
+				drop: function(arg) {
+					// is the "remove after drop" checkbox checked?
+					if (document.getElementById('drop-remove').checked) {
+					// if so, remove the element from the "Draggable Events" list
+					arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+					}
+				},
+				initialDate: '2026-08-01',
+					weekNumbers: true,
+					firstDay: 1,
+					navLinks: true, // can click day/week names to navigate views
+					editable: false,
+					selectable: false,
+					nowIndicator: true,
+				events: [
+						{
+						title: 'Hari Buruh Internasional',
+						start: '2026-05-01',
+						backgroundColor: '#dc3545', // Your custom hex code
+							borderColor: '#bd2130',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Kenaikan Yesus Kristus',
+						start: '2026-05-14',
+						backgroundColor: '#dc3545', // Your custom hex code
+							borderColor: '#bd2130',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Cuti Bersama Kenaikan Yesus Kristus',
+						start: '2026-05-15',
+						backgroundColor: '#cd5c5c', // Your custom hex code
+							borderColor: '#a54a4a',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Hari Raya Idul Adha',
+						start: '2026-05-27',
+						backgroundColor: '#dc3545', // Your custom hex code
+							borderColor: '#bd2130',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Cuti Bersama Hari Raya Idul Adha',
+						start: '2026-05-28',
+						backgroundColor: '#cd5c5c', // Your custom hex code
+							borderColor: '#a54a4a',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-02',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-03',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-09',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-10',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-16',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-17',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-23',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-24',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-30',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Weekend / Day Off',
+						start: '2026-05-31',
+						backgroundColor: '#8b0000', // Your custom hex code
+							borderColor: '#5c0000',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-04',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:10 - Out : 17:00',
+						start: '2026-05-05',
+						backgroundColor: '#fd7e14', // Your custom hex code
+							borderColor: '#d3680d',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-07',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-11',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-12',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 17:00',
+						start: '2026-05-18',
+						backgroundColor: '#20c997', // Your custom hex code
+							borderColor: '#1aa179',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'In : 08:00 - Out : 12:00',
+						start: '2026-05-19',
+						backgroundColor: '#17a2b8', // Your custom hex code
+							borderColor: '#117a8b',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Annual Leave',
+						start: '2026-05-08',
+						backgroundColor: '#6f42c1', // Your custom hex code
+							borderColor: '#59339d',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Special Leave',
+						start: '2026-05-13',
+						backgroundColor: '#d63384', // Your custom hex code
+							borderColor: '#a82767',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Sick Leave',
+						start: '2026-05-06',
+						backgroundColor: '#0d6efd', // Your custom hex code
+							borderColor: '#0a58ca',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Unpaid Leave',
+						start: '2026-05-21',
+						backgroundColor: '#6c757d', // Your custom hex code
+							borderColor: '#5a6268',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Business Trip',
+						start: '2026-05-22',
+						backgroundColor: '#0dcaf0', // Your custom hex code
+							borderColor: '#0aa2c0',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-04',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-11',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-18',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Monday Meeting (Sprint)',
+						start: '2026-05-25',
+						url: 'http://google.com/',
+						backgroundColor: '#795548', // Your custom hex code
+							borderColor: '#5d4037',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						},
+						{
+						title: 'Townhall Meeting',
+						start: '2026-05-07',
+						backgroundColor: '#212529', // Your custom hex code
+							borderColor: '#121416',     // Slightly darker for the border
+							textColor: '#ffffff'        // Keep text readable
+						}
+						// {
+						//   title: 'Click for Google',
+						//   url: 'http://google.com/',
+						//   start: '2026-05-28'
+						// }
+					]
+				});
+				calendar.render();
+				
+				
+			
+		}	
+			
+			
+			
+		jQuery(window).on('load',function(){
+			setTimeout(function(){
+				fullCalender();	
+			}, 1000);
+			
+			
+		});	
+
+
+	
+
+	</script>
 	
 	<!-- Script For Multiple Languages -->
 	<script src="assets/vendor/i18n/i18n.js"></script>
