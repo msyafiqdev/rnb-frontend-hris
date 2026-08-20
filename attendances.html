@@ -258,7 +258,6 @@
 							<div class="effect bg-success"></div>
 						</div>
 					</div>
-					<!-- Start - Daily Cycling -->
 					<div class="col-md-3 col-sm-6">
 						<div class="card overflow-hidden avtivity-card">
 							<div class="card-body">
@@ -287,7 +286,6 @@
 							<div class="effect bg-danger"></div>
 						</div>
 					</div>
-					<!-- End - Daily Cycling -->
 					<div class="col-md-3 col-sm-6">
 						<div class="card overflow-hidden avtivity-card">
 							<div class="card-body">
@@ -300,7 +298,7 @@
 										</svg>
 									</span>
 									<div>
-										<p class="fs-14 mb-2">Overtime Rate</p>
+										<p class="fs-14 mb-2">Leaves Rate</p>
 										<span class="title text-black fs-28 fw-semibold">60%</span>
 									</div>
 								</div>
@@ -322,7 +320,7 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Attendance Overview (May)</h4>
+										<h4 class="card-title">Overview (May)</h4>
 									</div>
 									<div class="card-body">
                                         <div class="position-relative mb-4">
@@ -355,8 +353,8 @@
 												<span class="fs-12 text-black">Leave</span>
 											</li>
 											<li class="d-flex align-items-center gap-3 me-5 mb-2">
-												<i class="fa fa-circle text-secondary"></i>
-												<span class="fs-12 text-black">Deviation</span>
+												<i class="fa fa-circle text-warning"></i>
+												<span class="fs-12 text-black">Alpha</span>
 											</li>
 										</ul>
 									</div>
@@ -434,7 +432,7 @@
 											<div class="col-sm-6">
 												<div class="d-flex align-items-center mb-sm-5 mb-3">
 													<div class="position-relative me-3">
-														<span class="donut" data-peity='{ "fill": ["var(--bs-secondary)", "var(--bs-light)"],   "innerRadius": 34, "radius": 10}'>5/8</span>
+														<span class="donut" data-peity='{ "fill": ["var(--bs-info)", "var(--bs-light)"],   "innerRadius": 34, "radius": 10}'>5/8</span>
 														<small class="position-absolute top-50 start-50 translate-middle">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<g clip-path="url(#clip5)">
@@ -452,15 +450,15 @@
 														</small>
 													</div>
 													<div>
-														<h4 class="fs-18 text-black">Weekly Required Hours (80%)</h4>
-														<span>32 Hrs / 40 Hrs Per Week</span>
+														<h4 class="fs-18 text-black">Leaves (80%)</h4>
+														<span>1 Days / 20 Days</span>
 													</div>
 												</div>
 											</div>
 											<div class="col-sm-6">
 												<div class="d-flex align-items-center mb-sm-5 mb-3">
 													<div class="position-relative me-3">
-														<span class="donut" data-peity='{ "fill": ["var(--bs-info)", "var(--bs-light)"],   "innerRadius": 34, "radius": 10}'>7/8</span>
+														<span class="donut" data-peity='{ "fill": ["var(--bs-warning)", "var(--bs-light)"],   "innerRadius": 34, "radius": 10}'>7/8</span>
 														<small class="position-absolute top-50 start-50 translate-middle">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<g clip-path="url(#clip8)">
@@ -475,8 +473,8 @@
 														</small>
 													</div>
 													<div>
-														<h4 class="fs-18 text-black">Overtime Logged (80%)</h4>
-														<span>18 Hrs / 18 Hrs Per Week</span>
+														<h4 class="fs-18 text-black">Alpha (80%)</h4>
+														<span>1 Days / 20 Days</span>
 													</div>
 												</div>
 											</div>
@@ -598,7 +596,7 @@
 							datasets: [
 								{
 									label: "My Business Trips",
-									data: [65, 59, 80, 81, 56, 55, 40, 45, 50, 55, 60, 65],
+									data: [7, 2, 10, 2, 5, 8, 4, 9, 1, 6, 3, 10],
 									borderColor: 'rgba(11, 42, 151, 1)',
 									borderWidth: "0",
 									barPercentage: 0.5,
@@ -640,23 +638,23 @@
 					barChart_3gradientStroke2.addColorStop(0, "rgba(249, 69, 135, 1)");
 					barChart_3gradientStroke2.addColorStop(1, "rgba(249, 69, 135, 1)");
 
-					const barChart_3gradientStroke3 = barChart_3.createLinearGradient(50, 100, 50, 50);
-					barChart_3gradientStroke3.addColorStop(0, "rgba(160, 44, 250, 1)");
-					barChart_3gradientStroke3.addColorStop(1, "rgba(160, 44, 250, 1)");
-
 					const barChart_3gradientStroke4 = barChart_3.createLinearGradient(50, 100, 50, 50);
 					barChart_3gradientStroke4.addColorStop(0, "rgba(30, 167, 197, 1)");
 					barChart_3gradientStroke4.addColorStop(1, "rgba(30, 167, 197, 1)");
-					
+
+					const barChart_3gradientStroke5 = barChart_3.createLinearGradient(50, 100, 50, 50);
+					barChart_3gradientStroke5.addColorStop(0, "rgba(255, 188, 17, 1)");
+					barChart_3gradientStroke5.addColorStop(1, "rgba(255, 188, 17, 1)");
+
 					barChart_3.height = 100;
 
 					let barChartData = {
 						defaultFontFamily: 'Poppins',
 						labels: [
-							'Jan (21 days)', 'Feb (19 days)', 'Mar (19 days)', 
-							'Apr (20 days)', 'May (18 days)', 'Jun (21 days)', 
-							'Jul (22 days)', 'Aug (20 days)', 'Sep (22 days)', 
-							'Oct (22 days)', 'Nov (21 days)', 'Dec (20 days)'
+							'Jan (21)', 'Feb (19)', 'Mar (19)', 
+							'Apr (20)', 'May (18)', 'Jun (21)', 
+							'Jul (22)', 'Aug (20)', 'Sep (22)', 
+							'Oct (22)', 'Nov (21)', 'Dec (20)'
 						],
 						datasets: [{
 							label: 'On Time',
@@ -671,17 +669,17 @@
 							// A realistic handful of late days scattered throughout the year
 							data: ['2', '1', '3', '1', '0', '1', '2', '1', '1', '2', '1', '2']
 						}, {
-							label: 'Deviation',
-							backgroundColor: barChart_3gradientStroke3,
-							hoverBackgroundColor: barChart_3gradientStroke3, 
-							// Rare occurrences (e.g., leaving early, unusual shifts)
-							data: ['0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0']
-						}, {
 							label: 'Leave',
 							backgroundColor: barChart_3gradientStroke4,
 							hoverBackgroundColor: barChart_3gradientStroke4, 
 							// Leaves factored in, peaking slightly around summer/holidays
 							data: ['1', '0', '1', '1', '2', '0', '2', '3', '0', '1', '1', '3']
+						}, {
+							label: 'Alpha',
+							backgroundColor: barChart_3gradientStroke5,
+							hoverBackgroundColor: barChart_3gradientStroke5, 
+							// Alpha days
+							data: ['1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '1']
 						}]
 					};
 
@@ -768,7 +766,7 @@
 						datasets: [
 							{
 								label: "My Overtime Hours",
-								data: [25, 20, 60, 41, 66, 45, 80, 25, 20, 60, 41, 12],
+								data: [6, 45, 12, 78, 23, 61, 5, 34, 59, 80, 19, 42],
 								borderColor: lineChart_2gradientStroke,
 								borderWidth: "2",
 								backgroundColor: 'transparent', 
@@ -864,7 +862,7 @@
 							{
 								label: "Annual Leave",
 								// Spikes heavily in the summer (June, July, August) and December for holidays.
-								data: [15, 12, 18, 20, 25, 45, 55, 50, 20, 15, 22, 60],
+								data: [3, 1, 4, 0, 2, 4, 2, 1, 3, 0, 4, 2],
 								borderColor: lineChart_3gradientStroke1,
 								borderWidth: "2",
 								backgroundColor: 'transparent', 
@@ -873,7 +871,7 @@
 							}, {
 								label: "Special Leave",
 								// Random but consistently low (represents jury duty, bereavement, unpaid leave, etc.)
-								data: [2, 1, 3, 2, 4, 1, 2, 0, 1, 2, 1, 3],
+								data: [1, 0, 4, 2, 2, 3, 0, 1, 4, 3, 2, 1],
 								borderColor: lineChart_3gradientStroke2,
 								borderWidth: "2",
 								backgroundColor: 'transparent', 
@@ -882,7 +880,7 @@
 							}, {
 								label: "Sick Leave",
 								// Higher during flu season/winter months (Jan-Mar, Nov-Dec) and drops during the summer.
-								data: [35, 30, 25, 15, 10, 8, 5, 8, 12, 20, 28, 30],
+								data: [4, 2, 0, 0, 3, 1, 4, 2, 1, 0, 3, 4],
 								borderColor: lineChart_3gradientStroke3,
 								borderWidth: "2",
 								backgroundColor: 'transparent', 
@@ -891,7 +889,7 @@
 							}, {
 								label: "Unpaid Leave",
 								// Scattered randomly throughout the year with no clear pattern.
-								data: [1, 0, 2, 1, 3, 0, 2, 1, 0, 1, 2, 1],
+								data: [0, 3, 1, 4, 4, 2, 0, 1, 2, 3, 1, 0],
 								borderColor: lineChart_3gradientStroke4,
 								borderWidth: "2",
 								backgroundColor: 'transparent', 
@@ -907,11 +905,11 @@
 						},
 						scales: {
 							y:{
-								max: 100, 
+								max: 10, 
 								min: 0, 
 								ticks: {
 									beginAtZero: true, 
-									stepSize: 20, 
+									stepSize: 2, 
 									padding: 10
 								}
 							},
@@ -1477,12 +1475,12 @@
 					show:false,
 				},
 				fill:{
-					colors:['#F94687', '#2BC155', '#A02CFA', '#1EA7C5']
+					colors:['#F94687', '#2BC155', '#FFBC11', '#1EA7C5']
 				},
 				stroke:{
 					width:0,
 				},
-				colors:['#F94687', '#2BC155', '#A02CFA', '#1EA7C5'],
+				colors:['#F94687', '#2BC155', '#FFBC11', '#1EA7C5'],
 				dataLabels: {
 				enabled: false
 				}
