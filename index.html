@@ -108,7 +108,110 @@
 		<!-- ========== Start - Content Body ========== -->
         <main class="content-body">
 			<div class="container-fluid">
-				
+				<div class="row">
+					<!-- Start - Workout Details -->
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header border-0 pb-3">
+								<div>
+									<h4 class="card-title">Attendance Confirmation</h4>
+									<p class="fs-13 mb-0">Make sure you're at the workplace to log your time today.</p>
+								</div>
+							</div>
+							<div class="card-body p-0">
+								<div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+									<div class="text-center">
+										<p class="fs-14 mb-2">Date</p>
+										<span class="fs-20 text-black">20 May | 08:34:53</span>
+									</div>
+									
+									<div class="text-center">
+										<p class="fs-14 mb-2">Clock In</p>
+										<span class="fs-20 text-black">08:00</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn light btn-success m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockIn">Clock In</a>
+							<div class="mb-3"></div>
+						</div>
+					</div>
+					<!-- End - Maps Route -->
+					<!-- Start - Workout Details -->
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header border-0 pb-3">
+								<div>
+									<h4 class="card-title">End of Shift</h4>
+									<p class="fs-13 mb-0">Please update your tasks and progress before you go.</p>
+								</div>
+							</div>
+							<div class="card-body p-0">
+								<div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+									<div class="text-center">
+										<p class="fs-14 mb-2">Date</p>
+										<span class="fs-20 text-black">20 May | 17:05:53</span>
+									</div>
+									
+									<div class="text-center">
+										<p class="fs-14 mb-2">Clock Out</p>
+										<span class="fs-20 text-black">17:05</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn light btn-danger m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockOut">Clock Out</a>
+							<div class="mb-3"></div>
+						</div>
+					</div>
+					<!-- End - Maps Route -->
+					<!-- Start - Workout Details -->
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header border-0 pb-3">
+								<div>
+									<h4 class="card-title">Current Task</h4>
+									<p class="fs-13 mb-0">Track your task and see your daily and monthly progress.</p>
+								</div>
+							</div>
+							<div class="card-body p-0">
+								<div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
+									<div class="text-center">
+										<p class="fs-14 mb-2">Month (Aug)</p>
+										<span class="fs-20 text-black">30 Task</span>
+									</div>
+									
+									<div class="text-center">
+										<p class="fs-14 mb-2">Today (Mon)</p>
+										<span class="fs-20 text-black">5 Task</span>
+									</div>
+								</div>
+							</div>
+							<a class="btn light btn-primary m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#create">Create a New Task</a>
+							<div class="mb-3"></div>
+						</div>
+					</div>
+					<!-- End - Maps Route -->
+				</div>
+
+				<!-- Start - Menu -->
+				<div class="col-lg-12">
+					<div class="d-flex justify-content-between align-items-center mb-3">
+						<h5 class="mb-0">Menu</h5>
+					</div>
+				</div>
+				<!-- End - Menu -->
+
+				<div class="row">
+					<!-- Start - Workout Details -->
+					<div class="col-md-2 col-4">
+						<a href="">
+							<div class="card mb-0">
+								<img class="p-5 pb-3" src="assets/images/icons/attendance.png" alt="Card image">
+							</div>
+						</a>
+						<h6 class="text-center fs-20 text-black mt-3">Attendance</h6>
+					</div>
+					<!-- End - Maps Route -->
+				</div>
             </div>
 		</main>
 		<!-- End - Content Body -->
@@ -121,6 +224,20 @@
 			</script>
         </footer>
         <!-- End - Footer -->
+
+		<div id="attendance-modal">
+			<script>
+				fetch('fundamentals/layouts/attendance/modal.html')
+				.then(response => response.text()).then(data => { document.getElementById('attendance-modal').innerHTML = data; });
+			</script>
+		</div>
+
+		<div id="report-modal">
+			<script>
+				fetch('fundamentals/layouts/report/modal.html')
+				.then(response => response.text()).then(data => { document.getElementById('report-modal').innerHTML = data; });
+			</script>
+		</div>
 
 	</div>
     <!-- End - Main Wrapper -->
