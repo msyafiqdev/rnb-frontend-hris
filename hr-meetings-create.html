@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<!-- Title -->
+	<title>SIAP - HRIS</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="RNB">
+	<meta name="robots" content="">
+
+	<meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+	<meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+	<meta property="og:title" content="SIAP - HRIS">
+	<meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+	<meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+	<!-- All Required CSS -->
+    <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">	
+	<link href="assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/select2/css/select2.min.css">
+
+	<!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+	<!-- Start - Switcher CSS -->
+	<link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+	<!-- End - Switcher CSS -->
+
+	<!-- Start - Style Css -->
+	<link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+	<link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+	<!-- End - Style Css -->
+    
+</head>
+<body>
+
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Setup Meeting</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+		<!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+			<div class="container-fluid">
+				<!-- Start - Page Title & Breadcrumb -->
+				<div class="page-title">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li><h1>Setup Meeting</h1></li>
+							<li class="breadcrumb-item">
+								<a href="index.html">
+									<svg width="18" height="18" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.125 6.375L8.5 1.41667L14.875 6.375V14.1667C14.875 14.5424 14.7257 14.9027 14.4601 15.1684C14.1944 15.4341 13.8341 15.5833 13.4583 15.5833H3.54167C3.16594 15.5833 2.80561 15.4341 2.53993 15.1684C2.27426 14.9027 2.125 14.5424 2.125 14.1667V6.375Z" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M6.375 15.5833V8.5H10.625V15.5833" stroke="var(--bs-body-color)" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Home
+								</a>
+							</li>
+							<li class="breadcrumb-item" aria-current="page">Setup Meeting</li>
+							<li class="breadcrumb-item active" aria-current="page">Create Meeting</li>
+						</ol>
+					</nav>
+				</div>
+				<!-- End - Page Title & Breadcrumb -->
+				
+				<div class="tab-content" id="tabContentMyProfileBottom">
+
+                    <div class="card">
+                        <div class="card-header border-0 pb-0">
+                            <div>
+                                <h4 class="card-title">Schedule a Zoom Meeting</h4>
+                                <p class="fs-13 mb-0">
+                                    Please provide the requested information below so we can arrange the digital logistics and secure a hosted link for your upcoming virtual meeting.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Meeting Title</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Purpose">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Meeting Type</label>
+                                        <select class="selectpicker form-select" required>
+                                            <option value="AL">Weekly Meeting</option>
+                                            <option value="WY">BOD Meeting</option>
+                                            <option value="WY">Evaluation</option>
+                                            <option value="WY">Division Meeting</option>
+                                            <option value="WY">Other Meeting</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Dates</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Dates">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Times</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Times">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Meeting Link</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Link">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Invited Participants</label>
+                                        <select id="multi-value-select" multiple="multiple">
+                                            <optgroup label="Group">
+                                                <option selected="selected">All Staff</option>
+                                                <option>BOD</option>
+                                            </optgroup>
+                                            <optgroup label="Group">
+                                                <option>Rexy Aldinny</option>
+                                                <option>Muhammad Syafiq</option>
+                                                <option>Adam</option>
+                                                <option>Adam</option>
+                                                <option>Adam</option>
+                                                <option>Adam</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Meeting Status</label>
+                                        <div class="form-group mt-1 mb-0">
+                                            <div class="form-check d-inline-block me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                                <label class="form-check-label" for="flexRadioDefault1">Scheduled</label>
+                                            </div>
+                                            <div class="form-check d-inline-block me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                                <label class="form-check-label" for="flexRadioDefault3">Completed</label>
+                                            </div>
+                                            <div class="form-check d-inline-block me-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                <label class="form-check-label" for="flexRadioDefault2">Canceled</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Attachments Link</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Link for Presentation">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Notes</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Additional notes">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-3">
+                                <a class="btn light btn-danger me-2 mb-2 btn-lg" href="attendance-business-trip.html">Back</a>
+                                <a class="btn light btn-success mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#reimbursement">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header border-0 pb-0">
+                            <div>
+                                <h4 class="card-title">Log Attendance & Meeting Notes</h4>
+                                <p class="fs-13 mb-0">
+                                    The official record of attendance and the minutes for your recent meeting.                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Actual Attendees</label>
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-sm-responsive table-bottom-borderless mb-0">
+                                                <thead class="text-nowrap">
+                                                    <tr>
+                                                        <th class="mw-150">User</th>
+                                                        <th class="mw-150">Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Williams Brown</td>
+                                                        <td>Senin, 15 Sep, 09:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Paul Johnson</td>
+                                                        <td>Feb 29, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sarah Jones</td>
+                                                        <td>Jan 08, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Marcus Harris</td>
+                                                        <td>Nov 24, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maria Garcia</td>
+                                                        <td>Aug 10, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Robert Smith</td>
+                                                        <td>May 06, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Juan Carlos</td>
+                                                        <td>Jan 02, 2020</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Actual Attendees</label>
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-sm-responsive table-bottom-borderless mb-0">
+                                                <thead class="text-nowrap">
+                                                    <tr>
+                                                        <th class="mw-150">User</th>
+                                                        <th class="mw-150">Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Williams Brown</td>
+                                                        <td>Apr 30, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Paul Johnson</td>
+                                                        <td>Feb 29, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sarah Jones</td>
+                                                        <td>Jan 08, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Marcus Harris</td>
+                                                        <td>Nov 24, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maria Garcia</td>
+                                                        <td>Aug 10, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Robert Smith</td>
+                                                        <td>May 06, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Juan Carlos</td>
+                                                        <td>Jan 02, 2020</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Actual Attendees</label>
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-sm-responsive table-bottom-borderless mb-0">
+                                                <thead class="text-nowrap">
+                                                    <tr>
+                                                        <th class="mw-150">User</th>
+                                                        <th class="mw-150">Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Williams Brown</td>
+                                                        <td>Apr 30, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Paul Johnson</td>
+                                                        <td>Feb 29, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sarah Jones</td>
+                                                        <td>Jan 08, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Marcus Harris</td>
+                                                        <td>Nov 24, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maria Garcia</td>
+                                                        <td>Aug 10, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Robert Smith</td>
+                                                        <td>May 06, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Juan Carlos</td>
+                                                        <td>Jan 02, 2020</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Actual Attendees</label>
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-sm-responsive table-bottom-borderless mb-0">
+                                                <thead class="text-nowrap">
+                                                    <tr>
+                                                        <th class="mw-150">User</th>
+                                                        <th class="mw-150">Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Williams Brown</td>
+                                                        <td>Apr 30, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Paul Johnson</td>
+                                                        <td>Feb 29, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sarah Jones</td>
+                                                        <td>Jan 08, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Marcus Harris</td>
+                                                        <td>Nov 24, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maria Garcia</td>
+                                                        <td>Aug 10, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Robert Smith</td>
+                                                        <td>May 06, 2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Juan Carlos</td>
+                                                        <td>Jan 02, 2020</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="clearfix">
+                                        <h4 class="card-title mb-0">Administration</h4>
+                                        <small class="d-block">Administrative operational support</small>
+                                    </div>
+                                </div>
+                                <div class="card-body dz-scroll height380">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="clearfix">
+                                            <span class="text-gray fw-semibold">5 / 8 Completed <span class="text-success">(62%)</span></span>
+                                        </div>
+                                        <div class="clearfix">
+                                            <a class="text-success fw-semibold" data-bs-toggle="modal" data-bs-target="#create">+ Add Task</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <a data-bs-toggle="modal" data-bs-target="#details"><h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6></a>
+                                            <span class="small">Due in 1 day (10 jun) <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#details">View More</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update">Update</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Design Stage</h6>
+                                            <span class="small">18 May 2026 (2 days overdue) by <span class="text-primary">Rexy</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square" disabled><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-success me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Develop halaman utama website promotion</h6>
+                                            <span class="small">19 May 2026 (Status: Completed) by <span class="text-primary">Syafiq</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square"><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="clearfix">
+                                        <h4 class="card-title mb-0">Event Management (KMA)</h4>
+                                        <small class="d-block">Event Planning & Operations</small>
+                                    </div>
+                                </div>
+                                <div class="card-body dz-scroll height380">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="clearfix">
+                                            <span class="text-gray fw-semibold">5 / 8 Completed <span class="text-success">(62%)</span></span>
+                                        </div>
+                                        <div class="clearfix">
+                                            <a class="text-success fw-semibold" data-bs-toggle="modal" data-bs-target="#create">+ Add Task</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <a data-bs-toggle="modal" data-bs-target="#details"><h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6></a>
+                                            <span class="small">Due in 1 day (10 jun) <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#details">View More</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update">Update</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Design Stage</h6>
+                                            <span class="small">18 May 2026 (2 days overdue) by <span class="text-primary">Rexy</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square" disabled><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-success me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Develop halaman utama website promotion</h6>
+                                            <span class="small">19 May 2026 (Status: Completed) by <span class="text-primary">Syafiq</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square"><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="clearfix">
+                                        <h4 class="card-title mb-0">Property and Construction (TRAH)</h4>
+                                        <small class="d-block">Property & Construction Operations</small>
+                                    </div>
+                                </div>
+                                <div class="card-body dz-scroll height380">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="clearfix">
+                                            <span class="text-gray fw-semibold">5 / 8 Completed <span class="text-success">(62%)</span></span>
+                                        </div>
+                                        <div class="clearfix">
+                                            <a class="text-success fw-semibold" data-bs-toggle="modal" data-bs-target="#create">+ Add Task</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <a data-bs-toggle="modal" data-bs-target="#details"><h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6></a>
+                                            <span class="small">Due in 1 day (10 jun) <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#details">View More</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update">Update</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Design Stage</h6>
+                                            <span class="small">18 May 2026 (2 days overdue) by <span class="text-primary">Rexy</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square" disabled><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-success me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Develop halaman utama website promotion</h6>
+                                            <span class="small">19 May 2026 (Status: Completed) by <span class="text-primary">Syafiq</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square"><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="clearfix">
+                                        <h4 class="card-title mb-0">IT and Social Media (TMS)</h4>
+                                        <small class="d-block">Digital publication and IT operational support</small>
+                                    </div>
+                                </div>
+                                <div class="card-body dz-scroll height380">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="clearfix">
+                                            <span class="text-gray fw-semibold">5 / 8 Completed <span class="text-success">(62%)</span></span>
+                                        </div>
+                                        <div class="clearfix">
+                                            <a class="text-success fw-semibold" data-bs-toggle="modal" data-bs-target="#create">+ Add Task</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <a data-bs-toggle="modal" data-bs-target="#details"><h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6></a>
+                                            <span class="small">Due in 1 day (10 jun) <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#details">View More</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update">Update</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Design Stage</h6>
+                                            <span class="small">18 May 2026 (2 days overdue) by <span class="text-primary">Rexy</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square" disabled><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-success me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Develop halaman utama website promotion</h6>
+                                            <span class="small">19 May 2026 (Status: Completed) by <span class="text-primary">Syafiq</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square"><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="clearfix">
+                                        <h4 class="card-title mb-0">Others</h4>
+                                        <small class="d-block">General & Miscellaneous Support</small>
+                                    </div>
+                                </div>
+                                <div class="card-body dz-scroll height380">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="clearfix">
+                                            <span class="text-gray fw-semibold">5 / 8 Completed <span class="text-success">(62%)</span></span>
+                                        </div>
+                                        <div class="clearfix">
+                                            <a class="text-success fw-semibold" data-bs-toggle="modal" data-bs-target="#create">+ Add Task</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <a data-bs-toggle="modal" data-bs-target="#details"><h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6></a>
+                                            <span class="small">Due in 1 day (10 jun) <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#details">View More</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#update">Update</a>
+                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete">Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Design Stage</h6>
+                                            <span class="small">18 May 2026 (2 days overdue) by <span class="text-primary">Rexy</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square" disabled><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-success me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Develop halaman utama website promotion</h6>
+                                            <span class="small">19 May 2026 (Status: Completed) by <span class="text-primary">Syafiq</span></span>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <button type="button" class="btn btn-sm btn-light btn-square"><i class="bi bi-grid"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center py-2">
+                                        <div class="timeline-vr-badge bg-light me-2"></div>
+                                        <div class="clearfix ms-2">
+                                            <h6 class="fs-13 mb-0 fw-semibold">Sistem registrasi peserta</h6>
+                                            <span class="small">20 May 2026 (Due in 1 day) by <span class="text-primary">Syafiq</span></span><br>
+                                        </div>
+                                        <div class="clearfix ms-auto">
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-sm btn-light btn-square" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-grid"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Edit</a>
+                                                    <a class="dropdown-item" >Delete</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <div class="clearfix">
+                                        <h4 class="card-title mb-0">Tasks Summary</h4>
+                                        <small class="d-block">24 Overdue Tasks</small>
+                                    </div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-6 mb-3">
+                                            <div id="chartTasksSummary" class="d-flex justify-content-center"></div>
+                                        </div>
+                                        <div class="col-sm-6 mb-3">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="text-black">
+                                                    <i class="fa-solid fa-square text-primary me-1"></i> Administration
+                                                </div>
+                                                <span>25</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="text-black">
+                                                    <i class="fa-solid fa-square text-secondary me-1"></i> Event Management (KMA)
+                                                </div>
+                                                <span>25</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="text-black">
+                                                    <i class="fa-solid fa-square text-success me-1"></i> Property and Construction (TRAH)
+                                                </div>
+                                                <span>17</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="text-black">
+                                                    <i class="fa-solid fa-square text-danger me-1"></i> IT and Social Media (TMS)
+                                                </div>
+                                                <span>20</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="text-black">
+                                                    <i class="fa-solid fa-square text-warning me-1"></i> Others
+                                                </div>
+                                                <span>38</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="" target="_blank" class="btn light btn-primary mt-3 m-3 mb-2 btn-lg">Generate MoM PDF</a>
+							    <div class="mb-3"></div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                    
+				<!-- End - Attendance -->
+            </div>
+		</main>
+		<!-- End - Content Body -->
+
+		<!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+
+		<div id="modal">
+			<script>
+				fetch('fundamentals/layouts/report/modal.html')
+				.then(response => response.text()).then(data => { document.getElementById('modal').innerHTML = data; });
+			</script>
+		</div>
+
+	</div>
+    <!-- End - Main Wrapper -->
+	
+	<!-- Start - Script -->
+	<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+	<script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+	<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+		<!-- Chart piety plugin files -->
+    <script src="assets/vendor/peity/jquery.peity.min.js"></script>
+
+	<!-- Script For Apexchart -->
+	<script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+
+    <!-- Script For Bootstrap Datetimepicker -->
+	<script src="assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+	<script src="assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Script For Select2 -->
+	<script src="assets/vendor/select2/js/select2.full.min.js"></script>
+	<script src="assets/js/plugins-init/select2-init.js"></script>
+
+	<script>
+		(function($){
+
+		var dzProfile = function(){
+			var chartProfileProgress = function(){
+				var options = {
+					series: [
+						{
+							name: 'Task Completed',
+							data: [18, 18, 18, 20, 20, 22, 13, 15, 16, 17, 18, 12],
+						},
+					],
+					chart: {
+						type: 'area',
+						height: 100,
+						toolbar: {
+							show: false,
+						},
+						zoom: {
+							enabled: false
+						},
+						sparkline: {
+							enabled: true
+						}
+					},
+					colors:[
+						'var(--bs-primary)'
+					],
+					dataLabels: {
+						enabled: false,
+					},
+					legend: {
+						show: false,
+					},
+					stroke: {
+						show: true,
+						width: 2,
+						curve:'straight',
+						colors:['var(--bs-primary)'],
+					},
+					grid: {
+						show:false,
+						borderColor: '#eee',
+						padding: {
+							top: 0,
+							right: 0,
+							bottom: 0,
+							left: -1
+						}
+					},
+					states: {
+						normal: {
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						},
+						hover: {
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						},
+						active: {
+							allowMultipleDataPointsSelection: false,
+							filter: {
+								type: 'none',
+								value: 0
+							}
+						}
+					},
+					xaxis: {
+						categories: [
+							'January',
+							'February',
+							'March',
+							'April',
+							'May',
+							'June',
+							'July',
+							'August',
+							'September',
+							'October',
+							'November',
+							'December'
+						],
+						axisBorder: {
+							show: false,
+						},
+						axisTicks: {
+							show: false
+						},
+						labels: {
+							show: false,
+							style: {
+								fontSize: '12px',
+							}
+						},
+						crosshairs: {
+							show: false,
+							position: 'front',
+							stroke: {
+								width: 1,
+								dashArray: 3
+							}
+						},
+						tooltip: {
+							enabled: false,
+							formatter: undefined,
+							offsetY: 0,
+							style: {
+								fontSize: '12px',
+							}
+						}
+					},
+					yaxis: {
+						show: false,
+					},
+					fill: {
+						opacity: 0.9,
+						colors:'var(--bs-primary)',
+						type: 'gradient', 
+						gradient: {
+							colorStops:[
+								{
+									offset: 0,
+									color: 'var(--bs-primary)',
+									opacity: .4
+								},
+								{
+									offset: 0.6,
+									color: 'var(--bs-primary)',
+									opacity: .4
+								},
+								{
+									offset: 100,
+									color: 'white',
+									opacity: 0
+								}
+							],
+						}
+					},
+					tooltip: {
+						enabled:true,
+						style: {
+							fontSize: '12px',
+						},
+						y: {
+							formatter: function(val) {
+								return val + " tasks"
+							}
+						}
+					}
+				};
+
+				if($('#chartProfileProgress').length > 0){
+					var handleProfileProgress = new ApexCharts(document.querySelector("#chartProfileProgress"), options);
+					handleProfileProgress.render();
+				}
+			
+			}
+			
+            var chartTasksSummary = function(){
+                var options = {
+                    series: [25, 17, 20, 38, 20],
+                    chart: {
+                        type: 'donut',
+                        width: 250,
+                    },
+                    plotOptions: {
+                        pie: {
+                            donut: {
+                                size: '90%',
+                                labels: {
+                                    show: true,
+                                    name: {
+                                        show: true,
+                                        offsetY: 20,
+                                    },
+                                    value: {
+                                        show: true,
+                                        fontSize: '24px',
+                                        fontWeight:'600',
+                                        offsetY: -16,
+                                        color:' var(--bs-heading-color)',
+                                    },
+                                    total: {
+                                        show: true,
+                                        fontSize: '14px',
+                                        color:' var(--bs-body-color)',
+                                        fontWeight:'500',
+                                        label: 'Total',
+                                        
+                                        formatter: function (w) {
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return a + b
+                                            }, 0)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    colors: [
+                        'var(--bs-primary)',
+                        'var(--bs-secondary)',
+                        'var(--bs-success)',
+                        'var(--bs-danger)',
+                        'var(--bs-warning)',
+                    ],
+                    labels: [
+                        "Administration",
+                        "Event Management (KMA)",
+                        "Property and Construction (TRAH)",
+                        "IT and Social Media (TMS)", 
+                        "Others"
+                    ],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    stroke: {
+                        width: 3,
+                        colors: [
+                            'var(--bs-body-bg)',
+                        ],
+                    },
+                };
+                
+                if($('#chartTasksSummary').length > 0){
+                    var handleTasksSummary = new ApexCharts(document.querySelector("#chartTasksSummary"), options);
+                    handleTasksSummary.render();			
+                }
+            }
+
+            var chartTasksOverTime = function(){
+                var options = {
+                    series: [
+                        {
+                            name: 'Incomplete',
+                            data: [90, 120, 120, 100]
+                        },
+                        {
+                            name: 'Complete',
+                            data: [50, 75, 75, 55]
+                        }
+                    ],
+                    chart: {
+                        height: 280,
+                        type: 'area',
+                        toolbar:{
+                            show: false
+                        },
+                    },
+                    colors:[
+                        "var(--bs-danger)",
+                        "var(--bs-primary)"
+                    ],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 3,
+                    },
+                    legend:{
+                        show: false,
+                    },
+                    grid:{
+                        show: true,
+                        strokeDashArray: 3,
+                        borderColor: 'var(--bs-border-color)',
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 120,
+                        tickAmount: 4,
+                        labels: {
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '14px',
+                            },
+                            formatter: function (value) {
+                                return value;
+                            }
+                        },
+                    },
+                    xaxis: {
+                        categories: ["1-7 Jun", "8-14 Jun", "15-21 Jun", "22-28 Jun"],
+                        labels:{
+                            style: {
+                                colors: 'var(--bs-body-color)',
+                                fontSize: '12px',
+                            },
+                        },
+                        axisTicks : {
+                            show : false
+                        },
+                        axisBorder : {
+                            show : false
+                        },
+                    },
+                    fill:{
+                        type:'gradient',
+                        gradient: {
+                            colorStops:[ 
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 50,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0.1
+                                    },
+                                    {
+                                        offset: 80,
+                                        color: 'var(--bs-danger)',
+                                        opacity: 0
+                                    }
+                                ],
+                                [
+                                    {
+                                        offset: 0,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 0.4,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    },
+                                    {
+                                        offset: 100,
+                                        color: 'var(--bs-primary)',
+                                        opacity: 0.2
+                                    }
+                                ],
+                            ]
+                        },				
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    },
+                    responsive: [{
+                        breakpoint: 575,
+                        options: {
+                            chart : {
+                                height:200,
+                            },
+                            stroke :{
+                                width : 3,
+                            },
+                            yaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                            xaxis: {
+                                labels:{
+                                    style: {
+                                        fontSize: '11px',
+                                    },
+                                },
+                            },
+                        },
+                    }]
+                };
+        
+                if(jQuery("#chartTasksOverTime").length > 0){
+                    var handleTasksOverTime = new ApexCharts(document.querySelector("#chartTasksOverTime"), options);
+                    handleTasksOverTime.render();
+                    
+                    jQuery('#seriesIncomplete').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Incomplete');
+                    });
+                    
+                    jQuery('#seriesComple').on('change',function(){
+                        jQuery(this).toggleClass('disabled');
+                        handleTasksOverTime.toggleSeries('Comple');
+                    });
+                }
+            }
+			/* Function ============ */
+			return {
+				
+				load:function(){
+					chartProfileProgress();
+                    chartTasksSummary();
+			        chartTasksOverTime();
+				},
+				
+				resize:function(){
+					lineChartSecuritySummary();
+				}
+			}
+			
+		}();
+
+		jQuery(window).on('load',function(){
+			setTimeout(function(){
+				dzProfile.load();
+			}, 1000); 
+		});
+
+		jQuery(window).on('resize',function () {
+			setTimeout(function(){
+				dzProfile.resize();
+			}, 1000);
+			
+		});
+
+		})(jQuery);
+
+	</script>
+	
+	<!-- Script For Multiple Languages -->
+	<script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+	
+	<!-- Script For Custom JS -->
+	<script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#datetimepicker1').datetimepicker({
+				inline: true,
+			});
+		});
+	</script>
+</body>
+</html>
