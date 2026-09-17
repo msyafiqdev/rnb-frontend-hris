@@ -156,9 +156,6 @@
                                     <option value="2023">2023</option>
                                 </select>
                             </div>
-                            <div class="ms-2">
-                                <div id="licenseUsageExcelBTN"></div>
-                            </div>
                         </div>
                     </div>
                     <div class="card-body table-card-body px-0 pt-0 pb-2">
@@ -166,354 +163,58 @@
                             <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
                                 <thead>
                                     <tr>
-                                        <th class="mw-100">Date</th>
-                                        <th class="mw-80">Clock In</th>
-                                        <th class="mw-80">Clock Out</th>
-                                        <th class="mw-80">Location</th>
-                                        <th class="mw-80">Note</th>
-                                        <th class="mw-80">Working Hours</th>
-                                        <th class="mw-100">Attachment</th>
+                                        <th class="mw-10">No</th>
+                                        <th class="mw-80">Date</th>
+                                        <th class="mw-80">Meeting Type</th>
+                                        <th class="mw-80">Time</th>
+                                        <th class="mw-80">Joined</th>
+                                        <th class="mw-80">Task</th>
+                                        <th class="mw-80">Status</th>
+                                        <th class="mw-100">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>01 May 2026</td>
-                                        <td><span class="badge badge-sm badge-secondary light fw-semibold">Hari Buruh</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">-</span></td>
-                                        <td>-</td>
-                                        <td>Libur Nasional</td>
-                                        <td>-</td>
+                                        <td>1.</td>
+                                        <td>Monday, 07 September 2025</td>
+                                        <td>BOD Meeting</td>
+                                        <td>10:00 WIB</td>
+                                        <td>4 People</td>
+                                        <td>5 Task</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Completed</span></td>
                                         <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#dayOff">
+                                            <a href="">
                                                 <div class="btn btn-square btn-secondary light btn-xs">
                                                     <i class="fa-regular fa-file-lines"></i>
                                                 </div>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>02 May 2026</td>
-                                        <td><span class="badge badge-sm badge-danger light fw-semibold">08:10</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>Late 10 Minutes</td>
-                                        <td>7 hours, 50 minutes</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#late">
-                                                <div class="btn btn-square btn-danger light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
+                                            <a href="">
+                                                <div class="btn btn-square btn-warning light btn-xs">
+                                                    <i class="fa-solid fa-pencil"></i>
                                                 </div>
                                             </a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>03 May 2026</td>
-                                        <td><span class="badge badge-sm badge-danger light fw-semibold">08:20</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>Late 20 Minutes</td>
-                                        <td>7 hours, 40 minutes</td>
+                                        <td>2.</td>
+                                        <td>Friday, 04 September 2025</td>
+                                        <td>Weekly Meeting</td>
+                                        <td>10:00 WIB</td>
+                                        <td>12 People</td>
+                                        <td>18 Task</td>
+                                        <td><span class="badge badge-sm badge-info light fw-semibold">Scheduled</span></td>
                                         <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#late">
-                                                <div class="btn btn-square btn-danger light btn-xs">
+                                            <a href="">
+                                                <div class="btn btn-square btn-secondary light btn-xs">
                                                     <i class="fa-regular fa-file-lines"></i>
                                                 </div>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>04 May 2026</td>
-                                        <td><span class="badge badge-sm badge-info light fw-semibold">11:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>Izin Masuk Terlambat 3 Jam</td>
-                                        <td>5 hours</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#deviation">
-                                                <div class="btn btn-square btn-info light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
+                                            <a href="">
+                                                <div class="btn btn-square btn-warning light btn-xs">
+                                                    <i class="fa-solid fa-pencil"></i>
                                                 </div>
                                             </a>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>05 May 2026</td>
-                                        <td><span class="badge badge-sm badge-info light fw-semibold">Annual Leave</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">-</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>Annual Leave</td>
-                                        <td>0 hours</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#annualLeave">
-                                                <div class="btn btn-square btn-info light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>06 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#onTime">
-                                                <div class="btn btn-square btn-success light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>07 May 2026</td>
-                                        <td><span class="badge badge-sm badge-primary light fw-semibold">Sick Leave</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">-</span></td>
-                                        <td></td>
-                                        <td>Sick Leave</td>
-                                        <td>-</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#sick">
-                                                <div class="btn btn-square btn-primary light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>08 May 2026</td>
-                                        <td><span class="badge badge-sm badge-info light fw-semibold">Special Leave</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">-</span></td>
-                                        <td>-</td>
-                                        <td>Special Leave</td>
-                                        <td>-</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#specialLeave">
-                                                <div class="btn btn-square btn-info light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>09 May 2026</td>
-                                        <td><span class="badge badge-sm badge-info light fw-semibold">Unpaid Leave</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">-</span></td>
-                                        <td>-</td>
-                                        <td>Unpaid Leave</td>
-                                        <td>-</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#unpaidLeave">
-                                                <div class="btn btn-square btn-info light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10 May 2026</td>
-                                        <td><span class="badge badge-sm badge-primary light fw-semibold">Business Trip</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">-</span></td>
-                                        <td>-</td>
-                                        <td>Business Trip</td>
-                                        <td>8 hours</td>
-                                        <td>
-                                            <a data-bs-toggle="modal" data-bs-target="#trip">
-                                                <div class="btn btn-square btn-primary light btn-xs">
-                                                    <i class="fa-regular fa-file-lines"></i>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>12 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>13 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>14 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>15 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>16 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>17 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>18 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>19 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>20 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>22 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>23 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>24 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>25 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>26 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>27 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>28 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>29 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>30 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>31 May 2026</td>
-                                        <td><span class="badge badge-sm badge-success light fw-semibold">08:00</span></td>
-                                        <td><span class="badge badge-sm badge-light light fw-semibold">17:00</span></td>
-                                        <td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
-                                        <td>On Time</td>
-                                        <td>8 hours</td>
-                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
