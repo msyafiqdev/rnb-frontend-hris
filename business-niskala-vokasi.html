@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<!-- Title -->
+	<title>SIAP - HRIS</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="RNB">
+	<meta name="robots" content="">
+
+	<meta name="keywords" content="HRIS, Human Resource Information System, Employee Management, Payroll, Attendance Tracking, Performance Evaluation, Recruitment, Training and Development, HR Analytics, Employee Self-Service Portal, HR Compliance, Workforce Planning, Talent Management, HR Software Solutions">
+	<meta name="description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+
+	<meta property="og:title" content="SIAP - HRIS">
+	<meta property="og:description" content="SIAP - HRIS is a comprehensive Human Resource Information System designed to streamline employee management, payroll processing, attendance tracking, and performance evaluation.">
+	<meta property="og:image" content="https://gymove.dexignzone.com/xhtml/social-image.avif">
+	<meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.avif">
+    
+    <!-- All Required CSS -->
+    <link href="assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/vendor/@yaireo/tagify/dist/tagify.css" rel="stylesheet">
+
+    <!-- Start - Basic CSS -->
+    <link href="assets/vendor/metismenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- End - Basic CSS -->
+    
+    <!-- Start - Switcher CSS -->
+    <link class="main-switcher" href="assets/css/switcher.css" rel="stylesheet">
+    <!-- End - Switcher CSS -->
+
+    <!-- Start - Style Css -->
+    <link class="main-plugins" href="assets/css/plugins.css" rel="stylesheet">
+    <link class="main-css" href="assets/css/style.css" rel="stylesheet">	
+    <!-- End - Style Css -->
+    
+</head>
+<body>
+
+	<!-- Start - Preloader -->
+    <div id="preloader">
+		<script>
+			fetch('fundamentals/layouts/header/preloader.html')
+			.then(response => response.text()).then(data => { document.getElementById('preloader').innerHTML = data; });
+		</script>
+    </div>
+    <!-- End - Preloader -->
+    
+    <!-- Start - Main Wrapper -->
+    <div id="main-wrapper">
+		
+		<!-- Start - Nav header -->
+		<div id="nav-header">
+			<script>
+				fetch('fundamentals/layouts/header/nav-header.html')
+				.then(response => response.text()).then(data => { document.getElementById('nav-header').innerHTML = data; });
+			</script>
+		</div>
+        <!-- End - Nav header -->
+        
+		<!-- Start - Sidebar Chat Box  -->
+		<div class="chatbox" id="chatbox">
+			<script>
+				fetch('fundamentals/layouts/header/chatbox.html')
+				.then(response => response.text()).then(data => { document.getElementById('chatbox').innerHTML = data; });
+			</script>
+		</div>
+		<!-- End - Sidebar Chat Box  -->
+		
+		<!-- Start - Header -->
+        <header class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">Business</div>
+						</div>
+						<ul class="navbar-nav header-right" id="header">
+							<script>
+								fetch('fundamentals/layouts/header/header.html')
+								.then(response => response.text()).then(data => { document.getElementById('header').innerHTML = data; });
+							</script>
+						</ul>
+					</div>
+				</nav>
+			</div>
+            
+        </header>
+        <!-- End - Header -->
+		
+		<!-- Start - Sidebar -->
+        <div class="deznav" id="sidebar">
+            <script>
+				fetch('fundamentals/layouts/sidebar/sidebar.html')
+				.then(response => response.text()).then(data => { document.getElementById('sidebar').innerHTML = data; });
+			</script>
+        </div>
+        <!-- End - Sidebar -->
+
+		<!-- ========== Start - Content Body ========== -->
+        <main class="content-body">
+			<div class="container-fluid">
+                <div class="card h-auto px-md-2 pt-md-2">
+					<!-- Start - Profile Navigation -->
+					<div class="card-footer py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0 border-0">
+						<ul class="nav nav-underline gap-3 px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
+							<li class="nav-item" role="presentation">
+								<a href="" class="nav-link py-3 px-1 border-3 active">Master Data</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="" class="nav-link py-3 px-1 border-3">Procurement & Inventory</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="" class="nav-link py-3 px-1 border-3">Sales</a>
+							</li>
+							<li class="nav-item" role="presentation">
+								<a href="" class="nav-link py-3 px-1 border-3">Finance & Accounting</a>
+							</li>
+                            <li class="nav-item" role="presentation">
+								<a href="" class="nav-link py-3 px-1 border-3">Reporting & Analytics</a>
+							</li>
+						</ul>
+					</div>
+					<!-- End - Profile Navigation -->
+				</div>
+                
+				<!-- Start - Menu -->
+				<div class="col-lg-12">
+					<div class="d-flex justify-content-between align-items-center mb-3">
+						<h5 class="mb-0">Master Data</h5>
+					</div>
+				</div>
+				<!-- End - Menu -->
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Products</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#addProduct" class="btn btn-success light ms-2">Add Product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Menu Name</th>
+                                        <th class="mw-80">Category</th>
+                                        <th class="mw-80">Price</th>
+                                        <th class="mw-80">BoM</th>
+                                        <th class="mw-80">Status</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Cappuccino</td>
+                                        <td>Coffee</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">Rp. 18.000</span>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">Rp. 25.000</span>
+                                        </td>
+                                        <td>Rp. 6.152</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a data-bs-toggle="modal" data-bs-target="#updateProduct" class="dropdown-item" >Update</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a data-bs-toggle="modal" data-bs-target="#deleteProduct" class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Cafe Latte</td>
+                                        <td>Coffee</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">Rp. 18.000</span>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">Rp. 25.000</span>
+                                        </td>
+                                        <td>Rp. 5.983</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Butterscotch Latte</td>
+                                        <td>Coffee</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">Rp. 20.000</span>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">Rp. 28.000</span>
+                                        </td>
+                                        <td>Rp. 10.182</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Caramel Latte</td>
+                                        <td>Coffee</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">Rp. 20.000</span>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">Rp. 21.000</span>
+                                        </td>
+                                        <td>Rp. 10.182</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Vanilla Latte</td>
+                                        <td>Coffee</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">Rp. 20.000</span>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">Rp. 24.000</span>
+                                        </td>
+                                        <td>Rp. 10.182</td>
+                                        <td><span class="badge badge-sm badge-danger light fw-semibold">Non Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Ingredients</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#addIngredient" class="btn btn-success light ms-2">Add Ingredients</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Raw Material</th>
+                                        <th class="mw-80">Category</th>
+                                        <th class="mw-80">Unit</th>
+                                        <th class="mw-80">Stock</th>
+                                        <th class="mw-80">Status</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Creamer</td>
+                                        <td>Dairy</td>
+                                        <td>gr</td>
+                                        <td>2.040 gr (2.0 kg)</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a data-bs-toggle="modal" data-bs-target="#updateIngredient" class="dropdown-item" >Update</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a data-bs-toggle="modal" data-bs-target="#deleteIngredient" class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Cup</td>
+                                        <td>Packaging</td>
+                                        <td>pcs</td>
+                                        <td>613 pcs</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Espresso</td>
+                                        <td>Coffee</td>
+                                        <td>gr</td>
+                                        <td>677 gr (0.67 kg)</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Freshmilk</td>
+                                        <td>Dairy</td>
+                                        <td>ml</td>
+                                        <td>10.420 gr (10.4 l)</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Available</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Powder Chocolate</td>
+                                        <td>Powder</td>
+                                        <td>gr</td>
+                                        <td>251 gr (0.25 kg)</td>
+                                        <td><span class="badge badge-sm badge-danger light fw-semibold">Non Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Supplier</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#addSupplier" class="btn btn-success light ms-2">Add Supplier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Suplier Name</th>
+                                        <th class="mw-80">People in Charge</th>
+                                        <th class="mw-80">Phone Number</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>KainIndo Utama</td>
+                                        <td>Budi Santoso</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a data-bs-toggle="modal" data-bs-target="#updateSupplier" class="dropdown-item" >Update</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a data-bs-toggle="modal" data-bs-target="#deleteSupplier" class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>GayaGrosir Apparel</td>
+                                        <td>Anton</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Sinergi Tekstil</td>
+                                        <td>Riky</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>PT Anugrah Sukses Marine</td>
+                                        <td>Abdul</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Medika Cahaya Mandiri</td>
+                                        <td>Dana</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Bill of Materials</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#addBom" class="btn btn-success light ms-2">Add Bill of Materials</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Menu Name</th>
+                                        <th class="mw-80">Category</th>
+                                        <th class="mw-80">Materials</th>
+                                        <th class="mw-80">BoM</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Cappuccino</td>
+                                        <td>Coffee</td>
+                                        <td>Espresso (8 gr), Freshmilk (100 ml), Cup (1 pcs)
+                                        </td>
+                                        <td>Rp. 6.152</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a data-bs-toggle="modal" data-bs-target="#updateBom" class="dropdown-item" >Update</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a data-bs-toggle="modal" data-bs-target="#deleteBom" class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Cafe Latte</td>
+                                        <td>Coffee</td>
+                                        <td>Espresso (8 gr), Freshmilk (100 ml), Cup (1 pcs)</td>
+                                        <td>Rp. 5.983</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Butterscotch Latte</td>
+                                        <td>Coffee</td>
+                                        <td>Espresso (8 gr), Syrup Butterscotch (17 ml), Creamer (15 gr), Freshmilk (100 ml), Cup (1 pcs)</td>
+                                        <td>Rp. 10.182</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Caramel Latte</td>
+                                        <td>Coffee</td>
+                                        <td>Espresso (8 gr), Syrup Classic Caramel (17 ml), Creamer (15 gr), Freshmilk (100 ml), Cup (1 pcs)</td>
+                                        <td>Rp. 10.182</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Vanilla Latte</td>
+                                        <td>Coffee</td>
+                                        <td>Espresso (8 gr), Syrup Vanilla Traditio (17 ml), Creamer (15 gr), Freshmilk (100 ml), Cup (1 pcs)</td>
+                                        <td>Rp. 10.182</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Users</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#clockIn" class="btn btn-success light btn-sm">Add Product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Name</th>
+                                        <th class="mw-80">Phone Number</th>
+                                        <th class="mw-80">Email</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Adam</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Alice</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Gaga</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Anton</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">RBAC</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#clockIn" class="btn btn-success light ms-2">Add Product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Name</th>
+                                        <th class="mw-80">Phone Number</th>
+                                        <th class="mw-80">Email</th>
+                                        <th class="mw-80">RBAC</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>POS, Stock Management</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>POS, Stock Management</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>POS, Stock Management</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>POS, Stock Management</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>cashier@coffeeniskala.com</td>
+                                        <td>POS, Stock Management</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Customer</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#clockIn" class="btn btn-success light ms-2">Add Product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Name</th>
+                                        <th class="mw-80">Phone Number</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Adam</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Alice</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Gaga</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Dipa</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Anton</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header border-0 align-items-center gap-2 flex-wrap">
+                        <h4 class="card-title m-0">Promo</h4>
+                        <div class="clearfix d-flex align-items-center">
+                            <div class="clearfix">
+                                <select class="selectpicker form-select form-select-sm" >
+                                    <option value="2026">Products</option>
+                                    <option value="2025">Ingredients</option>
+                                    <option value="2023">Supplier</option>
+                                    <option value="2023">Bill of Materials</option>
+                                    <option value="2023">Users</option>
+                                    <option value="2023">RBAC</option>
+                                    <option value="2023">Customer</option>
+                                    <option value="2023">Promo</option>
+                                </select>
+                            </div>
+                            <div class="ms-2">
+                                <a data-bs-toggle="modal" data-bs-target="#clockIn" class="btn btn-success light ms-2">Add Product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body table-card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-sm-responsive text-nowrap" id="tableLicenseUsage">
+                                <thead>
+                                    <tr>
+                                        <th class="mw-20">No.</th>
+                                        <th class="mw-80">Duration</th>
+                                        <th class="mw-80">Promo Name</th>
+                                        <th class="mw-80">Product</th>
+                                        <th class="mw-80">Discount</th>
+                                        <th class="mw-80">Price</th>
+                                        <th class="mw-80">Status</th>
+                                        <th class="mw-10">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>01 - 30 October 2026</td>
+                                        <td>Promo Bundling</td>
+                                        <td>1 Butterscotch Latte + 1 Cheese Denish</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">-</span>
+                                        </td>
+                                        <td>Rp. 30.000</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>01 - 30 October 2026</td>
+                                        <td>Buy 1 one Get One Free</td>
+                                        <td>1 Caramel Latte + 1 Caramel Latte</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">-</span>
+                                        </td>
+                                        <td>Rp. 20.000</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>01 - 30 October 2026</td>
+                                        <td>20% Off</td>
+                                        <td>1 Thai Tea</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">20 %</span>
+                                        </td>
+                                        <td>Rp. 12.000</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>01 - 30 October 2026</td>
+                                        <td>Cashback Rp. 10.0000</td>
+                                        <td>1 Chocolate</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-success light fw-semibold">Rp. 10.000</span>
+                                        </td>
+                                        <td>Rp. 5.000</td>
+                                        <td><span class="badge badge-sm badge-success light fw-semibold">Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>01 - 30 October 2026</td>
+                                        <td>10% Off</td>
+                                        <td>1 Cookies and Cream</td>
+                                        <td>
+                                            <span class="badge badge-sm badge-primary light fw-semibold">10%</span>
+                                        </td>
+                                        <td>Rp. 18.000</td>
+                                        <td><span class="badge badge-sm badge-danger light fw-semibold">Non Active</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-primary light btn-square" type="button" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" >Update Menu</a>
+                                                    <a class="dropdown-item" >Status</a>
+                                                    <div class="dropdown-divider m-0"></div>
+                                                    <a class="dropdown-item text-danger" >Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+		</main>
+		<!-- End - Content Body -->
+
+		<!-- Start - Footer -->
+        <footer class="footer" id="footer">
+			<script>
+				fetch('fundamentals/layouts/footer/footer.html')
+				.then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data; });
+			</script>
+        </footer>
+        <!-- End - Footer -->
+
+        <div id="modal">
+			<script>
+				fetch('fundamentals/business/modal-niskala-data.html')
+				.then(response => response.text()).then(data => { document.getElementById('modal').innerHTML = data; });
+			</script>
+		</div>
+
+	</div>
+    <!-- End - Main Wrapper -->
+	
+    <!-- Start - Script -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendor/@yaireo/tagify/dist/tagify.js"></script>
+    <script src="assets/vendor/metismenu/dist/metisMenu.min.js"></script>
+    <script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+
+    <!-- Script For Apexchart -->
+    <script src="assets/vendor/apexcharts/dist/apexcharts.min.js"></script>
+
+    <script>
+        (function($){
+
+        var dzProfile = function(){
+            var tableLicenseUsage = function(){
+                if($('#tableLicenseUsage').length > 0){
+                    var table = $('#tableLicenseUsage').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 10,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLicenseUsage_wrapper .dt-buttons').detach();
+                            $('#licenseUsageExcelBTN').append(btns);
+                        }
+                    });	
+                }
+            }
+            
+            var tableLogs = function(){
+                if($('#tableLogs').length > 0){
+                    var table = $('#tableLogs').DataTable({
+                        'dom': 'ZBfrltip',
+                        buttons: [{
+                            extend: 'excel',
+                            text: '<i class="fa-solid fa-file-excel"></i> Export Report',
+                            className: 'btn btn-primary light btn-sm'
+                        }],
+                        searching: false,
+                        pageLength: 6,
+                        select: false,            
+                        lengthChange: false,
+                        paging: true,
+                        bInfo: true,
+                        language: {
+                            paginate: {
+                                next: '<i class="fa-solid fa-angle-right"></i>',
+                                previous: '<i class="fa-solid fa-angle-left"></i>' 
+                            }
+                        },
+                        initComplete: function() {
+                            var btns = $('#tableLogs_wrapper .dt-buttons').detach();
+                            $('#tableLogsExcelBTN').append(btns);
+                        }
+                    });
+                }
+            }
+            
+                
+            /* Function ============ */
+            return {
+                
+                load:function(){
+                    tableLicenseUsage();
+                    tableLogs();
+                },
+            }
+            
+        }();
+
+        jQuery(window).on('load',function(){
+            setTimeout(function(){
+                dzProfile.load();
+            }, 1000); 
+        });
+
+        jQuery(window).on('resize',function () {
+            setTimeout(function(){
+                dzProfile.resize();
+            }, 1000);
+            
+        });
+
+        })(jQuery);
+
+    </script>
+
+    <!-- Script For Datatables -->
+    <script src="assets/vendor/datatables/js/jquery.dataTables.bundle.min.js"></script>
+
+    <!-- Script For Multiple Languages -->
+    <script src="assets/vendor/i18n/i18n.js"></script>
+    <script src="assets/js/translator.js"></script>
+
+    <!-- Script For Custom JS -->
+    <script src="assets/js/deznav-init.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

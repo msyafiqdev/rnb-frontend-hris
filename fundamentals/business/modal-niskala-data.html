@@ -1,0 +1,580 @@
+<!-- Modal Product-->
+<div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="addProductLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addProductLabel">Brew a New Menu Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                What’s the newest masterpiece? Let’s get it in the system.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What’s it called?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., The Ultimate Caramel Macchiato">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">The Details</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Why is this delicious? Tell the customers...">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label">Where does it belong? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Coffee</option>
+                                        <option value="WY">Non Coffee</option>
+                                        <option value="WY">Main Course</option>
+                                        <option value="WY">Snack</option>
+                                        <option value="WY">Catering</option>
+                                        <option value="WY">Pastry</option>
+                                        <option value="WY">Promo</option>
+                                        <option value="WY">Add Ons</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label d-block">Show it off: <span class="text-danger">*</span></label>
+                                    <div class="avatar avatar-xl avatar-preview rounded">
+                                        <img class="imagePreview w-100 h-100" src="assets/images/avatar/middle/avatar2.webp" alt="Avatar">
+                                        <input type="file" class="imageUpload d-none" accept=".avif, .webp, .jpeg">
+                                        <a class="btn btn-square btn-primary btn-sm position-absolute bottom-0 end-0 shadow-sm upload-trigger rounded-circle border-2 border-white">
+                                            <i class="fa fa-camera "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-success mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Add to Menu</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="updateProduct" tabindex="-1" aria-labelledby="updateProductLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateProductLabel">Update Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Giving this item a little glow-up? Make your changes below.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What’s it called?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., The Ultimate Caramel Macchiato">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">The Details</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Why is this delicious? Tell the customers...">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label">Where does it belong? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Coffee</option>
+                                        <option value="WY">Non Coffee</option>
+                                        <option value="WY">Main Course</option>
+                                        <option value="WY">Snack</option>
+                                        <option value="WY">Catering</option>
+                                        <option value="WY">Pastry</option>
+                                        <option value="WY">Promo</option>
+                                        <option value="WY">Add Ons</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label d-block">Show it off: <span class="text-danger">*</span></label>
+                                    <div class="avatar avatar-xl avatar-preview rounded">
+                                        <img class="imagePreview w-100 h-100" src="assets/images/avatar/middle/avatar2.webp" alt="Avatar">
+                                        <input type="file" class="imageUpload d-none" accept=".avif, .webp, .jpeg">
+                                        <a class="btn btn-square btn-primary btn-sm position-absolute bottom-0 end-0 shadow-sm upload-trigger rounded-circle border-2 border-white">
+                                            <i class="fa fa-camera "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-warning mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Update Menu</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteProduct" tabindex="-1" aria-labelledby="deleteProductLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteProductLabel">Say Goodbye?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h5 class="text-center text-muted mb-3">
+                                Are you sure you want to 86 "[Product Name]" for good? Once it's tossed, it's gone forever!
+                            </h5>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-danger mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Yes, dump it</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Ingredients -->
+<div class="modal fade" id="addIngredient" tabindex="-1" aria-labelledby="addIngredientLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addIngredientLabel">Stock the Pantry</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                What fresh supplies are we bringing in? Add the raw goods here.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What are we stocking?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Oat Milk, Matcha Powder">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label">Where do we get this? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">KainIndo Utama</option>
+                                        <option value="WY">GayaGrosir Apparel</option>
+                                        <option value="WY">Medika Cahaya Mandiri</option>
+                                        <option value="WY">Sinergi Tekstil</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-label">Which shelf does this go on? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Dairy</option>
+                                        <option value="WY">Packaging</option>
+                                        <option value="WY">Coffee</option>
+                                        <option value="WY">Powder</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-label">How do we measure it? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">gr</option>
+                                        <option value="WY">pcs</option>
+                                        <option value="WY">ml</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Current Stash?</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="How much do we actually have right now?">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">When should we panic?</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Send an alert when stock drops below...d">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-success mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Add to Pantry</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="updateIngredient" tabindex="-1" aria-labelledby="updateIngredientLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateIngredientLabel">Rearrange the Pantry</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Did something change? Tweak the details for this supply below.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What are we stocking?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Oat Milk, Matcha Powder">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label">Where do we get this? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">KainIndo Utama</option>
+                                        <option value="WY">GayaGrosir Apparel</option>
+                                        <option value="WY">Medika Cahaya Mandiri</option>
+                                        <option value="WY">Sinergi Tekstil</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-label">Which shelf does this go on? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Dairy</option>
+                                        <option value="WY">Packaging</option>
+                                        <option value="WY">Coffee</option>
+                                        <option value="WY">Powder</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label class="form-label">How do we measure it? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">gr</option>
+                                        <option value="WY">pcs</option>
+                                        <option value="WY">ml</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">When should we panic?</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Send an alert when stock drops below...d">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-warning mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Update Pantry</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteIngredient" tabindex="-1" aria-labelledby="deleteIngredientLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteIngredientLabel">Clear the Shelf?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h5 class="text-center text-muted mb-3">
+                                Are you sure you want to throw out "[Ingredient Name]"? If it's still being used in any of our recipes, tossing this might break the menu!                            </h5>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-danger mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Yes, toss it</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Supplier -->
+<div class="modal fade" id="addSupplier" tabindex="-1" aria-labelledby="addSupplierLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addSupplierLabel">Add a New Vendor</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Who's bringing us the good stuff? Add their details below so we always know who to call.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Who are they?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., The Pastry Bakery, Milk Distributors Inc.">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Who's our guy?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name of the person we actually talk to...">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">How do we reach them?</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Drop their phone number here...">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Where are they located?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Address for returns or pickups...">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Any quirks we should know?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Text them before 3 PM on Mondays for Tuesday delivery.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-success mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Lock in Vendor</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="updateSupplier" tabindex="-1" aria-labelledby="updateSupplierLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateSupplierLabel">Tweak the Contact Book</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Did they get a new number or change their delivery days? Update their details below.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Who are they?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., The Pastry Bakery, Milk Distributors Inc.">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Who's our guy?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name of the person we actually talk to...">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">How do we reach them?</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Drop their phone number here...">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Where are they located?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Address for returns or pickups...">
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Any quirks we should know?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Text them before 3 PM on Mondays for Tuesday delivery.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-warning mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Update Vendor</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteSupplier" tabindex="-1" aria-labelledby="deleteSupplierLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteSupplierLabel">Parting Ways?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h5 class="text-center text-muted mb-3">
+                                Are you sure you want to remove "[Supplier Name]" from our list? We won't be able to place automated stock orders with them once they're gone.    
+                            </h5>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-danger mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Yes, remove them</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Bill of Materials -->
+<div class="modal fade" id="addBom" tabindex="-1" aria-labelledby="addBomLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addBomLabel">The Secret Formula</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Let’s map out exactly what goes into this item. This keeps our pantry math perfectly brewed and our stock levels accurate!
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label">Which menu item are we building? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Cappuccino</option>
+                                        <option value="WY">Cafe Latte</option>
+                                        <option value="WY">Butterscotch Latte</option>
+                                        <option value="WY">Caramel Latte</option>
+                                        <option value="WY">Vanilla Latte</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What goes in it?</label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Creamer</option>
+                                        <option value="WY">Cup</option>
+                                        <option value="WY">Espresso</option>
+                                        <option value="WY">Freshmilk</option>
+                                        <option value="WY">Powder Chocolate</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">How much we use?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter amount... (e.g., 18)">
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Measurement</label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">gr</option>
+                                        <option value="WY">ml</option>
+                                        <option value="WY">pcs</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What it costs us?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Rp. 8.000">
+                                </div>
+                                <div class="col-12 col-md-2 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Add Another?</label>
+                                    <div class="d-flex gap-2">
+                                        <div class="btn btn-square btn-success light">
+                                            <i class="fa fa-plus "></i>
+                                        </div>
+                                        <div class="btn btn-square btn-danger light">
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Raw Ingredient Cost</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Rp. 8.000">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Customer Price Tag</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Rp. 8.000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-success mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Lock in Recipe</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="updateBom" tabindex="-1" aria-labelledby="updateBomLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateBomLabel">Tweak the Recipe</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Changing the ratio? Swapping a cup size? Update the ingredients and operational costs below so our margins stay deadly accurate.
+                            </p>
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label class="form-label">Which menu item are we building? <span class="text-danger">*</span></label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Cappuccino</option>
+                                        <option value="WY">Cafe Latte</option>
+                                        <option value="WY">Butterscotch Latte</option>
+                                        <option value="WY">Caramel Latte</option>
+                                        <option value="WY">Vanilla Latte</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What goes in it?</label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">Creamer</option>
+                                        <option value="WY">Cup</option>
+                                        <option value="WY">Espresso</option>
+                                        <option value="WY">Freshmilk</option>
+                                        <option value="WY">Powder Chocolate</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">How much we use?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter amount... (e.g., 18)">
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Measurement</label>
+                                    <select class="selectpicker form-select" required>
+                                        <option value="AL">gr</option>
+                                        <option value="WY">ml</option>
+                                        <option value="WY">pcs</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">What it costs us?</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Rp. 8.000">
+                                </div>
+                                <div class="col-12 col-md-2 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Add Another?</label>
+                                    <div class="d-flex gap-2">
+                                        <div class="btn btn-square btn-success light">
+                                            <i class="fa fa-plus "></i>
+                                        </div>
+                                        <div class="btn btn-square btn-danger light">
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Raw Ingredient Cost</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Rp. 8.000">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Customer Price Tag</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g., Rp. 8.000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-warning mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Update Formula</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteBom" tabindex="-1" aria-labelledby="deleteBomLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteBomLabel">Forget the Formula?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h5 class="text-center text-muted mb-3">
+                                Are you sure you want to clear the recipe for "[Product Name]"? If you do this, selling this item won't automatically deduct anything from our pantry anymore!
+                            </h5>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-danger mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Yes, shred it</a>
+            </div>
+        </div>
+    </div>
+</div>
