@@ -124,7 +124,7 @@
                             </li>
                             <li class="breadcrumb-item" aria-current="page">Attendance</li>
                             <li class="breadcrumb-item" aria-current="page">Business Trip</li>
-                            <li class="breadcrumb-item active" aria-current="page">Cash Advance</li>
+                            <li class="breadcrumb-item active" aria-current="page">Reimbursement</li>
                         </ol>
                     </nav>
                 </div>
@@ -145,22 +145,22 @@
                     <div class="card-footer py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
                         <ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
 							<li class="nav-item" role="presentation">
-								<a href="attendances.html" class="nav-link py-3 px-1 border-3">Overview</a>
+								<a href="siap-attendances.html" class="nav-link py-3 px-1 border-3 active">Overview</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a href="attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
+								<a href="siap-attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a href="attendance-recap.html" class="nav-link py-3 px-1 border-3">Recap</a>
+								<a href="siap-attendance-recap.html" class="nav-link py-3 px-1 border-3">Recap</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a href="attendance-leave.html" class="nav-link py-3 px-1 border-3">Leave</a>
+								<a href="siap-attendance-leave.html" class="nav-link py-3 px-1 border-3">Leave</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a href="attendance-business-trip.html" class="nav-link py-3 px-1 border-3 active">Business Trip</a>
+								<a href="siap-attendance-business-trip.html" class="nav-link py-3 px-1 border-3">Business Trip</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a href="attendance-overtime.html" class="nav-link py-3 px-1 border-3">Overtime</a>
+								<a href="siap-attendance-overtime.html" class="nav-link py-3 px-1 border-3">Overtime</a>
 							</li>
 						</ul>
                         <ul class="d-xl-flex d-none py-2">
@@ -198,7 +198,7 @@
                 <!-- Start - My Projects -->
                 <div class="col-lg-12">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="mb-0">Business Trip - Cash Advance</h5>
+                        <h5 class="mb-0">Business Trip - Reimbursement</h5>
                         <div class="d-flex align-items-center">
 
                         </div>
@@ -209,8 +209,8 @@
                 <div class="card">
                     <div class="card-header border-0 pb-0">
                         <div>
-                            <h4 class="card-title">Request Cash Advance</h4>
-                            <p class="fs-13 mb-0">Please submit your advance request at least 3 days before the funds are needed. Any unspent funds and valid receipts must be reported within 7 days after the trip concludes.</p>
+                            <h4 class="card-title">Reimbursement Form</h4>
+                            <p class="fs-13 mb-0">Please itemize your trip expenses below and attach clear photos or PDFs of all receipts. Claims must be submitted within 7 days of returning from your trip.</p>
                         </div>
                     </div>
                     <div class="card-body">
@@ -218,7 +218,7 @@
                             <div class="col-12 col-md-2">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Date</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date Needed">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date">
                                 </div>
                             </div>
                             <div class="col-12 col-md-2">
@@ -229,7 +229,7 @@
                             </div>
                             <div class="col-12 col-md-2">
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Breakdown</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Category</label>
                                     <select class="selectpicker form-select" required>
                                         <option value="AL">Accommodation</option>
                                         <option value="WY">Transportation</option>
@@ -239,10 +239,16 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-2">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Notes</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Cash advance for local transportation (airport taxis), daily meals, and client entertainment">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Reimbursement Notes">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Receipt</label>
+                                    <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="Amount">
                                 </div>
                             </div>
                             <div class="col-12 col-md-2">
@@ -252,58 +258,6 @@
                                         <button type="button" class="btn btn-success light me-2" data-bs-dismiss="modal">Add</button>
                                         <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Remove</button>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Amount Realized</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Amount Realized">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Attachments</label>
-                                    <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="Cash advance for local transportation (airport taxis), daily meals, and client entertainment">
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="row">
-                            <h6 class="card-title">Approved By Finance</h6>
-                            <div class="col-12 col-md-2">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Date</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date Needed" disabled>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Amount</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Amount" disabled>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Amount Approved</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Amount Approved" disabled>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Breakdown</label>
-                                    <select class="selectpicker form-select" required disabled>
-                                        <option value="AL">Accommodation</option>
-                                        <option value="WY">Transportation</option>
-                                        <option value="WY">Meals & Entertaintment</option>
-                                        <option value="WY">Local Transport</option>
-                                        <option value="WY">Others</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Notes</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Cash advance for local transportation (airport taxis), daily meals, and client entertainment" disabled>
                                 </div>
                             </div>
                         </div>

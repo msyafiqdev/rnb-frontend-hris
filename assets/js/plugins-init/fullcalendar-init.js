@@ -51,8 +51,8 @@
 			  arg.draggedEl.parentNode.removeChild(arg.draggedEl);
 			}
 		  },
-		  initialDate: '2021-02-13',
-			  weekNumbers: true,
+		  	  firstDay: 1,
+		  	  weekNumbers: true,
 			  navLinks: true, // can click day/week names to navigate views
 			  editable: true,
 			  selectable: true,
@@ -189,8 +189,8 @@ function fullCalender(){
 			  arg.draggedEl.parentNode.removeChild(arg.draggedEl);
 			}
 		  },
-		  initialDate: '2021-02-13',
-			  weekNumbers: true,
+		  	  firstDay: 1,
+		  	  weekNumbers: true,
 			  navLinks: true, // can click day/week names to navigate views
 			  editable: true,
 			  selectable: true,
