@@ -143,6 +143,281 @@
 <!-- Modal-Box-End -->
 
 <!-- Modal Box Start -->
+<div class="modal fade" id="correction" tabindex="-1" aria-labelledby="correctionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="correctionLabel">Attendance correction</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Forgot to clock in or missed a punch? It happens! You can request an attendance correction up to <span class="fw-bold">5 times a month</span> 
+                                to keep your hours accurate. Just drop a quick note explaining what happened so HR can hit approve!
+                            </p>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Quick Note</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contoh: Izin ke dokter, macet, atau ada urusan keluarga">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Date</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="01 October 2026">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Request Type</label>
+                                <div class="form-group mb-0">
+                                    <div class="form-check d-inline-block me-3">
+                                        <input class="form-check-input" type="radio" name="correction" id="correction4">
+                                        <label class="form-check-label" for="correction4">Clock In</label>
+                                    </div>
+                                    <div class="form-check d-inline-block mx-2">
+                                        <input class="form-check-input" type="radio" name="correction" id="correction5">
+                                        <label class="form-check-label" for="correction5">Clock Out</label>
+                                    </div>
+                                    <div class="form-check d-inline-block mx-2">
+                                        <input class="form-check-input" type="radio" name="correction" id="correction6">
+                                        <label class="form-check-label" for="correction6">Both</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">From</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1" value="08:30" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">To</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">From</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1" value="08:30" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">To</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-warning mt-2 mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">Got it!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal-Box-End -->
+
+<!-- Modal Box Start -->
+<div class="modal fade" id="updateCorrection" tabindex="-1" aria-labelledby="updateCorrectionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateCorrectionLabel">Attendance update correction</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="form-label text-muted mb-3">
+                                Forgot to clock in or missed a punch? It happens! You can request an attendance correction up to <span class="fw-bold">5 times a month</span> 
+                                to keep your hours accurate. Just drop a quick note explaining what happened so HR can hit approve!
+                            </p>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Quick Note</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contoh: Izin ke dokter, macet, atau ada urusan keluarga">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Date</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="01 October 2026">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Request Type</label>
+                                <div class="form-group mb-0">
+                                    <div class="form-check d-inline-block me-3">
+                                        <input class="form-check-input" type="radio" name="correction" id="correction1">
+                                        <label class="form-check-label" for="correction1">Clock In</label>
+                                    </div>
+                                    <div class="form-check d-inline-block mx-2">
+                                        <input class="form-check-input" type="radio" name="correction" id="correction2">
+                                        <label class="form-check-label" for="correction2">Clock Out</label>
+                                    </div>
+                                    <div class="form-check d-inline-block mx-2">
+                                        <input class="form-check-input" type="radio" name="correction" id="correction3">
+                                        <label class="form-check-label" for="correction3">Both</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">From</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1" value="08:30" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">To</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">From</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1" value="08:30" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">To</label>
+                                        <input type="time" class="form-control" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a class="btn light btn-warning mt-2 mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">Got it!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal-Box-End -->
+
+<!-- Modal Box Start -->
+<div class="modal fade" id="deleteCorrection" tabindex="-1" aria-labelledby="deleteCorrectionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteCorrectionLabel">Delete Correction Request</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h5 class="text-muted fw-bold text-center">Change of Plans?</h5>
+                            <p class="form-label text-muted mb-3">
+                                Do you want to cancel this pending correction request? We will simply remove the request from the approval list so you can submit a new one later if needed.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark light" data-bs-dismiss="modal">Nevermind</button>
+                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Yes, Cancel It</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal-Box-End -->
+
+<!-- Modal Box Start -->
+<div class="modal fade" id="detailCorrection" tabindex="-1" aria-labelledby="detailCorrection" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="detailCorrection">Correction Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h5 class="text-muted mb-0 fw-bold">Timesheet Tweak</h5>
+                            <p class="form-label text-muted mb-3">
+                                Status: ⏳ Pending Review <br>
+                                Submission Date: TSubmitted on Oct 5, 2026, 09:00 AM.
+                            </p>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Requested By</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="fw-semibold">Muhammad Syafiq (IT / Programmer)</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>The Shift</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-danger fw-semibold">01 October 2026</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>The Fix</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray">Missed Clock-Out</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Time Adjusted</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray fw-semibold"> 00:00 ➔ 05:00 PM </span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Your Note</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray">Forgot to punch out before closing my laptop.</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>HR Feedback</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray">Approved. Don't forget next time!</span>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4">
+                                    <span>Approval Line (Audit Trail)</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="text-gray">
+                                        Budi (Employee): Submitted request (Oct 5, 09:00 AM) <br>
+                                        Siti (HRD): Locked (Waiting for Manager's action)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal-Box-End -->
+
+<!-- Modal Box Start -->
 <div class="modal fade" id="sick" tabindex="-1" aria-labelledby="sickLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

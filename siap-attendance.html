@@ -375,7 +375,7 @@
 												</div>
 												<div class="text-center">
 													<p class="fs-14 mb-2">Variance</p>
-													<span class="fs-20 text-black">04.00</span>
+													<span class="fs-20 text-black">04:00</span>
 												</div>
 											</div>
 										</div>
@@ -452,14 +452,86 @@
 											<tbody>
 												<tr>
 													<td>01 Oct 2026</td>
-													<td><span class="badge badge-sm badge-danger light fw-semibold">08:10</span> - 
+													<td>
+                                                        <span class="badge badge-sm badge-danger light fw-semibold">08:10</span> - 
 														<span class="badge badge-sm badge-light light fw-semibold">17:00</span>
+                                                        <a href="hr-attendance-details.html">
+                                                            <span class="badge badge-xs light badge-danger fw-semibold">Submit Correction?</span>
+                                                        </a>
 													</td>
 													<td>7C93+WJ Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
 													<td>Late 10 Minutes</td>
 													<td>7 hours, 50 minutes</td>
 													<td>
 														<a data-bs-toggle="modal" data-bs-target="#late">
+															<div class="btn btn-square btn-danger light btn-xs">
+																<i class="fa-regular fa-file-lines"></i>
+															</div>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                            <div class="card">
+								<div class="card-header border-0 align-items-center gap-2 flex-wrap">
+									<h4 class="card-title m-0">Attendance Correction</h4>
+									<div class="clearfix d-flex align-items-center">
+										<div class="clearfix me-1">
+											<select class="selectpicker form-select form-select-sm" >
+												<option value="May">May</option>
+												<option value="June">June</option>
+												<option value="July">July</option>
+												<option value="August">August</option>
+											</select>
+										</div>
+										<div class="clearfix">
+											<select class="selectpicker form-select form-select-sm" >
+												<option value="2026">2026</option>
+												<option value="2025">2025</option>
+												<option value="2024">2024</option>
+												<option value="2023">2023</option>
+											</select>
+										</div>
+										<div class="ms-2">
+											<a class="btn btn-success mb-1" data-bs-toggle="modal" data-bs-target="#correction">Submit Correction</a>
+										</div>
+									</div>
+								</div>
+								<div class="card-body table-card-body px-0 pt-0 pb-2">
+									<div class="table-responsive">
+										<table class="table table-sm table-sm-responsive text-nowrap" id="tableLogs">
+											<thead>
+												<tr>
+													<th class="mw-100">Date</th>
+													<th class="mw-80">Before</th>
+													<th class="mw-80">After</th>
+													<th class="mw-80">Note</th>
+													<th class="mw-80">Actor</th>
+                                                    <th class="mw-80">Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Thursday, 01 Oct 2026</td>
+													<td>08:10 - 17:00</td>
+                                                    <td>08:00 - 17:00</td>	
+                                                    <td>Clock in 10 Minutes Correction</td>
+													<td>Submitted by @syafiq Approved by @admin</td>
+                                                    <td>
+														<a data-bs-toggle="modal" data-bs-target="#updateCorrection">
+															<div class="btn btn-square btn-warning light btn-xs">
+																<i class="fa-solid fa-pencil"></i>
+															</div>
+														</a>
+                                                        <a data-bs-toggle="modal" data-bs-target="#deleteCorrection">
+															<div class="btn btn-square btn-danger light btn-xs">
+																<i class="fa-solid fa-trash"></i>
+															</div>
+														</a>
+                                                        <a data-bs-toggle="modal" data-bs-target="#detailCorrection">
 															<div class="btn btn-square btn-danger light btn-xs">
 																<i class="fa-regular fa-file-lines"></i>
 															</div>
