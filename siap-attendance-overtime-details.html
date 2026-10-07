@@ -144,13 +144,10 @@
                     <div class="card-footer py-0 d-flex flex-wrap justify-content-between align-items-center mx-sm-4 px-0">
                         <ul class="nav nav-underline gap-3 nav-scroll nav-scroll-auto-xl px-3 px-sm-0" id="tabMyProfileBottom" role="tablist">
 							<li class="nav-item" role="presentation">
-								<a href="siap-attendances.html" class="nav-link py-3 px-1 border-3 active">Overview</a>
+								<a href="siap-attendances.html" class="nav-link py-3 px-1 border-3">Overview</a>
 							</li>
 							<li class="nav-item" role="presentation">
 								<a href="siap-attendance.html" class="nav-link py-3 px-1 border-3">Attendance</a>
-							</li>
-							<li class="nav-item" role="presentation">
-								<a href="siap-attendance-recap.html" class="nav-link py-3 px-1 border-3">Recap</a>
 							</li>
 							<li class="nav-item" role="presentation">
 								<a href="siap-attendance-leave.html" class="nav-link py-3 px-1 border-3">Leave</a>
@@ -159,36 +156,9 @@
 								<a href="siap-attendance-business-trip.html" class="nav-link py-3 px-1 border-3">Business Trip</a>
 							</li>
 							<li class="nav-item" role="presentation">
-								<a href="siap-attendance-overtime.html" class="nav-link py-3 px-1 border-3">Overtime</a>
+								<a href="siap-attendance-overtime.html" class="nav-link py-3 px-1 border-3 active">Overtime</a>
 							</li>
 						</ul>
-                        <ul class="d-xl-flex d-none py-2">
-                            <li class="px-1">
-                                <a class="btn btn-square btn-light btn-sm" >
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li class="px-1">
-                                <a class="btn btn-square btn-light btn-sm" >
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="px-1">
-                                <a class="btn btn-square btn-light btn-sm" >
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="px-1">
-                                <a class="btn btn-square btn-light btn-sm" >
-                                    <i class="fa-brands fa-telegram"></i>
-                                </a>
-                            </li>
-                            <li class="px-1">
-                                <a class="btn btn-square btn-light btn-sm" >
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                     <!-- End - Profile Navigation -->
                 
@@ -396,10 +366,6 @@
                                         </div>
                                         <div class="d-flex gap-3 justify-content-between flex-wrap p-4 pb-2">
                                             <div class="text-center">
-                                                <p class="fs-14 mb-2">Duration</p>
-                                                <span class="fs-20 text-black">01:20</span>
-                                            </div>
-                                            <div class="text-center">
                                                 <p class="fs-14 mb-2">Time</p>
                                                 <span class="fs-20 text-black">08:34:53</span>
                                             </div>
@@ -409,7 +375,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="btn light btn-info m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockIn">Overtime Clock In</a>
+                                    <a class="btn light btn-info m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockIn">Overtime Start</a>
                                     <div class="mb-3"></div>
                                 </div>
                             </div>
@@ -458,7 +424,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="btn light btn-warning m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockOut">Overtime Clock Out</a>
+                                <a class="btn light btn-warning m-3 mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#clockOut">Overtime End</a>
                                 <div class="mb-3"></div>
                             </div>
                         </div>
@@ -1179,31 +1145,29 @@
                                     Grab your coffee and let's get things done. Start your session when you're ready to crush this extra hustle!
                                 </p>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Scheduled Start Time</label>
-                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Date</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026</p>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Scheduled End Time</label>
-                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Supervisior</label>
+                                            <p class="fs-13 mb-0">Muhammad Syafiq</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Target Duration</label>
-                                            <p class="fs-13 mb-0">3 Hours</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Time (Jika Tanggal Lewat)</label>
+                                            <input type="time" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <a class="btn light btn-info mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Overtime Clock In</a>
+                    <a class="btn light btn-info mt-3 mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockIn">Overtime Clock In</a>
                 </div>
             </div>
         </div>
@@ -1231,49 +1195,43 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Scheduled Start Time</label>
-                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Date</label>
+                                            <p class="fs-13 mb-0">Wed, 20 May 2026</p>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Scheduled End Time</label>
-                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Actual Start Time</label>
-                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Actual End Time</label>
-                                            <p class="fs-13 mb-0">Wed, 20 May 2026 - 17:00</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Supervisor</label>
+                                            <p class="fs-13 mb-0">Muhammad Syafiq</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Target Duration</label>
-                                            <p class="fs-13 mb-0">3 Hours</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Clock In</label>
+                                            <p class="fs-13 mb-0">17:00</p>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Actual Duration</label>
-                                            <p class="fs-13 mb-0">3 Hours, 10 Minutes</p>
+                                            <label for="exampleFormControlInput1" class="form-label">Clock Out (Jika Lewat)</label>
+                                            <input type="time" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Duration</label>
+                                            <p class="fs-13 mb-0">3 Hours 10 Minutes</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <a class="btn light btn-warning mb-2 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">End Overtime Session</a>
+                    <a class="btn light btn-warning mb-2 mt-3 btn-lg w-100" data-bs-toggle="modal" data-bs-target="#clockOut">End Overtime Session</a>
                 </div>
             </div>
         </div>
