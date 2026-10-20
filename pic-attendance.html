@@ -108,7 +108,261 @@
 		<!-- ========== Start - Content Body ========== -->
         <main class="content-body">
 			<div class="container-fluid">
-				<img src="files/comingsoon/comingsoon.png" alt="" class="rounded">
+				                <!-- Start - logs -->
+                <div class="card">
+                    <div class="card-header border-0 align-items-center">
+                        <h4 class="card-title m-0">Attendance Logs (01 June 2026)</h4>
+                        <div class="d-flex align-items-center">
+                            <div class="clearfix">
+                                <button class="btn btn-sm btn-primary light ms-2">Capture</button>
+                            </div>	
+                        </div>	
+                    </div>
+                    <div class="card-body table-card-body p-0">
+                        <h6 class="text-center fw-bold mb-3">Senin, 01 June 2025 - 08:00:10 WIB</h6>
+                        <div class="table-responsive">
+                            <table class="table table-sm mb-0 table-bottom-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Clock In</th>
+                                        <th>Clock Out</th>
+                                        <th>Note</th>
+										<th>Address</th>
+                                        <th>Working Hours</th>
+                                        <th>Attachment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td><span class="badge badge-sm badge-success light fw-bold ">08:00</span></td>
+                                        <td><span class="badge badge-sm badge-light light fw-bold ">17:00</span></td>
+                                        <td>On Time</td>
+                                        <td>7C93+XH Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
+                                        <td>8 Hours</td>
+                                        <td>
+                                            <a data-bs-toggle="modal" data-bs-target="#clockInAdmin">
+                                                <div class="btn btn-square btn-success light btn-xs">
+                                                    <i class="fa-regular fa-file-lines"></i>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Adam Doe</td>
+                                        <td><span class="badge badge-sm badge-danger light fw-bold ">08:10</span></td>
+                                        <td><span class="badge badge-sm badge-light light fw-bold ">---</span></td>
+                                        <td><span>Late 10 Minutes</span></td>
+										<td>7C93+XH Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
+                                        <td>7 Hours 50 Minutes</td>
+                                        <td>
+                                            <a data-bs-toggle="modal" data-bs-target="#clockInAdmin">
+                                                <div class="btn btn-square btn-success light btn-xs">
+                                                    <i class="fa-regular fa-file-lines"></i>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Noah Doe</td>
+                                        <td><span class="badge badge-sm badge-secondary light fw-bold ">10:00</span></td>
+                                        <td><span class="badge badge-sm badge-light light fw-bold ">17:00</span></td>
+                                        <td><span>Deviation Late 2 Hours</span></td>
+										<td>7C93+XH Minomartani, Sleman Regency, Special Region of Yogyakarta</td>
+                                        <td>6 Hours</td>
+                                        <td>
+                                            <a data-bs-toggle="modal" data-bs-target="#deviation">
+                                                <div class="btn btn-square btn-secondary light btn-xs">
+                                                    <i class="fa-regular fa-file-lines"></i>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">Abraham Doe</td>
+                                        <td><span class="badge badge-sm badge-info light fw-bold ">Annual Leave</span></td>
+                                        <td><span class="badge badge-sm badge-light light fw-bold ">Annual Leave</span></td>
+                                        <td><span>Annual Leave</span></td>
+										<td>-</td>
+                                        <td>0 Hours</td>
+                                        <td>
+                                            <a data-bs-toggle="modal" data-bs-target="#annualLeave">
+                                                <div class="btn btn-square btn-info light btn-xs">
+                                                    <i class="fa-regular fa-file-lines"></i>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+				<!-- End - logs -->
+
+				<!-- Start - logs -->
+                <div class="card">
+                    <div class="card-header border-0 align-items-center">
+                        <h4 class="card-title m-0">Attendance Logs Monthly (June 2026)</h4>
+                        <div class="d-flex align-items-center">
+                            <div class="clearfix d-flex align-items-center">
+								<div class="clearfix me-1">
+									<select class="selectpicker form-select form-select-sm" >
+										<option value="May">May</option>
+										<option value="June">June</option>
+										<option value="July">July</option>
+										<option value="August">August</option>
+									</select>
+								</div>
+								<div class="clearfix">
+									<select class="selectpicker form-select form-select-sm" >
+										<option value="2026">2026</option>
+										<option value="2025">2025</option>
+										<option value="2024">2024</option>
+										<option value="2023">2023</option>
+									</select>
+								</div>
+								<div class="ms-2">
+									<div id="licenseUsageExcelBTN"></div>
+								</div>
+							</div>	
+                        </div>	
+                    </div>
+                    <div class="card-body table-card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-sm mb-0 table-bottom-borderless table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Working Days</th>
+										<th>Working Hours</th>
+                                        <th>On Time</th>
+										<th>Late</th>
+										<th>Leave</th>
+										<th>Deviation</th>
+										<th>Alpha</th>
+										<th>Trip</th>
+                                        <th>Overtimes</th>
+                                        <th>Leave 2026</th>
+										<th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td>22 / 22 days</td>
+										<td>12h 30m / 176h</td>
+                                        <td>18 days</td>
+                                        <td>2d (35m)</td>
+                                        <td>1 days</td>
+										<td>35m</td>
+                                        <td>0 days</td>
+										<td>0 days</td>
+										<td>12h 30m</td>
+										<td>2 days</td>
+										<td>
+											<a href="hr-attendance-details.html">
+												<span class="badge badge-xs light badge-primary fw-semibold">View More</span>
+											</a>
+										</td>
+                                    </tr>
+									<tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td>22 / 22 days</td>
+										<td>12h 30m / 176h</td>
+                                        <td>18 days</td>
+                                        <td>2 days</td>
+                                        <td>1 days</td>
+										<td>1 days</td>
+                                        <td>0 days</td>
+										<td>0 days</td>
+										<td>12h 30m</td>
+										<td>2 days</td>
+										<td>
+											<a href="hr-attendance-details.html">
+												<span class="badge badge-xs light badge-primary fw-semibold">View More</span>
+											</a>
+										</td>
+                                    </tr>
+									<tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td>22 / 22 days</td>
+										<td>12h 30m / 176h</td>
+                                        <td>18 days</td>
+                                        <td>2 days</td>
+                                        <td>1 days</td>
+										<td>1 days</td>
+                                        <td>0 days</td>
+										<td>0 days</td>
+										<td>12h 30m</td>
+										<td>2 days</td>
+										<td>
+											<a href="hr-attendance-details.html">
+												<span class="badge badge-xs light badge-primary fw-semibold">View More</span>
+											</a>
+										</td>
+                                    </tr>
+									<tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td>22 / 22 days</td>
+										<td>12h 30m / 176h</td>
+                                        <td>18 days</td>
+                                        <td>2 days</td>
+                                        <td>1 days</td>
+										<td>1 days</td>
+                                        <td>0 days</td>
+										<td>0 days</td>
+										<td>12h 30m</td>
+										<td>2 days</td>
+										<td>
+											<a href="hr-attendance-details.html">
+												<span class="badge badge-xs light badge-primary fw-semibold">View More</span>
+											</a>
+										</td>
+                                    </tr>
+									<tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td>22 / 22 days</td>
+										<td>12h 30m / 176h</td>
+                                        <td>18 days</td>
+                                        <td>2 days</td>
+                                        <td>1 days</td>
+										<td>1 days</td>
+                                        <td>0 days</td>
+										<td>0 days</td>
+										<td>12h 30m</td>
+										<td>2 days</td>
+										<td>
+											<a href="hr-attendance-details.html">
+												<span class="badge badge-xs light badge-primary fw-semibold">View More</span>
+											</a>
+										</td>
+                                    </tr>
+									<tr>
+                                        <td class="fw-semibold">John Doe</td>
+                                        <td>22 / 22 days</td>
+										<td>12h 30m / 176h</td>
+                                        <td>18 days</td>
+                                        <td>2 days</td>
+                                        <td>1 days</td>
+										<td>1 days</td>
+                                        <td>0 days</td>
+										<td>0 days</td>
+										<td>12h 30m</td>
+										<td>2 days</td>
+										<td>
+											<a href="hr-attendance-details.html">
+												<span class="badge badge-xs light badge-primary fw-semibold">View More</span>
+											</a>
+										</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+				<!-- End - logs -->
             </div>
 		</main>
 		<!-- End - Content Body -->
@@ -121,6 +375,13 @@
 			</script>
         </footer>
         <!-- End - Footer -->
+
+		<div id="modal">
+			<script>
+				fetch('fundamentals/layouts/attendance/modal.html')
+				.then(response => response.text()).then(data => { document.getElementById('modal').innerHTML = data; });
+			</script>
+		</div>
 
 	</div>
     <!-- End - Main Wrapper -->
